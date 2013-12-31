@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/event_fragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffff00" >
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="25dp"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingTop="7dp"
+                android:text="Management Events"
+                android:textSize="17sp" />
+
+            <HorizontalScrollView
+                android:id="@+id/horizontalScrollView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="17dp" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal" >
+
+                    <ImageButton
+                        android:id="@+id/imageButton1"
+                        android:layout_width="220dp"
+                        android:layout_height="220dp"
+                        android:background="@drawable/button_shape"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/alegria_logo" />
+
+                    <ImageButton
+                        android:id="@+id/imageButton2"
+                        android:layout_width="220dp"
+                        android:layout_height="220dp"
+                       />
+
+                    <ImageButton
+                        android:id="@+id/imageButton3"
+                        android:layout_width="220dp"
+                        android:layout_height="220dp"
+                        android:background="@drawable/button_shape"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/alegria_logo" />
+
+                    <ImageButton
+                        android:id="@+id/imageButton4"
+                        android:layout_width="220dp"
+                        android:layout_height="220dp"
+                         />
+
+                    <ImageButton
+                        android:id="@+id/imageButton5"
+                        android:layout_width="220dp"
+                        android:layout_height="220dp"
+                        android:paddingRight="10dp"
+                        android:background="@drawable/button_shape"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/alegria_logo" />
+                    <ImageButton
+                        android:id="@+id/imageButton6"
+                        android:layout_width="220dp"
+                        android:layout_height="220dp"
+						android:paddingRight="10dp"
+                        android:background="@drawable/button_shape"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/alegria_logo" />
+                    <ImageButton
+                        android:id="@+id/imageButton7"
+                        android:layout_width="220dp"
+                        android:layout_height="220dp"
+                         />
+
+                    <ImageButton
+                        android:id="@+id/imageButton8"
+                        android:layout_width="220dp"
+                        android:layout_height="220dp"
+                        android:background="@drawable/button_shape"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/alegria_logo" />
+                    <ImageButton
+                        android:id="@+id/imageButton9"
+                        android:layout_width="220dp"
+                        android:layout_height="220dp"
+                         />
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingTop="7dp"
+                android:text="Technical Events"
+                android:textSize="17sp" />
+
+            <HorizontalScrollView
+                android:id="@+id/HorizontalScrollView01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="17dp" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal" >
+
+                    <ImageButton
+                        android:id="@+id/ImageButton03"
+                        android:layout_width="220dp"
+                        android:layout_height="220dp"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/ImageButton01"
+                        android:layout_width="220dp"
+                        android:layout_height="220dp"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/ImageButton02"
+                        android:layout_width="220dp"
+                        android:layout_height="220dp"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/ImageButton05"
+                        android:layout_width="220dp"
+                        android:layout_height="220dp"
+                         />
+
+                    <ImageButton
+                        android:id="@+id/ImageButton04"
+                        android:layout_width="220dp"
+                        android:layout_height="220dp"
+                         />
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingTop="7dp"
+                android:text="Performing Arts"
+                android:textSize="17sp" />
+
+            <HorizontalScrollView
+                android:id="@+id/HorizontalScrollView02"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="17dp" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal" >
+
+                    <ImageButton
+                        android:id="@+id/ImageButton08"
+                        android:layout_width="220dp"
+                        android:layout_height="220dp"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/ImageButton06"
+                        android:layout_width="220dp"
+                        android:layout_height="220dp" />
+
+                    <ImageButton
+                        android:id="@+id/ImageButton07"
+                        android:layout_width="220dp"
+                        android:layout_height="220dp"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/ImageButton10"
+                        android:layout_width="220dp"
+                        android:layout_height="220dp"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/ImageButton09"
+                        android:layout_width="220dp"
+                        android:layout_height="220dp"
+                        />
+                </LinearLayout>
+            </HorizontalScrollView>
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
