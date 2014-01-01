@@ -1,0 +1,117 @@
+package com.ashish.alegria3;
+
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
+public class Event implements Comparable<Event>{
+
+	private String eventId;
+	private String eventDate;
+	private String time;
+	private String	rate;
+	private String duration;
+	private List<String> rules;
+	private String eventHead;
+	private String title;
+	
+	static SimpleDateFormat FORMATTER = 
+	        new SimpleDateFormat("dd-MM-yyyy");
+	static SimpleDateFormat TIMEFORMATTER = 
+	        new SimpleDateFormat("HH:mm");
+	
+	
+	
+	public Event() {
+		super();
+		rules = new ArrayList<String>();
+		eventId = "Information not availaible";
+		eventDate = "Information not availaible";
+		time = "Information not availaible";
+		rate = "Information not availaible";
+		duration = "Information not availaible";
+		eventHead  = "Information not availaible";
+		title = "Information not availaible";
+
+	}
+
+	public String getTitle() {
+		return title;
+	}
+
+
+	public void setTitle(String title) {
+		this.title = title;
+	}
+
+
+	public String getEventId() {
+		return eventId;
+	}
+
+
+	public void setEventId(String eventId) {
+		this.eventId = eventId;
+	}
+
+
+	public String getEventDate() {
+		return eventDate;
+	}
+
+	public void setEventDate(String eventDate) {
+		this.eventDate = eventDate;
+	}
+
+	public String getTime() {
+		return time;
+	}
+
+	public void setTime(String time) {
+		this.time = time;
+	}
+
+	public String getRate() {
+		return rate;
+	}
+
+	public void setRate(String rate) {
+		this.rate = rate;
+	}
+
+	public String getDuration() {
+		return duration;
+	}
+
+	public void setDuration(String duration) {
+		this.duration = duration;
+	}
+
+	public List<String> getRules() {
+		return rules;
+	}
+
+
+	public void setRules(List<String> rules) {
+		this.rules = rules;
+	}
+
+
+	public String getEventHead() {
+		return eventHead;
+	}
+
+
+	public void setEventHead(String eventHead) {
+		this.eventHead = eventHead;
+	}
+
+
+	@Override
+	public int compareTo(Event arg0) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	
+}

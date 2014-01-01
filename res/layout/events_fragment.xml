@@ -4,7 +4,7 @@
     android:id="@+id/event_fragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ffff00" >
+    >
 
     <ScrollView
         android:id="@+id/scrollView1"
@@ -24,6 +24,7 @@
                 android:gravity="center"
                 android:paddingTop="7dp"
                 android:text="Management Events"
+                android:textColor="@color/white"
                 android:textSize="17sp" />
 
             <HorizontalScrollView
@@ -38,21 +39,24 @@
                     android:orientation="horizontal" >
 
                     <ImageButton
-                        android:id="@+id/imageButton1"
+                        android:id="@+id/bn_mgt1"
                         android:layout_width="220dp"
                         android:layout_height="220dp"
                         android:background="@drawable/button_shape"
                         android:scaleType="fitXY"
+                        android:contentDescription="Ad Mad"
                         android:src="@drawable/alegria_logo" />
 
                     <ImageButton
-                        android:id="@+id/imageButton2"
+                        android:id="@+id/bn_mgt2"
                         android:layout_width="220dp"
                         android:layout_height="220dp"
+                        android:contentDescription="Mad Ad"
+                        
                        />
 
                     <ImageButton
-                        android:id="@+id/imageButton3"
+                        android:id="@+id/bn_mgt3"
                         android:layout_width="220dp"
                         android:layout_height="220dp"
                         android:background="@drawable/button_shape"
@@ -60,13 +64,13 @@
                         android:src="@drawable/alegria_logo" />
 
                     <ImageButton
-                        android:id="@+id/imageButton4"
+                        android:id="@+id/bn_mgt4"
                         android:layout_width="220dp"
                         android:layout_height="220dp"
                          />
 
                     <ImageButton
-                        android:id="@+id/imageButton5"
+                        android:id="@+id/bn_mgt5"
                         android:layout_width="220dp"
                         android:layout_height="220dp"
                         android:paddingRight="10dp"
@@ -74,7 +78,7 @@
                         android:scaleType="fitXY"
                         android:src="@drawable/alegria_logo" />
                     <ImageButton
-                        android:id="@+id/imageButton6"
+                        android:id="@+id/bn_mgt6"
                         android:layout_width="220dp"
                         android:layout_height="220dp"
 						android:paddingRight="10dp"
@@ -82,20 +86,20 @@
                         android:scaleType="fitXY"
                         android:src="@drawable/alegria_logo" />
                     <ImageButton
-                        android:id="@+id/imageButton7"
+                        android:id="@+id/bn_mgt7"
                         android:layout_width="220dp"
                         android:layout_height="220dp"
                          />
 
                     <ImageButton
-                        android:id="@+id/imageButton8"
+                        android:id="@+id/bn_mgt8"
                         android:layout_width="220dp"
                         android:layout_height="220dp"
                         android:background="@drawable/button_shape"
                         android:scaleType="fitXY"
                         android:src="@drawable/alegria_logo" />
                     <ImageButton
-                        android:id="@+id/imageButton9"
+                        android:id="@+id/bn_mgt9"
                         android:layout_width="220dp"
                         android:layout_height="220dp"
                          />

@@ -1,5 +1,6 @@
 package com.ashish.alegria3;
 
+import java.util.List;
 import java.util.Locale;
 
 import com.ashish.alegria3.AlegriaBody.AboutMeFragment;
@@ -27,7 +28,7 @@ public class EventActivity extends FragmentActivity {
 
 	SectionsPagerAdapter mSectionsPagerAdapter;
 	ViewPager mViewPager;
-	static int value;
+	static String value;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -37,93 +38,33 @@ public class EventActivity extends FragmentActivity {
 	    getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, 
 	                            WindowManager.LayoutParams.FLAG_FULLSCREEN);
 		
-		setContentView(R.layout.activity_alegria_body);
+		setContentView(R.layout.activity_event);
 		
-		mSectionsPagerAdapter = new SectionsPagerAdapter(
-				getSupportFragmentManager());
-
-		// Set up the ViewPager with the sections adapter.
-		mViewPager = (ViewPager) findViewById(R.id.pager);
-		mViewPager.setAdapter(mSectionsPagerAdapter);
-
-	}
-
-	public class SectionsPagerAdapter extends FragmentPagerAdapter {
-
-		public SectionsPagerAdapter(FragmentManager fm) {
-			super(fm);
-		}
-
-		@Override
-		public Fragment getItem(int position) {
-			Bundle extras = getIntent().getExtras();
-			if (extras != null) {
-			    value = extras.getInt("Type");
-			}
-			
-			Fragment fragment;
-			// getItem is called to instantiate the fragment for the given page.
-			// Return a DummySectionFragment (defined as a static inner class
-			// below) with the page number as its lone argument.
-				fragment = new DummySectionFragment();
-			Bundle args = new Bundle();
-			args.putInt(DummySectionFragment.ARG_SECTION_NUMBER, position + 1);
-			fragment.setArguments(args); 
-			return fragment;
-			
-		}
-
-		@Override
-		public int getCount() {
-			// Show 4 total pages.
-			return 4;
-		}
-
-		@SuppressLint("DefaultLocale")
-		@Override
-		public CharSequence getPageTitle(int position) {
-			Locale l = Locale.getDefault();
-			switch (position) {
-			case 0:
-				return getString(R.string.title_section1).toUpperCase(l);
-			case 1:
-				return getString(R.string.title_section2).toUpperCase(l);
-			case 2:
-				return getString(R.string.title_section3).toUpperCase(l);
-			case 3:
-				return getString(R.string.title_section4).toUpperCase(l);
-			}
-			return null;
-		}
-	}
-	
-	public static class DummySectionFragment extends Fragment {
-		/**
-		 * The fragment argument representing the section number for this
-		 * fragment.
-		 */
-		public static final String ARG_SECTION_NUMBER = "section_number";
-		public DummySectionFragment() {
-		}
+		XmlPullFeedParser xpp = new XmlPullFeedParser(this);
 		
+		List<Event> events = xpp.parse();
+		
+		Bundle extras = getIntent().getExtras();
+        if (extras != null) {
+            value = extras.getString("EventCode");
+        }
+        Event selectedEvent = new Event();
+        
+	        for(Event item : events) {
+	        	if(item.getEventId().equalsIgnoreCase(value)){
+	        		selectedEvent = item;
+	        	}
+	        }
+		
+		TextView tv_date_text = (TextView) this.findViewById(R.id.tv_date_text);
+		TextView tv_rules_text = (TextView) this.findViewById(R.id.tv_rules_text);
+		TextView tv_title_event = (TextView) this.findViewById(R.id.tv_title_event);
 
-		@Override
-		public View onCreateView(LayoutInflater inflater, ViewGroup container,
-				Bundle savedInstanceState) {
-			View rootView = inflater.inflate(
-					R.layout.fragment_alegria_body_dummy, container, false);
-			TextView dummyTextView = (TextView) rootView
-					.findViewById(R.id.section_label);
-			if (value != 0) {
-				dummyTextView.setText("Intent Extra recieved");
-
-			}
-			else
-			dummyTextView.setText(Integer.toString(getArguments().getInt(
-					ARG_SECTION_NUMBER)));
-			return rootView;
-		}
+		tv_date_text.setText(selectedEvent.getEventId());
+		tv_title_event.setText(selectedEvent.getTitle());
+		tv_rules_text.setText(selectedEvent.getRules().toString());
+		
+		
 	}
-	
 
 }

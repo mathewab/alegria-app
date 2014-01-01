@@ -1,16 +1,16 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/event_fragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ffff00" >
+    android:background="@drawable/body_bg" >
     
                     <ImageView
                         android:id="@+id/imageButton1"
                         android:layout_width="wrap_content"
                         android:layout_height="100dp"
                         android:scaleType="fitXY"
-                        android:src="@drawable/bg_cover2" />
+                        android:src="@drawable/header_bg" />
+    
 
 <android.support.v4.view.ViewPager xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
@@ -36,5 +36,6 @@
         android:textColor="#fff" />
 
 </android.support.v4.view.ViewPager>
+
 
 </RelativeLayout>

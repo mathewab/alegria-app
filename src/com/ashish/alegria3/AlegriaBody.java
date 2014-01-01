@@ -9,19 +9,17 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.app.NavUtils;
 import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
-public class AlegriaBody extends FragmentActivity implements OnClickListener{
+public class AlegriaBody extends FragmentActivity {
 
 	/**
 	 * The {@link android.support.v4.view.PagerAdapter} that will provide
@@ -97,8 +95,8 @@ public class AlegriaBody extends FragmentActivity implements OnClickListener{
 
 		@Override
 		public int getCount() {
-			// Show 4 total pages.
-			return 4;
+			// Show 3 total pages.
+			return 3;
 		}
 
 		@SuppressLint("DefaultLocale")
@@ -112,8 +110,6 @@ public class AlegriaBody extends FragmentActivity implements OnClickListener{
 				return getString(R.string.title_section2).toUpperCase(l);
 			case 2:
 				return getString(R.string.title_section3).toUpperCase(l);
-			case 3:
-				return getString(R.string.title_section4).toUpperCase(l);
 			}
 			return null;
 		}
@@ -163,7 +159,7 @@ public class AlegriaBody extends FragmentActivity implements OnClickListener{
 			return rootView;
 		}
 	}
-	public static class EventsFragment extends Fragment {
+	public static class EventsFragment extends Fragment implements OnClickListener {
 		/**
 		 * The fragment argument representing the section number for this
 		 * fragment.
@@ -178,28 +174,52 @@ public class AlegriaBody extends FragmentActivity implements OnClickListener{
 				Bundle savedInstanceState) {
 			View rootView = inflater.inflate(
 					R.layout.events_fragment, container, false);
+			
+			ImageButton bn_mgt1 = (ImageButton) rootView.findViewById(R.id.bn_mgt1);
+			ImageButton bn_mgt2 = (ImageButton) rootView.findViewById(R.id.bn_mgt2);
+			ImageButton bn_mgt3 = (ImageButton) rootView.findViewById(R.id.bn_mgt3);
+			ImageButton bn_mgt4 = (ImageButton) rootView.findViewById(R.id.bn_mgt4);
+			ImageButton bn_mgt5 = (ImageButton) rootView.findViewById(R.id.bn_mgt5);
+			ImageButton bn_mgt6 = (ImageButton) rootView.findViewById(R.id.bn_mgt6);
+			ImageButton bn_mgt7 = (ImageButton) rootView.findViewById(R.id.bn_mgt7);
+			ImageButton bn_mgt8 = (ImageButton) rootView.findViewById(R.id.bn_mgt8);
+			ImageButton bn_mgt9 = (ImageButton) rootView.findViewById(R.id.bn_mgt9);
+
+			bn_mgt1.setOnClickListener(this);
+			bn_mgt2.setOnClickListener(this);
+			bn_mgt3.setOnClickListener(this);
+			bn_mgt4.setOnClickListener(this);
+			bn_mgt5.setOnClickListener(this);
+			bn_mgt6.setOnClickListener(this);
+			bn_mgt7.setOnClickListener(this);
+			bn_mgt8.setOnClickListener(this);
+			bn_mgt9.setOnClickListener(this);
+
 			return rootView;
 		}
-	}
-	@Override
-	public void onClick(View v) {
-		Intent intent;
-		switch(v.getId()){
-		  case R.id.imageButton1: /** Start a new Activity MyCards.java */
-			  System.out.println("Button clicked");
-		       intent = new Intent("com.ashish.alegria.EVENTACTIVITY");
-		       this.startActivity(intent);
-		       break;
+		@Override
+		public void onClick(View v) {
+			Intent intent;
+			intent = new Intent("com.ashish.alegria3.EVENTACTIVITY");
+			intent.putExtra("EventCode", "");
 
-		  case R.id.imageButton2: /** AlerDialog when click on Exit */
-		       intent = new Intent("com.ashish.alegria.EVENTACTIVITY");
-		       intent.putExtra("Type", 1);
-		       this.startActivity(intent);
-		       break;
-		  }
+			switch(v.getId()){
+			  case R.id.bn_mgt1:
+				  System.out.println("Button clicked");
+			       break;
 
-		
+			  case R.id.bn_mgt2: 
+			       intent.putExtra("Type", 1);
+			       intent.putExtra("EventCode", "MGT101");
+			       break;
+			  }
+		      this.startActivity(intent);
+
+
+			
+		}
 	}
+	
 
 
 }
