@@ -4,6 +4,7 @@
     android:id="@+id/event_fragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#88f3f17c"
     >
 
     <ScrollView
@@ -38,77 +39,75 @@
                     android:layout_height="match_parent"
                     android:orientation="horizontal" >
 
-                    <ImageButton
+                    <Button
                         android:id="@+id/bn_mgt1"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
                         android:background="@drawable/button_shape"
                         android:scaleType="fitXY"
-                        android:contentDescription="khiladi no 1"
+                        android:text="khiladi no 1"
                         android:src="@drawable/alegria_logo" />
 
-                    <ImageButton
+                    <Button
                         android:id="@+id/bn_mgt2"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
-                        android:contentDescription="finto parlimento"
-                        
-                       />
+                        android:text="finto parlimento" />
 
-                    <ImageButton
+                    <Button
                         android:id="@+id/bn_mgt3"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
                         android:background="@drawable/button_shape"
                         android:scaleType="fitXY"
-                        android:contentDescription="vyapar"
+                        android:text="vyapar"
                         android:src="@drawable/alegria_logo" />
 
-                    <ImageButton
+                    <Button
                         android:id="@+id/bn_mgt4"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
-                        android:contentDescription="analyse this"
+                        android:text="analyse this"
                          />
 
-                    <ImageButton
+                    <Button
                         android:id="@+id/bn_mgt5"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
                         android:paddingRight="10dp"
                         android:background="@drawable/button_shape"
                         android:scaleType="fitXY"
-                        android:contentDescription="share-e-bazar"
+                        android:text="share-e-bazar"
                         android:src="@drawable/alegria_logo" />
-                    <ImageButton
+                    <Button
                         android:id="@+id/bn_mgt6"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
 						android:paddingRight="10dp"
                         android:background="@drawable/button_shape"
                         android:scaleType="fitXY"
-                        android:contentDescription="ad-o-mania"
+                        android:text="ad-o-mania"
                         android:src="@drawable/alegria_logo" />
-                    <ImageButton
+                    <Button
                         android:id="@+id/bn_mgt7"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
-                        android:contentDescription="the bazar"
+                        android:text="the bazar"
                          />
 
-                    <ImageButton
+                    <Button
                         android:id="@+id/bn_mgt8"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
                         android:background="@drawable/button_shape"
                         android:scaleType="fitXY"
-                        android:contentDescription="jumble -gamble"
+                        android:text="jumble -gamble"
                         android:src="@drawable/alegria_logo" />
-                    <ImageButton
+                    <Button
                         android:id="@+id/bn_mgt9"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
-                        android:contentDescription="hisssss..."
+                        android:text="hisssss..."
                          />
                 </LinearLayout>
             </HorizontalScrollView>
@@ -135,96 +134,98 @@
 
                     <ImageButton
                         android:id="@+id/bn_te01"
-                        android:contentDescription="Death race"
+                        android:background="@drawable/button_shape"
+                        android:src="@drawable/alegria_logo"
+                        android:text="Death race"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
                         />
 
-                    <ImageButton
+                    <Button
                         android:id="@+id/bn_te02"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
-                        android:contentDescription="time chase"
+                        android:text="time chase"
                         />
 
-                    <ImageButton
+                    <Button
                         android:id="@+id/bn_te03"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
-                        android:contentDescription="can u follow me"
+                        android:text="can u follow me"
                         />
 
-                    <ImageButton
+                    <Button
                         android:id="@+id/bn_te04"
-                        android:contentDescription="xtreme fighter"
+                        android:text="xtreme fighter"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
                          />
 
-                    <ImageButton
+                    <Button
                         android:id="@+id/bn_te05"
-                        android:contentDescription="machine primere league"
+                        android:text="machine primere league"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
                          />
-                    <ImageButton
+                    <Button
                         android:id="@+id/bn_te06"
                         android:layout_width="150dp"
-                        android:contentDescription="Bhool bhulaiya"
+                        android:text="Bhool bhulaiya"
                         android:layout_height="150dp"
                          />
-                    <ImageButton
+                    <Button
                         android:id="@+id/bn_te07"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
-                        android:contentDescription="robodecathon"
+                        android:text="robodecathon"
                          />
-                    <ImageButton
+                    <Button
                         android:id="@+id/bn_te08"
-                        android:contentDescription="tpp"
+                        android:text="tpp"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
                          />
-                    <ImageButton
+                    <Button
                         android:id="@+id/bn_te09"
                         android:layout_width="150dp"
-                        android:contentDescription="web hunt"
+                        android:text="web hunt"
                         android:layout_height="150dp"
                          />
-                    <ImageButton
+                    <Button
                         android:id="@+id/bn_te10"
-                        android:contentDescription="code master"
+                        android:text="code master"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
                          />
-                    <ImageButton
+                    <Button
                         android:id="@+id/bn_te11"
                         android:layout_width="150dp"
-                        android:contentDescription="junkyard wars"
+                        android:text="junkyard wars"
                         android:layout_height="150dp"
                          />
-                    <ImageButton
+                    <Button
                         android:id="@+id/bn_te12"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
-                        android:contentDescription="techroadies 2.0"
+                        android:text="techroadies 2.0"
                          />
-                    <ImageButton
+                    <Button
                         android:id="@+id/bn_te13"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
-                        android:contentDescription="mock interviews"
+                        android:text="mock interviews"
                          />
-                    <ImageButton
+                    <Button
                         android:id="@+id/bn_te14"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
-                        android:contentDescription="robo-pirates"
+                        android:text="robo-pirates"
                          />
-                    <ImageButton
+                    <Button
                         android:id="@+id/bn_te15"
                         android:layout_width="150dp"
-                        android:contentDescription="3D modelling"
+                        android:text="3D modelling"
                         android:layout_height="150dp"
                          />
                 </LinearLayout>
@@ -250,72 +251,72 @@
                     android:layout_height="match_parent"
                     android:orientation="horizontal" >
 
-                    <ImageButton
+                    <Button
                         android:id="@+id/bn_pa01"
-                     	android:contentDescription="Bring it on"
+                     	android:text="Bring it on"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
                         />
 
-                    <ImageButton
+                    <Button
                         android:id="@+id/bn_pa02"
-                     	android:contentDescription="footloose"
+                     	android:text="footloose"
                         android:layout_width="150dp"
                         android:layout_height="150dp" />
 
-                    <ImageButton
+                    <Button
                         android:id="@+id/bn_pa03"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
-                        android:contentDescription="stomp the floor"
+                        android:text="stomp the floor"
                         />
 
-                    <ImageButton
+                    <Button
                         android:id="@+id/bn_pa04"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
-                        android:contentDescription="in sync"
+                        android:text="in sync"
                         />
 
-                    <ImageButton
+                    <Button
                         android:id="@+id/bn_pa05"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
-                        android:contentDescription="reinventing traditions"
+                        android:text="reinventing traditions"
                         />
-                    <ImageButton
+                    <Button
                         android:id="@+id/bn_pa06"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
-                        android:contentDescription="kalakshetra"
+                        android:text="kalakshetra"
                         />
-                    <ImageButton
+                    <Button
                         android:id="@+id/bn_pa07"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
-                        android:contentDescription="vocalize"
+                        android:text="vocalize"
                         />
-                    <ImageButton
+                    <Button
                         android:id="@+id/bn_pa08"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
-                        android:contentDescription="rap-shap"
+                        android:text="rap-shap"
                         />
-                    <ImageButton
+                    <Button
                         android:id="@+id/bn_pa09"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
-                        android:contentDescription="Beats and chords"
+                        android:text="Beats and chords"
                         />
-                    <ImageButton
+                    <Button
                         android:id="@+id/bn_pa10"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
-                        android:contentDescription="i me myself"
+                        android:text="i me myself"
                         />
-                    <ImageButton
+                    <Button
                         android:id="@+id/bn_pa11"
-                        android:contentDescription="take-1"
+                        android:text="take-1"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
                         />
@@ -342,62 +343,62 @@
                     android:layout_height="match_parent"
                     android:orientation="horizontal" >
 
-                                        <ImageButton
+                                        <Button
                         android:id="@+id/bn_fa01"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
-                        android:contentDescription="artistic fantasy"
+                        android:text="artistic fantasy"
                         />
 
-                    <ImageButton
+                    <Button
                         android:id="@+id/bn_fa02"
-                        android:contentDescription="poster mania"
+                        android:text="poster mania"
                         android:layout_width="150dp"
                         android:layout_height="150dp" />
 
-                    <ImageButton
+                    <Button
                         android:id="@+id/bn_fa03"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
-                        android:contentDescription="art of colours"
+                        android:text="art of colours"
                         />
 
-                    <ImageButton
+                    <Button
                         android:id="@+id/bn_fa04"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
-                        android:contentDescription="intricate patterns"
+                        android:text="intricate patterns"
                         />
 
-                    <ImageButton
+                    <Button
                         android:id="@+id/bn_fa05"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
-                        android:contentDescription="nail fantasy"
+                        android:text="nail fantasy"
                         />
-                    <ImageButton
+                    <Button
                         android:id="@+id/bn_fa06"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
-                        android:contentDescription="Blot the tee"
+                        android:text="Blot the tee"
                         />
-                    <ImageButton
+                    <Button
                         android:id="@+id/bn_fa07"
-                        android:contentDescription="mask me"
+                        android:text="mask me"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
                         />
-                    <ImageButton
+                    <Button
                         android:id="@+id/bn_fa08"
                         android:layout_width="150dp"
-                        android:contentDescription="Bodygraphy"
+                        android:text="Bodygraphy"
                         android:layout_height="150dp"
                         />
-                    <ImageButton
+                    <Button
                         android:id="@+id/bn_fa09"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
-                       android:contentDescription="tooning around"
+                       android:text="tooning around"
                         />
                     
         
@@ -425,114 +426,114 @@
                     android:layout_height="match_parent"
                     android:orientation="horizontal" >
 
-                                        <ImageButton
+                                        <Button
                         android:id="@+id/bn_sg01"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
-                        android:contentDescription="counter strike 1.6"
+                        android:text="counter strike 1.6"
                         />
 
-                    <ImageButton
+                    <Button
                         android:id="@+id/bn_sg02"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
-                        android:contentDescription="Dota" />
+                        android:text="Dota" />
 
-                    <ImageButton
+                    <Button
                         android:id="@+id/bn_sg03"
                         android:layout_width="150dp"
-                        android:contentDescription="fifa"
+                        android:text="fifa"
                         android:layout_height="150dp"
                         />
 
-                    <ImageButton
+                    <Button
                         android:id="@+id/bn_sg04"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
-                        android:contentDescription="nfs most wanted"
+                        android:text="nfs most wanted"
                         />
 
-                    <ImageButton
+                    <Button
                         android:id="@+id/bn_sg05"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
-                        android:contentDescription="futsal(boys)"/>
-                    <ImageButton
+                        android:text="futsal(boys)"/>
+                    <Button
                         android:id="@+id/bn_sg06"
                         android:layout_width="150dp"
-                        android:contentDescription="futsal(girls)"
+                        android:text="futsal(girls)"
                         android:layout_height="150dp"
                         />
-                    <ImageButton
+                    <Button
                         android:id="@+id/bn_sg07"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
-                        android:contentDescription="basketball"
+                        android:text="basketball"
                         />
-                    <ImageButton
+                    <Button
                         android:id="@+id/bn_sg08"
-                        android:contentDescription="Boxcricket"
+                        android:text="Boxcricket"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
                         />
-                    <ImageButton
+                    <Button
                         android:id="@+id/bn_sg09"
-                        android:contentDescription="volleyball"
+                        android:text="volleyball"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
                         />
 
-                    <ImageButton
+                    <Button
                         android:id="@+id/bn_sg10"
-                        android:contentDescription="throwball(girls)"
+                        android:text="throwball(girls)"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
                         />
                     
-                    <ImageButton
+                    <Button
                         android:id="@+id/bn_sg11"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
-                        android:contentDescription="tug of war"
+                        android:text="tug of war"
                         />
 
-                    <ImageButton
+                    <Button
                         android:id="@+id/bn_sg12"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
-                        android:contentDescription="chess" />
+                        android:text="chess" />
 
-                    <ImageButton
+                    <Button
                         android:id="@+id/bn_sg13"
-                        android:contentDescription="table tennis"
+                        android:text="table tennis"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
                         />
 
-                    <ImageButton
+                    <Button
                         android:id="@+id/bn_sg14"
-                        android:contentDescription="carrom"
+                        android:text="carrom"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
                         />
 
-                    <ImageButton
+                    <Button
                         android:id="@+id/bn_sg15"
-                        android:contentDescription="Neo cricket"
+                        android:text="Neo cricket"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
                         />
-                    <ImageButton
+                    <Button
                         android:id="@+id/bn_sg16"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
-                        android:contentDescription="iom air-rifle shooting"
+                        android:text="iom air-rifle shooting"
                         />
-                    <ImageButton
+                    <Button
                         android:id="@+id/bn_sg17"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
-                        android:contentDescription="sports freak"
+                        android:text="sports freak"
                         />
         		</LinearLayout>
         </HorizontalScrollView>
@@ -556,114 +557,114 @@
                     android:layout_height="match_parent"
                     android:orientation="horizontal" >
 
-                    <ImageButton
+                    <Button
                         android:id="@+id/bn_w01"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
-                        android:contentDescription="photo and video"
+                        android:text="photo and video"
                         />
 
-                    <ImageButton
+                    <Button
                         android:id="@+id/bn_w02"
                         android:layout_width="150dp"
-                        android:contentDescription="pottery on a wheel"
+                        android:text="pottery on a wheel"
                         android:layout_height="150dp" />
 
-                    <ImageButton
+                    <Button
                         android:id="@+id/bn_w03"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
-                        android:contentDescription="architechture model making"
+                        android:text="architechture model making"
                         />
 
-                    <ImageButton
+                    <Button
                         android:id="@+id/bn_w04"
-                        android:contentDescription="warli painting"
+                        android:text="warli painting"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
                         />
 
-                    <ImageButton
+                    <Button
                         android:id="@+id/bn_w05"
                         android:layout_width="150dp"
-                        android:contentDescription="clay modelling"
+                        android:text="clay modelling"
                         android:layout_height="150dp"
                         />
-                    <ImageButton
+                    <Button
                         android:id="@+id/bn_w06"
                         android:layout_width="150dp"
-                        android:contentDescription="waste paper modelling"
+                        android:text="waste paper modelling"
                         android:layout_height="150dp"
                         />
-                    <ImageButton
+                    <Button
                         android:id="@+id/bn_w07"
                         android:layout_width="150dp"
-                        android:contentDescription="dramatics"
+                        android:text="dramatics"
                         android:layout_height="150dp"
                         />
-                    <ImageButton
+                    <Button
                         android:id="@+id/bn_w08"
                         android:layout_width="150dp"
-                        android:contentDescription="metal foil workshops"
+                        android:text="metal foil workshops"
                         android:layout_height="150dp"
                         />
-                    <ImageButton
+                    <Button
                         android:id="@+id/bn_w09"
-                        android:contentDescription="atmaraksha"
+                        android:text="atmaraksha"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
                         />
 
-                    <ImageButton
+                    <Button
                         android:id="@+id/bn_w10"
                         android:layout_width="150dp"
-                        android:contentDescription="wood carving"
+                        android:text="wood carving"
                         android:layout_height="150dp"
                         />
                     
-                    <ImageButton
+                    <Button
                         android:id="@+id/bn_w11"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
-                        android:contentDescription="calligraphy"
+                        android:text="calligraphy"
                         />
 
-                    <ImageButton
+                    <Button
                         android:id="@+id/bn_w12"
                         android:layout_width="150dp"
-                        android:contentDescription="paper furniture making"
+                        android:text="paper furniture making"
                         android:layout_height="150dp" />
 
-                    <ImageButton
+                    <Button
                         android:id="@+id/bn_w13"
                         android:layout_width="150dp"
-                        android:contentDescription="salsa"
+                        android:text="salsa"
                         android:layout_height="150dp"
                         />
 
-                    <ImageButton
+                    <Button
                         android:id="@+id/bn_w14"
                         android:layout_width="150dp"
-                        android:contentDescription="death race"
+                        android:text="death race"
                         android:layout_height="150dp"
                         />
 
-                    <ImageButton
+                    <Button
                         android:id="@+id/bn_w15"
                         android:layout_width="150dp"
-                        android:contentDescription="time chase"
+                        android:text="time chase"
                         android:layout_height="150dp"
                         />
-                    <ImageButton
+                    <Button
                         android:id="@+id/bn_w16"
                         android:layout_width="150dp"
-                        android:contentDescription="can u follow me"
+                        android:text="can u follow me"
                         android:layout_height="150dp"
                         />
-                    <ImageButton
+                    <Button
                         android:id="@+id/bn_w17"
                         android:layout_width="150dp"
-                        android:contentDescription="robo-pirates"
+                        android:text="robo-pirates"
                         android:layout_height="150dp"
                         />
         		</LinearLayout>
@@ -688,61 +689,61 @@
                     android:layout_height="match_parent"
                     android:orientation="horizontal" >
 
-                    <ImageButton
+                    <Button
                         android:id="@+id/bn_l1"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
                         android:background="@drawable/button_shape"
                         android:scaleType="fitXY"
-                        android:contentDescription="wordsworth"
+                        android:text="wordsworth"
                         android:src="@drawable/alegria_logo" />
 
-                    <ImageButton
+                    <Button
                         android:id="@+id/bn_l2"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
-                        android:contentDescription="right to write"
+                        android:text="right to write"
                         android:background="@drawable/button_shape"
                         android:scaleType="fitXY"
                         android:src="@drawable/alegria_logo" />
                         
                        />
 
-                    <ImageButton
+                    <Button
                         android:id="@+id/bn_l3"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
                         android:background="@drawable/button_shape"
                         android:scaleType="fitXY"
                         android:src="@drawable/alegria_logo"
-                        android:contentDescription="battle of words" />
+                        android:text="battle of words" />
                     
 
-                    <ImageButton
+                    <Button
                         android:id="@+id/bn_l4"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
                         android:background="@drawable/button_shape"
                         android:scaleType="fitXY"
                         android:src="@drawable/alegria_logo"
-                        android:contentDescription="me marathi" />
+                        android:text="me marathi" />
                         
                          />
 
-                    <ImageButton
+                    <Button
                         android:id="@+id/bn_l5"
                         android:layout_width="150dp"
-                        android:contentDescription="spell to win"
+                        android:text="spell to win"
                         android:layout_height="150dp"
                         android:paddingRight="10dp"
                         android:background="@drawable/button_shape"
                         android:scaleType="fitXY"
                         android:src="@drawable/alegria_logo" />
-                    <ImageButton
+                    <Button
                         android:id="@+id/bn_l6"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
-                        android:contentDescription="relay writing"
+                        android:text="relay writing"
 						android:paddingRight="10dp"
                         android:background="@drawable/button_shape"
                         android:scaleType="fitXY"
@@ -770,61 +771,61 @@
                     android:layout_height="match_parent"
                     android:orientation="horizontal" >
 
-                    <ImageButton
+                    <Button
                         android:id="@+id/bn_in1"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
                         android:background="@drawable/button_shape"
                         android:scaleType="fitXY"
-                        android:contentDescription="Strut it or shut it"
+                        android:text="Strut it or shut it"
                         android:src="@drawable/alegria_logo" />
 
-                    <ImageButton
+                    <Button
                         android:id="@+id/bn_in2"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
-                        android:contentDescription="mr and ms alegira"
+                        android:text="mr and ms alegira"
                         android:background="@drawable/button_shape"
                         android:scaleType="fitXY"
                         android:src="@drawable/alegria_logo" />
                         
                        />
 
-                    <ImageButton
+                    <Button
                         android:id="@+id/bn_in3"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
-                        android:contentDescription="reel stories"
+                        android:text="reel stories"
                         android:background="@drawable/button_shape"
                         android:scaleType="fitXY"
                         android:src="@drawable/alegria_logo" />
 
-                    <ImageButton
+                    <Button
                         android:id="@+id/bn_in4"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
-                        android:contentDescription="hocus focus"
+                        android:text="hocus focus"
                         android:background="@drawable/button_shape"
                         android:scaleType="fitXY"
                         android:src="@drawable/alegria_logo" />
                         
                          />
 
-                    <ImageButton
+                    <Button
                         android:id="@+id/bn_in5"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
                         android:paddingRight="10dp"
                         android:background="@drawable/button_shape"
                         android:scaleType="fitXY"
-                        android:contentDescription="ptv roadies"
+                        android:text="ptv roadies"
                         android:src="@drawable/alegria_logo" />
-                    <ImageButton
+                    <Button
                         android:id="@+id/bn_in6"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
 						android:paddingRight="10dp"
-                        android:contentDescription="the hunting games"
+                        android:text="the hunting games"
                         android:background="@drawable/button_shape"
                         android:scaleType="fitXY"
                         android:src="@drawable/alegria_logo" />

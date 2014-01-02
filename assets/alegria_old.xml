@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<management >
+<event id="MGT101">
+	<title>Ad Mad</title>
+	<desc>This is a timepass event</desc>
+	<date>28-12-2013</date>
+	<time>10:00</time>
+	<duration>02:00</duration>
+	<rate>45</rate>
+	<rule>This is rule1</rule>
+	<head>Ashish Mathew</head>
+</event>
+<event id="MGT102">
+	<title>Mad ad</title>
+	<date>28-12-2013</date>
+	<time>10:00</time>
+	<duration>02:00</duration>
+	<rate>45</rate>
+	<rule>This is rule2 </rule>
+	<head>Ashish Mathew</head>
+</event>
+</management>
+	

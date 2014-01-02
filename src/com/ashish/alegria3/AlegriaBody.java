@@ -16,7 +16,7 @@ import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
-import android.widget.ImageButton;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class AlegriaBody extends FragmentActivity {
@@ -191,16 +191,27 @@ public class AlegriaBody extends FragmentActivity {
 			View rootView = inflater.inflate(
 					R.layout.events_fragment, container, false);
 			
-			ImageButton bn_mgt1 = (ImageButton) rootView.findViewById(R.id.bn_mgt1);
-			ImageButton bn_mgt2 = (ImageButton) rootView.findViewById(R.id.bn_mgt2);
-			ImageButton bn_mgt3 = (ImageButton) rootView.findViewById(R.id.bn_mgt3);
-			ImageButton bn_mgt4 = (ImageButton) rootView.findViewById(R.id.bn_mgt4);
-			ImageButton bn_mgt5 = (ImageButton) rootView.findViewById(R.id.bn_mgt5);
-			ImageButton bn_mgt6 = (ImageButton) rootView.findViewById(R.id.bn_mgt6);
-			ImageButton bn_mgt7 = (ImageButton) rootView.findViewById(R.id.bn_mgt7);
-			ImageButton bn_mgt8 = (ImageButton) rootView.findViewById(R.id.bn_mgt8);
-			ImageButton bn_mgt9 = (ImageButton) rootView.findViewById(R.id.bn_mgt9);
+			Button bn_mgt1 = (Button) rootView.findViewById(R.id.bn_mgt1);
+			Button bn_mgt2 = (Button) rootView.findViewById(R.id.bn_mgt2);
+			Button bn_mgt3 = (Button) rootView.findViewById(R.id.bn_mgt3);
+			Button bn_mgt4 = (Button) rootView.findViewById(R.id.bn_mgt4);
+			Button bn_mgt5 = (Button) rootView.findViewById(R.id.bn_mgt5);
+			Button bn_mgt6 = (Button) rootView.findViewById(R.id.bn_mgt6);
+			Button bn_mgt7 = (Button) rootView.findViewById(R.id.bn_mgt7);
+			Button bn_mgt8 = (Button) rootView.findViewById(R.id.bn_mgt8);
+			Button bn_mgt9 = (Button) rootView.findViewById(R.id.bn_mgt9);
 
+			Button bn_fa01 = (Button) rootView.findViewById(R.id.bn_fa01);
+			Button bn_fa02 = (Button) rootView.findViewById(R.id.bn_fa02);
+			Button bn_fa03 = (Button) rootView.findViewById(R.id.bn_fa03);
+			Button bn_fa04 = (Button) rootView.findViewById(R.id.bn_fa04);
+			Button bn_fa05 = (Button) rootView.findViewById(R.id.bn_fa05);
+			Button bn_fa06 = (Button) rootView.findViewById(R.id.bn_fa06);
+			Button bn_fa07 = (Button) rootView.findViewById(R.id.bn_fa07);
+			Button bn_fa08 = (Button) rootView.findViewById(R.id.bn_fa08);
+			Button bn_fa09 = (Button) rootView.findViewById(R.id.bn_fa09);
+			
+			
 			bn_mgt1.setOnClickListener(this);
 			bn_mgt2.setOnClickListener(this);
 			bn_mgt3.setOnClickListener(this);
@@ -210,6 +221,16 @@ public class AlegriaBody extends FragmentActivity {
 			bn_mgt7.setOnClickListener(this);
 			bn_mgt8.setOnClickListener(this);
 			bn_mgt9.setOnClickListener(this);
+
+			bn_fa01.setOnClickListener(this);
+			bn_fa02.setOnClickListener(this);
+			bn_fa03.setOnClickListener(this);
+			bn_fa04.setOnClickListener(this);
+			bn_fa05.setOnClickListener(this);
+			bn_fa06.setOnClickListener(this);
+			bn_fa07.setOnClickListener(this);
+			bn_fa08.setOnClickListener(this);
+			bn_fa09.setOnClickListener(this);
 
 			return rootView;
 		}
@@ -227,6 +248,17 @@ public class AlegriaBody extends FragmentActivity {
 			  case R.id.bn_mgt2: intent.putExtra("EventCode", "MGT101"); break; 
 			  case R.id.bn_mgt3: intent.putExtra("EventCode", "MGT102"); break;
 			  
+			  case R.id.bn_fa01: intent.putExtra("EventCode", "FA101"); break; 
+			  case R.id.bn_fa02: intent.putExtra("EventCode", "FA102"); break; 
+			  case R.id.bn_fa03: intent.putExtra("EventCode", "FA103"); break; 
+			  case R.id.bn_fa04: intent.putExtra("EventCode", "FA104"); break; 
+			  case R.id.bn_fa05: intent.putExtra("EventCode", "FA105"); break; 
+			  case R.id.bn_fa06: intent.putExtra("EventCode", "FA106"); break; 
+			  case R.id.bn_fa07: intent.putExtra("EventCode", "FA107"); break; 
+			  case R.id.bn_fa08: intent.putExtra("EventCode", "FA108"); break; 
+			  case R.id.bn_fa09: intent.putExtra("EventCode", "FA109"); break; 
+
+			 
 			  }
 		      this.startActivity(intent);
 

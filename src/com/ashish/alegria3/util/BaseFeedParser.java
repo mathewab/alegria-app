@@ -23,6 +23,7 @@ public abstract class BaseFeedParser implements FeedParser {
     protected static final  String TITLE = "title";
     protected static final  String EVENT = "event";
     protected static final  String EVENT_HEAD = "head";
+    protected static final  String DESCRIPTION = "desc";
 
     
     public URL feedUrl;

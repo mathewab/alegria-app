@@ -63,10 +63,12 @@ public class EventActivity extends FragmentActivity {
 		TextView tv_rules_text = (TextView) this.findViewById(R.id.tv_rules_text);
 		TextView tv_title_event = (TextView) this.findViewById(R.id.tv_title_event);
 		TextView tv_time_text = (TextView) this.findViewById(R.id.tv_time_text);
+		TextView tv_description = (TextView) this.findViewById(R.id.tv_description);
 
+		tv_description.setText(selectedEvent.getDesc());
 		tv_date_text.setText(selectedEvent.getEventDate());
 		tv_title_event.setText(selectedEvent.getTitle());
-		tv_rules_text.setText(selectedEvent.getRules().toString());
+		tv_rules_text.setText(selectedEvent.getRules());
 		tv_rate_text.setText(selectedEvent.getRate());
 		tv_duration_text.setText(selectedEvent.getDuration());
 		tv_head_text.setText(selectedEvent.getEventHead());

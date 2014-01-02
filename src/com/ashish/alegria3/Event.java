@@ -12,9 +12,10 @@ public class Event implements Comparable<Event>{
 	private String time;
 	private String	rate;
 	private String duration;
-	private List<String> rules;
+	private String rules;
 	private String eventHead;
 	private String title;
+	public String desc;
 	
 	static SimpleDateFormat FORMATTER = 
 	        new SimpleDateFormat("dd-MM-yyyy");
@@ -25,7 +26,7 @@ public class Event implements Comparable<Event>{
 	
 	public Event() {
 		super();
-		rules = new ArrayList<String>();
+		rules = "Information not availaible";
 		eventId = "Information not availaible";
 		eventDate = "Information not availaible";
 		time = "Information not availaible";
@@ -33,7 +34,16 @@ public class Event implements Comparable<Event>{
 		duration = "Information not availaible";
 		eventHead  = "Information not availaible";
 		title = "Information not availaible";
+		desc = "Information not availaible";
 
+	}
+
+	public String getDesc() {
+		return desc;
+	}
+
+	public void setDesc(String desc) {
+		this.desc = desc;
 	}
 
 	public String getTitle() {
@@ -88,12 +98,12 @@ public class Event implements Comparable<Event>{
 		this.duration = duration;
 	}
 
-	public List<String> getRules() {
+	public String getRules() {
 		return rules;
 	}
 
 
-	public void setRules(List<String> rules) {
+	public void setRules(String rules) {
 		this.rules = rules;
 	}
 
