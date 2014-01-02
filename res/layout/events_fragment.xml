@@ -24,7 +24,7 @@
                 android:gravity="center"
                 android:paddingTop="7dp"
                 android:text="Management Events"
-                android:textColor="@color/white"
+                android:background="#88f3f17c"
                 android:textSize="17sp" />
 
             <HorizontalScrollView
@@ -112,6 +112,7 @@
                 android:gravity="center"
                 android:paddingTop="7dp"
                 android:text="Technical Events"
+                android:background="#88f3f17c"
                 android:textSize="17sp" />
 
             <HorizontalScrollView
@@ -163,6 +164,7 @@
                 android:gravity="center"
                 android:paddingTop="7dp"
                 android:text="Performing Arts"
+                android:background="#88f3f17c"
                 android:textSize="17sp" />
 
             <HorizontalScrollView

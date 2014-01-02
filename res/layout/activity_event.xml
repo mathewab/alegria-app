@@ -16,7 +16,8 @@
         android:layout_height="match_parent"
         android:layout_alignParentLeft="true"
         android:layout_marginTop="100dp"
-        android:orientation="vertical" >
+        android:orientation="vertical"
+        android:textAlignment="center" >
 
         <TextView
             android:id="@+id/tv_title_event"
@@ -26,49 +27,143 @@
             android:background="#ff2323"
             android:paddingBottom="5dp"
             android:paddingTop="10dp"
-            android:textAlignment="center"
             android:text="Event Name"
+            android:textAllCaps="true"
             android:textColor="#fff" />
 
-        <TextView
-            android:id="@+id/tv_date_label"
-            android:layout_width="wrap_content"
+        <TableLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Date"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
+            android:background="#88f3f17c" >
 
-        <TextView
-            android:id="@+id/tv_date_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="" />
+            <TableRow
+                android:id="@+id/tableRow1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
 
-        <TextView
-            android:id="@+id/tv_time_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Time"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
+                <TextView
+                    android:id="@+id/tv_date_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.20"
+                    android:text="Date"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
 
-        <TextView
-            android:id="@+id/tv_time_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="" />
+                <TextView
+                    android:id="@+id/tv_date_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.80"
+                    android:text="" />
+            </TableRow>
 
-        <TextView
-            android:id="@+id/tv_rules_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Rules"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
+            <TableRow
+                android:id="@+id/tableRow2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
 
-        <TextView
-            android:id="@+id/tv_rules_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="" />
-        
+                <TextView
+                    android:id="@+id/tv_time_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.20"
+                    android:text="Time"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <TextView
+                    android:id="@+id/tv_time_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.80"
+                    android:text="" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/tv_duration_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.20"
+                    android:text="Duration"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <TextView
+                    android:id="@+id/tv_duration_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.80"
+                    android:text="" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/tv_rate_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.20"
+                    android:text="Price"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <TextView
+                    android:id="@+id/tv_rate_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.80"
+                    android:text="" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/tv_rules_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.20"
+                    android:text="Rules"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <TextView
+                    android:id="@+id/tv_rules_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:lines="6"
+                    android:layout_weight="0.80"
+                    android:text="" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/tv_head_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.20"
+                    android:text="Event Head"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <TextView
+                    android:id="@+id/tv_head_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.80"
+                    android:text="" />
+            </TableRow>
+
+        </TableLayout>
     </LinearLayout>
 
 </RelativeLayout>

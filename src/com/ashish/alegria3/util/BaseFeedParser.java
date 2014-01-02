@@ -17,11 +17,13 @@ public abstract class BaseFeedParser implements FeedParser {
     // names of the XML tags
     protected static final String EVENT_DATE = "date";
     protected static final  String RULE = "rule";
-    protected static final  String RATE = "rule";
+    protected static final  String RATE = "rate";
     protected static final  String EVENT_TIME = "time";
     protected static final  String EVENT_DURATION = "duration";
     protected static final  String TITLE = "title";
     protected static final  String EVENT = "event";
+    protected static final  String EVENT_HEAD = "head";
+
     
     public URL feedUrl;
     public Activity mAcivity;

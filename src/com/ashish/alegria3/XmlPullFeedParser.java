@@ -38,11 +38,21 @@ public class XmlPullFeedParser extends BaseFeedParser {
                         	currentEvent = new Event();
                         	currentEvent.setEventId(parser.getAttributeValue(null, "id"));
                         } else if (currentEvent != null){
-                            if (name.equalsIgnoreCase(RULE)){
+                        	if (name.equalsIgnoreCase(EVENT_DATE)) {
+                        		currentEvent.setEventDate(parser.nextText());
+                        	} else if (name.equalsIgnoreCase(EVENT_DURATION)) {
+                        		currentEvent.setDuration(parser.nextText());
+                        	} else if (name.equalsIgnoreCase(RATE)) {
+                        		currentEvent.setRate(parser.nextText());
+                        	} else if (name.equalsIgnoreCase(EVENT_TIME)) {
+                        		currentEvent.setTime(parser.nextText());
+                        	} else if (name.equalsIgnoreCase(RULE)){
                             	currentEvent.getRules().add(parser.nextText());
                             } else if (name.equalsIgnoreCase(TITLE)){
                             	currentEvent.setTitle(parser.nextText());
-                            }    
+                            } else if (name.equalsIgnoreCase(EVENT_HEAD)) {
+                            	currentEvent.setEventHead(parser.nextText());
+                            }
                         }
                         break;
                     case XmlPullParser.END_TAG:

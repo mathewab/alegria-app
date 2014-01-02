@@ -6,7 +6,9 @@
 	<time>10:00</time>
 	<duration>02:00</duration>
 	<rate>45</rate>
-		<rule>This is rule1</rule>
+	<rule>This is rule1</rule>
+	<rule>This is rule2</rule>
+	<rule>This can have multiple rules</rule>
 	<head>Ashish Mathew</head>
 </event>
 <event id="MGT102">

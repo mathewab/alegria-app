@@ -80,6 +80,9 @@ public class AlegriaBody extends FragmentActivity {
 			else if (position == 1){
 				return new EventsFragment();
 			}
+			else if (position == 2) {
+				return new ContactUsFragment();
+			}
 			else {
 			// getItem is called to instantiate the fragment for the given page.
 			// Return a DummySectionFragment (defined as a static inner class
@@ -138,6 +141,24 @@ public class AlegriaBody extends FragmentActivity {
 					.findViewById(R.id.section_label);
 			dummyTextView.setText(Integer.toString(getArguments().getInt(
 					ARG_SECTION_NUMBER)));
+			return rootView;
+		}
+	}
+	public static class ContactUsFragment extends Fragment {
+		/**
+		 * The fragment argument representing the section number for this
+		 * fragment.
+		 */
+		public static final String ARG_SECTION_NUMBER = "section_number";
+
+		public ContactUsFragment() {
+		}
+
+		@Override
+		public View onCreateView(LayoutInflater inflater, ViewGroup container,
+				Bundle savedInstanceState) {
+			View rootView = inflater.inflate(
+					R.layout.contact_us_fragment, container, false);
 			return rootView;
 		}
 	}
@@ -208,10 +229,9 @@ public class AlegriaBody extends FragmentActivity {
 				  System.out.println("Button clicked");
 			       break;
 
-			  case R.id.bn_mgt2: 
-			       intent.putExtra("Type", 1);
-			       intent.putExtra("EventCode", "MGT101");
-			       break;
+			  case R.id.bn_mgt2: intent.putExtra("EventCode", "MGT101"); break; 
+			  case R.id.bn_mgt3: intent.putExtra("EventCode", "MGT102"); break;
+			  
 			  }
 		      this.startActivity(intent);
 
