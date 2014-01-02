@@ -74,13 +74,10 @@ public class AlegriaBody extends FragmentActivity {
 		@Override
 		public Fragment getItem(int position) {
 			Fragment fragment;
-			if(position == 0) {
-				 return new AboutMeFragment();
-			}
-			else if (position == 1){
+			if (position == 0){
 				return new EventsFragment();
 			}
-			else if (position == 2) {
+			else if (position == 1) {
 				return new ContactUsFragment();
 			}
 			else {
@@ -98,8 +95,8 @@ public class AlegriaBody extends FragmentActivity {
 
 		@Override
 		public int getCount() {
-			// Show 3 total pages.
-			return 3;
+			// Show 2 total pages.
+			return 2;
 		}
 
 		@SuppressLint("DefaultLocale")
@@ -108,10 +105,8 @@ public class AlegriaBody extends FragmentActivity {
 			Locale l = Locale.getDefault();
 			switch (position) {
 			case 0:
-				return getString(R.string.title_section1).toUpperCase(l);
-			case 1:
 				return getString(R.string.title_section2).toUpperCase(l);
-			case 2:
+			case 1:
 				return getString(R.string.title_section3).toUpperCase(l);
 			}
 			return null;
