@@ -23,21 +23,52 @@
                 android:layout_width="0dip"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="@string/about_alegria" 
+                android:text="@string/about_mes" 
                 android:background="#88f3f17c"/>
 
             <ImageView
                 android:id="@+id/imageView1"
-                android:layout_width="100dip"
-                android:layout_height="100dip"
-                android:src="@drawable/alegria_logo" />
+                android:layout_width="75dip"
+                android:layout_height="132dip"
+                android:src="@drawable/meslogo" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" >
+            android:layout_height="116dp" >
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="108dp"
+                android:layout_height="109dp"
+                android:src="@drawable/alegria_logo" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="108dp"
+                android:text="@string/about_alegria" />
+
         </LinearLayout>
 
-    </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="120dp" >
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="203dp"
+                android:layout_height="108dp"
+                android:layout_weight="0.83"
+                android:text="@string/about_piit" />
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/piitlogo" />
+        </LinearLayout>
+        
+</LinearLayout>
 
 </RelativeLayout>
