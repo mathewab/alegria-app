@@ -16,7 +16,9 @@ import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
+import android.webkit.WebView.FindListener;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class AlegriaBody extends FragmentActivity {
@@ -55,7 +57,7 @@ public class AlegriaBody extends FragmentActivity {
 				getSupportFragmentManager());
 
 		// Set up the ViewPager with the sections adapter.
-		mViewPager = (ViewPager) findViewById(R.id.pager);
+		mViewPager = (ViewPager) findViewById(R.id.pager_body);
 		mViewPager.setAdapter(mSectionsPagerAdapter);
 
 	}
@@ -139,7 +141,7 @@ public class AlegriaBody extends FragmentActivity {
 			return rootView;
 		}
 	}
-	public static class ContactUsFragment extends Fragment {
+	public static class ContactUsFragment extends Fragment implements OnClickListener{
 		/**
 		 * The fragment argument representing the section number for this
 		 * fragment.
@@ -154,7 +156,20 @@ public class AlegriaBody extends FragmentActivity {
 				Bundle savedInstanceState) {
 			View rootView = inflater.inflate(
 					R.layout.contact_us_fragment, container, false);
+			
+			ImageView iv_fb = (ImageView) rootView.findViewById(R.id.iv_facebook);
+			
+			iv_fb.setOnClickListener(this);
+			
+			
+			
 			return rootView;
+		}
+		@Override
+		public void onClick(View v) {
+			Intent intent;
+			intent = new Intent(this.getActivity(), GridViewActivity.class);
+			this.startActivity(intent);
 		}
 	}
 	public static class AboutMeFragment extends Fragment {
