@@ -1,24 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content" >
 
     <ImageView
-        android:id="@+id/iv_facebook"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_alignTop="@+id/iv_twitter"
-        android:layout_toRightOf="@+id/iv_twitter"
+        android:id="@+id/bn_fb"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
         android:scaleType="centerInside"
         android:src="@drawable/fb_logo" />
 
     <ImageView
-        android:id="@+id/iv_twitter"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+
+        android:id="@+id/bn_twitter"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
+        android:layout_toRightOf="@+id/bn_fb"
         android:scaleType="centerInside"
         android:src="@drawable/twitter_logo" />
+
+    <ImageView
+        android:id="@+id/bn_utube"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/bn_twitter"
+        android:scaleType="centerInside"
+        android:src="@drawable/u" />
+
+    <ImageView
+        android:id="@+id/bn_ins"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:scaleType="centerInside"
+        android:src="@drawable/ins" />
 
 </RelativeLayout>

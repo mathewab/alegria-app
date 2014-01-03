@@ -157,7 +157,7 @@ public class AlegriaBody extends FragmentActivity {
 			View rootView = inflater.inflate(
 					R.layout.contact_us_fragment, container, false);
 			
-			ImageView iv_fb = (ImageView) rootView.findViewById(R.id.iv_facebook);
+			ImageView iv_fb = (ImageView) rootView.findViewById(R.id.bn_fb);
 			
 			iv_fb.setOnClickListener(this);
 			
