@@ -3,12 +3,16 @@ package com.ashish.alegria3.gallery.adapter;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.concurrent.ExecutionException;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.os.AsyncTask;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
@@ -54,20 +58,57 @@ public class GridViewImageAdapter extends BaseAdapter {
         } else {
             imageView = (ImageView) convertView;
         }
- 
-        // get screen dimensions
-        Bitmap image = decodeFile(_filePaths.get(position), imageWidth,
-                imageWidth);
- 
         imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
         imageView.setLayoutParams(new GridView.LayoutParams(imageWidth,
                 imageWidth));
-        imageView.setImageBitmap(image);
+        //Bitmap image = null;
+        try {
+			 new DownloadImageTask(imageView)
+			.execute(_filePaths.get(position)).get();
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (ExecutionException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+        
+        // get screen dimensions
+        //Bitmap image = decodeFile(_filePaths.get(position), imageWidth,
+        //        imageWidth);
+ 
+       
+        //imageView.setImageBitmap(image);
  
         // image view click listener
         imageView.setOnClickListener(new OnImageClickListener(position));
  
         return imageView;
+    }
+    
+    private class DownloadImageTask extends AsyncTask<String, Void, Bitmap> {
+        ImageView bmImage;
+
+        public DownloadImageTask(ImageView bmImage) {
+            this.bmImage = bmImage;
+        }
+
+        protected Bitmap doInBackground(String... urls) {
+            String urldisplay = urls[0];
+            Bitmap mIcon11 = null;
+            try {
+                InputStream in = (InputStream) new java.net.URL(urldisplay).getContent();
+                mIcon11 = BitmapFactory.decodeStream(in);
+            } catch (Exception e) {
+                Log.e("Error", e.getMessage());
+                e.printStackTrace();
+            }
+            return mIcon11;
+        }
+
+        protected void onPostExecute(Bitmap result) {
+            bmImage.setImageBitmap(result);
+        }
     }
  
     class OnImageClickListener implements OnClickListener {

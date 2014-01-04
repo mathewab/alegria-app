@@ -24,7 +24,7 @@ public class Utils {
     public ArrayList<String> getFilePaths() {
         ArrayList<String> filePaths = new ArrayList<String>();
  
-        File directory = new File(
+/*        File directory = new File(
                 android.os.Environment.getExternalStorageDirectory()
                         + File.separator + AppConstant.PHOTO_ALBUM);
  
@@ -65,7 +65,9 @@ public class Utils {
             alert.setPositiveButton("OK", null);
             alert.show();
         }
- 
+        
+ */
+        filePaths.add("http://www.alegria.mes.ac.in/gallery/images/baichungbhutia/15.jpg");
         return filePaths;
     }
  
