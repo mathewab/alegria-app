@@ -20,53 +20,57 @@
 
             <TextView
                 android:id="@+id/textView1"
-                android:layout_width="0dip"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/about_mes" 
-                android:background="#88f3f17c"/>
+                android:layout_width="253dp"
+                android:layout_height="match_parent"
+                android:background="#88f3f17c"
+                android:text="@string/about_mes"
+                android:textSize="12sp" />
 
             <ImageView
                 android:id="@+id/imageView1"
                 android:layout_width="75dip"
                 android:layout_height="132dip"
-                android:src="@drawable/alegria_logo" />
+                android:src="@drawable/mes_logo" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="116dp" >
+            android:layout_height="180dp" >
 
             <ImageView
                 android:id="@+id/imageView2"
                 android:layout_width="108dp"
-                android:layout_height="109dp"
+                android:layout_height="match_parent"
                 android:src="@drawable/alegria_logo" />
 
             <TextView
                 android:id="@+id/textView2"
                 android:layout_width="match_parent"
-                android:layout_height="108dp"
-                android:text="@string/about_alegria" />
+                android:layout_height="match_parent"
+                android:text="@string/about_alegria"
+                android:background="#88f3f17c"
+                android:textSize="12sp" />
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="120dp" >
+            android:layout_height="match_parent" >
 
             <TextView
                 android:id="@+id/textView3"
-                android:layout_width="203dp"
-                android:layout_height="108dp"
-                android:layout_weight="0.83"
-                android:text="@string/about_piit" />
+                android:layout_width="218dp"
+                android:layout_height="match_parent"
+                android:background="#88f3f17c"
+                android:text="@string/about_piit"
+                android:textSize="12sp" />
 
             <ImageView
                 android:id="@+id/imageView3"
                 android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:src="@drawable/alegria_logo" />
+                android:layout_height="match_parent"
+                android:layout_weight="0.96"
+                android:src="@drawable/ic_launcher" />
         </LinearLayout>
         
 </LinearLayout>

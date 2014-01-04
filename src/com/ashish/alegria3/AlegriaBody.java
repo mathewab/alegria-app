@@ -4,6 +4,7 @@ import java.util.Locale;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
@@ -16,10 +17,12 @@ import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
-import android.webkit.WebView.FindListener;
 import android.widget.Button;
+import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.ashish.gallery.fragment.ImageAdapter;
 
 public class AlegriaBody extends FragmentActivity {
 
@@ -76,10 +79,17 @@ public class AlegriaBody extends FragmentActivity {
 		@Override
 		public Fragment getItem(int position) {
 			Fragment fragment;
-			if (position == 0){
+			if(position == 0){
+				return new AboutMeFragment();
+			}
+			else if (position == 1){
 				return new EventsFragment();
 			}
-			else if (position == 1) {
+			else if(position == 2)
+			{
+				return new GalleryFragment();
+			}
+			else if (position == 3) {
 				return new ContactUsFragment();
 			}
 			else {
@@ -97,8 +107,8 @@ public class AlegriaBody extends FragmentActivity {
 
 		@Override
 		public int getCount() {
-			// Show 2 total pages.
-			return 2;
+			// Show 4 total pages.
+			return 4;
 		}
 
 		@SuppressLint("DefaultLocale")
@@ -107,9 +117,14 @@ public class AlegriaBody extends FragmentActivity {
 			Locale l = Locale.getDefault();
 			switch (position) {
 			case 0:
-				return getString(R.string.title_section2).toUpperCase(l);
+				return getString(R.string.title_section1).toUpperCase(l);
 			case 1:
+				return getString(R.string.title_section2).toUpperCase(l);
+			case 2:
+				return getString(R.string.title_section4).toUpperCase(l);
+			case 3:
 				return getString(R.string.title_section3).toUpperCase(l);
+			
 			}
 			return null;
 		}
@@ -161,15 +176,56 @@ public class AlegriaBody extends FragmentActivity {
 			
 			iv_fb.setOnClickListener(this);
 			
-			
+			ImageView iv_map = (ImageView) rootView.findViewById(R.id.maps_img);
+			iv_map.setOnClickListener(this) ;
+			ImageView iv_twi = (ImageView) rootView.findViewById(R.id.bn_twitter);
+			iv_twi.setOnClickListener(this) ;
+			ImageView iv_ins = (ImageView) rootView.findViewById(R.id.bn_ins);
+			iv_ins.setOnClickListener(this) ;
+			ImageView iv_uto = (ImageView) rootView.findViewById(R.id.bn_utube);
+			iv_uto.setOnClickListener(this) ;
 			
 			return rootView;
 		}
+		
 		@Override
 		public void onClick(View v) {
-			Intent intent;
-			intent = new Intent(this.getActivity(), GridViewActivity.class);
-			this.startActivity(intent);
+			
+			switch(v.getId()){
+			case R.id.maps_img:
+				String map = "https://maps.google.co.in/maps?f=d&source=s_q&hl=en&geocode=%3BCccmoaV-1eUzFRjEIQEdbddbBCn_____ROjnOzFi_i3lFtLPkQ&q=Pillai%27s+Institute+of+Information+Technology,+Engineering,+Media+Studies+%26+Research,+Composite+College+Campus+10,+Sector+16,+New+Panvel,+Navi+Mumbai,+Maharashtra&aq=0&oq=pillai&sll=18.815427,76.775144&sspn=9.557646,19.753418&ie=UTF8&hq=Pillai%27s+Institute+of+Information+Technology,+Engineering,+Media+Studies+%26+Research,+Composite+College+Campus+10,+Sector+16,+New+Panvel,&hnear=Navi+Mumbai,+Thane,+Maharashtra&t=m&ll=19.002887,73.129978&spn=0.081153,0.137329&z=13&vpsrc=6&iwloc=A&daddr=Pillai+Institute+of+Information+Technology,+Dr.+K.+M.+Vasudevan+Pillais+Campus+,+Sector+16,+New+Panvel,+Navi+Mumbai,,+Panvel,+Maharashtra+410206";
+				Intent imap = new Intent(Intent.ACTION_VIEW);
+				imap.setData(Uri.parse(map));
+				this.startActivity(imap);
+				break;
+			case R.id.bn_fb:
+				String fb = "https://www.facebook.com/pillaisalegria";
+				Intent ifb = new Intent(Intent.ACTION_VIEW);
+				ifb.setData(Uri.parse(fb));
+				startActivity(ifb);
+				break;
+			case R.id.bn_ins:
+				String ins = "http://instagram.com/pillaisalegria#";
+				Intent ints = new Intent(Intent.ACTION_VIEW);
+				ints.setData(Uri.parse(ins));
+				startActivity(ints);
+				break;
+			case R.id.bn_utube:
+				String ut = "https://www.youtube.com/user/pillaisalegria‎";
+				Intent iut = new Intent(Intent.ACTION_VIEW);
+				iut.setData(Uri.parse(ut));
+				startActivity(iut);
+				break;
+			case R.id.bn_twitter:
+				String tw = "https://twitter.com/PillaisAlegria";
+				Intent itw = new Intent(Intent.ACTION_VIEW);
+				itw.setData(Uri.parse(tw));
+				startActivity(itw);
+				break;
+				
+			
+			}
+			
 		}
 	}
 	public static class AboutMeFragment extends Fragment {
@@ -190,6 +246,29 @@ public class AlegriaBody extends FragmentActivity {
 			return rootView;
 		}
 	}
+	
+	public static class GalleryFragment extends Fragment{
+		/**
+		 * The fragment argument representing the section number for this
+		 * fragment.
+		 */
+		public static final String ARG_SECTION_NUMBER = "section_number";
+
+		public GalleryFragment() {
+		}
+		
+		@Override
+		public View onCreateView(LayoutInflater inflater, ViewGroup container,
+				Bundle savedInstanceState) {
+			View rootView = inflater.inflate(
+					R.layout.gallery_fragment, container, false);
+			
+		    GridView gridview = (GridView) rootView.findViewById(R.id.gridViewGallery);
+		    gridview.setAdapter(new ImageAdapter(this.getActivity()));
+		    return rootView;
+		}
+	}
+	
 	public static class EventsFragment extends Fragment implements OnClickListener {
 		/**
 		 * The fragment argument representing the section number for this

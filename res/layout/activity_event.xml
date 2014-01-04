@@ -16,10 +16,9 @@
         android:layout_height="match_parent"
         android:layout_alignParentLeft="true"
         android:layout_marginTop="80dp"
+        android:background="#88f3f17c"
         android:orientation="vertical"
-        android:textAlignment="center"
-            android:background="#88f3f17c"
-         >
+        android:textAlignment="center" >
 
         <TextView
             android:id="@+id/tv_title_event"
@@ -27,42 +26,48 @@
             android:layout_height="wrap_content"
             android:layout_gravity="top"
             android:background="#ff2323"
+            android:fontFamily="@string/font"
             android:paddingBottom="5dp"
             android:paddingTop="10dp"
             android:text="Event Name"
             android:textAllCaps="true"
             android:textColor="#fff" />
 
-        <TableLayout
+        <RelativeLayout
+            android:id="@+id/RelativeLayout1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" >
-            
-			<TableRow
-                android:id="@+id/tableRow0"
+
+            <RelativeLayout
+                android:id="@+id/RelativeLayout1"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" >
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true" >
 
                 <TextView
                     android:id="@+id/tv_description"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text=""
+                    android:fontFamily="@string/font"
                     android:maxLines="10"
+                    android:text=""
                     android:textAppearance="?android:attr/textAppearanceMedium" />
+            </RelativeLayout>
 
-
-            </TableRow>
-            
             <TableRow
                 android:id="@+id/tableRow1"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" >
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/RelativeLayout1"
+                android:layout_below="@+id/RelativeLayout1" >
 
                 <TextView
                     android:id="@+id/tv_date_label"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.20"
+                    android:fontFamily="@string/font"
                     android:text="Date"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
@@ -71,19 +76,23 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.80"
+                    android:fontFamily="@string/font"
                     android:text="" />
             </TableRow>
 
             <TableRow
                 android:id="@+id/tableRow2"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" >
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/RelativeLayout1"
+                android:layout_below="@+id/tableRow1" >
 
                 <TextView
                     android:id="@+id/tv_time_label"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.20"
+                    android:fontFamily="@string/font"
                     android:text="Time"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
@@ -92,19 +101,23 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.80"
+                    android:fontFamily="@string/font"
                     android:text="" />
             </TableRow>
 
             <TableRow
                 android:id="@+id/tableRow3"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" >
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/RelativeLayout1"
+                android:layout_below="@+id/tableRow2" >
 
                 <TextView
                     android:id="@+id/tv_duration_label"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.20"
+                    android:fontFamily="@string/font"
                     android:text="Duration"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
@@ -113,19 +126,23 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.80"
+                    android:fontFamily="@string/font"
                     android:text="" />
             </TableRow>
 
             <TableRow
                 android:id="@+id/tableRow4"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" >
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/RelativeLayout1"
+                android:layout_below="@+id/tableRow3" >
 
                 <TextView
                     android:id="@+id/tv_rate_label"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.20"
+                    android:fontFamily="@string/font"
                     android:text="Price"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
@@ -134,47 +151,57 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.80"
+                    android:fontFamily="@string/font"
                     android:text="" />
             </TableRow>
 
             <TableRow
                 android:id="@+id/tableRow5"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" >
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/RelativeLayout1"
+                android:layout_below="@+id/tableRow4" >
 
                 <TextView
                     android:id="@+id/tv_rules_label"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.20"
+                    android:fontFamily="@string/font"
                     android:text="Rules"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
-                </TableRow>
+            </TableRow>
+
             <TableRow
                 android:id="@+id/tableRow5a"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" >
-                
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/RelativeLayout1"
+                android:layout_below="@+id/tableRow5" >
+
                 <TextView
                     android:id="@+id/tv_rules_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:maxLines="10"
                     android:layout_weight="1"
+                    android:fontFamily="@string/font"
+                    android:maxLines="10"
                     android:text="" />
-                
             </TableRow>
 
             <TableRow
                 android:id="@+id/tableRow6"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" >
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/RelativeLayout1"
+                android:layout_below="@+id/tableRow5a" >
 
                 <TextView
                     android:id="@+id/tv_head_label"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.20"
+                    android:fontFamily="@string/font"
                     android:text="Event Head"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
@@ -183,10 +210,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.80"
+                    android:fontFamily="@string/font"
                     android:text="" />
             </TableRow>
-
-        </TableLayout>
+        </RelativeLayout>
     </LinearLayout>
 
 </RelativeLayout>

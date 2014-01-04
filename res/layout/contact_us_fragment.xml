@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content" >
+    android:layout_height="wrap_content">
 
     <ImageView
         android:id="@+id/bn_fb"
@@ -29,15 +29,44 @@
         android:layout_alignParentBottom="true"
         android:layout_toRightOf="@+id/bn_twitter"
         android:scaleType="centerInside"
-        android:src="@drawable/u" />
+        android:src="@drawable/you_icon" />
 
     <ImageView
         android:id="@+id/bn_ins"
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@+id/bn_utube"
         android:scaleType="centerInside"
-        android:src="@drawable/ins" />
+        android:src="@drawable/insta_icon" />
+
+    <ImageView
+        android:id="@+id/maps_img"
+        android:layout_width="300dp"
+        android:layout_height="150dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView1"
+        android:src="@drawable/contact_us" />
+
+	<TextView
+	    android:id="@+id/textView3"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_above="@+id/bn_fb"
+	    android:layout_alignParentLeft="true"
+	    android:layout_alignParentRight="true"
+	    android:layout_below="@+id/imageView1"
+	    android:text="@string/directions"
+	    android:textSize="12sp" />
+
+	<TextView
+	    android:id="@+id/textView1"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentLeft="true"
+	    android:layout_alignParentRight="true"
+	    android:layout_alignParentTop="true"
+	    android:text="@string/contact_us1"
+	    android:textSize="14sp" />
 
 </RelativeLayout>
