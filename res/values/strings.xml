@@ -16,21 +16,47 @@
     <string name="about_alegria">Alegría - the Festival of Joy from the 28th of January to the 1st of February 2013 at\' Dr. K. M. Vasudevan Pillais Campus, New Panvel. Alegría - the Festival of Joy is a multi-institution\' mega festival, created with the goal of providing a platform for students to demonstrate their wonderful and sometimes hidden talent and skill.</string>
     <string name="title_activity_grid_view">GridViewActivity</string>
     <string name="title_activity_full_screen_view">FullScreenViewActivity</string>
-	<string name="about_mes">The Mahatma Education Society is proof of a vision linked irrevocably to national goals. Born in a\' time when education was deemed service, it set about bringing social and economic change through the\' proactive personal development of every child that came into its fold.</string>
-	<string name="about_piit">Alegría - The Festival of Joy celebrates the beauty of India with "Indie Ishtyle" as our theme for this year that will bring in\' modern sensibilities to Indian aesthetic traditions.\'We give our participants an opportunity and a centre stage to touch all the chords of this vibrant country in a quirky, kitschy\' style. Alegría - The Festival of Joy aims to bring out the desi in you in an "Indie Ishtyle" fashion.</string>
-	<string name="font">sans-serif-condensed</string>
-	<string name="contact_us1">
-	    \nOUR ADDRESS\n
+    <string name="about_mes">The Mahatma Education Society is proof of a vision linked irrevocably to national goals. Born in a\' time when education was deemed service, it set about bringing social and economic change through the\' proactive personal development of every child that came into its fold.</string>
+    <string name="about_piit">Alegría - The Festival of Joy celebrates the beauty of India with "Indie Ishtyle" as our theme for this year that will bring in\' modern sensibilities to Indian aesthetic traditions.\'We give our participants an opportunity and a centre stage to touch all the chords of this vibrant country in a quirky, kitschy\' style. Alegría - The Festival of Joy aims to bring out the desi in you in an "Indie Ishtyle" fashion.</string>
+    <string name="font">sans-serif-condensed</string>
+    <string name="contact_us1">	    \nOUR ADDRESS\n
 	Dr. K. M. Vasudevan Pillai\'s Campus\n
     Plot No. 10,Sector 16,\n
     New Panvel - 410 206\n
     Maharashtra, India.\n
     	TELEPHONE:9004215984\n
-    	Directions:\n
-</string>
-<string name="directions">FROM NEW PANVEL RAILWAY STATION\n
+    	Directions:\n</string>
+    <string name="directions">FROM NEW PANVEL RAILWAY STATION\n
  1.   Walk towards Janardhan Bhagat Marg\n
  2.   Turn right\n
  3.   Turn left after Sai Plaza\n
  4.   Turn right and we are on the left side of the road\n</string>
-	</resources>
+
+    <string-array name="titles_gallery">
+        <item>Bike Stunts</item>
+        <item>Insane Decibles - Rock Night</item>
+        <item>Akcent Concert</item>
+        <item>Sudha Chandran and Classical Solo</item>
+        <item>Baichung Bhutia</item>
+        <item>Jackky Bhagnani</item>
+        <item>Sector 16 - DJ Night</item>
+        <item>Street Dance</item>
+        <item>Dance Performance</item>
+        <item>Fashion Show</item>
+        <item>Technical Events</item>
+    </string-array>
+    <string-array name="links_gallery">
+        <item>bikestunt</item>
+        <item>insanedecibles</item>
+        <item>akcentconcert</item>
+        <item>sudhachandran</item>
+        <item>baichungbhutia</item>
+        <item>jackkybhagnani</item>
+        <item>sector16djnight</item>
+        <item>streetdance</item>
+        <item>danceperformance</item>
+        <item>fashionshow</item>
+        <item>technicalevents</item>
+    </string-array>
+
+</resources>

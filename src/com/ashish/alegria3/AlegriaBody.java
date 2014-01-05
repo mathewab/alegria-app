@@ -3,6 +3,7 @@ package com.ashish.alegria3;
 import java.util.Locale;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.net.Uri;
@@ -17,6 +18,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
+import android.view.ViewGroup.LayoutParams;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
@@ -192,6 +194,36 @@ public class AlegriaBody extends FragmentActivity {
 			return rootView;
 		}
 
+		public static Intent getOpenFacebookIntent(Context context) {
+
+			try {
+				context.getPackageManager().getPackageInfo(
+						"com.facebook.katana", 0);
+				return new Intent(Intent.ACTION_VIEW,
+						Uri.parse("fb://profile/128797447271799"));
+			} catch (Exception e) {
+				return new Intent(Intent.ACTION_VIEW,
+						Uri.parse("https://www.facebook.com/pillaisalegria"));
+			}
+		}
+
+		public static Intent getOpenTwitterIntent(Context context) {
+			Intent intent = null;
+			try {
+				// get the Twitter app if possible
+				context.getPackageManager().getPackageInfo(
+						"com.twitter.android", 0);
+				intent = new Intent(Intent.ACTION_VIEW,
+						Uri.parse("twitter://user?user_id=992773777"));
+				intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+			} catch (Exception e) {
+				// no Twitter app, revert to browser
+				intent = new Intent(Intent.ACTION_VIEW,
+						Uri.parse("https://twitter.com/pillaisalegria"));
+			}
+			return intent;
+		}
+
 		@Override
 		public void onClick(View v) {
 
@@ -204,8 +236,9 @@ public class AlegriaBody extends FragmentActivity {
 				break;
 			case R.id.bn_fb:
 				String fb = "https://www.facebook.com/pillaisalegria";
-				Intent ifb = new Intent(Intent.ACTION_VIEW);
-				ifb.setData(Uri.parse(fb));
+				Intent ifb = getOpenFacebookIntent(this.getActivity()
+						.getApplicationContext());
+				// ifb.setData(Uri.parse(fb));
 				startActivity(ifb);
 				break;
 			case R.id.bn_ins:
@@ -222,8 +255,9 @@ public class AlegriaBody extends FragmentActivity {
 				break;
 			case R.id.bn_twitter:
 				String tw = "https://twitter.com/PillaisAlegria";
-				Intent itw = new Intent(Intent.ACTION_VIEW);
-				itw.setData(Uri.parse(tw));
+				Intent itw = getOpenTwitterIntent(this.getActivity()
+						.getApplicationContext());
+				// itw.setData(Uri.parse(tw));
 				startActivity(itw);
 				break;
 
@@ -259,7 +293,7 @@ public class AlegriaBody extends FragmentActivity {
 		public static final String ARG_SECTION_NUMBER = "section_number";
 
 		GridView gridview;
-		
+
 		public GalleryFragment() {
 		}
 
@@ -268,33 +302,33 @@ public class AlegriaBody extends FragmentActivity {
 				Bundle savedInstanceState) {
 			View rootView = inflater.inflate(R.layout.gallery_fragment,
 					container, false);
-			
-			
-			gridview = (GridView) rootView
-					.findViewById(R.id.gridViewGallery);
-			
+
+			gridview = (GridView) rootView.findViewById(R.id.gridViewGallery);
+
 			InitilizeGridLayout();
 
 			gridview.setAdapter(new ImageAdapter(this.getActivity()));
 			return rootView;
 		}
-	    private void InitilizeGridLayout() {
-	        Resources r = getResources();
-	        float padding = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,
-	                AppConstant.GRID_PADDING, r.getDisplayMetrics());
-	        Utils utils = new Utils(this.getActivity());
 
-	        int columnWidth = (int) ((utils.getScreenWidth() - ((AppConstant.NUM_OF_COLUMNS + 1) * padding)) / AppConstant.NUM_OF_COLUMNS);
-	 
-	        gridview.setNumColumns(AppConstant.NUM_OF_COLUMNS);
-	        gridview.setColumnWidth(columnWidth);
-	        gridview.setStretchMode(GridView.NO_STRETCH);
-	        gridview.setPadding((int) padding, (int) padding, (int) padding,
-	                (int) padding);
-	        gridview.setHorizontalSpacing((int) padding);
-	        gridview.setVerticalSpacing((int) padding);
-	    }
-	 
+		private void InitilizeGridLayout() {
+			Resources r = getResources();
+			float padding = TypedValue.applyDimension(
+					TypedValue.COMPLEX_UNIT_DIP, AppConstant.GRID_PADDING,
+					r.getDisplayMetrics());
+			Utils utils = new Utils(this.getActivity());
+
+			int columnWidth = (int) ((utils.getScreenWidth() - ((AppConstant.NUM_OF_COLUMNS + 1) * padding)) / AppConstant.NUM_OF_COLUMNS);
+
+			gridview.setNumColumns(AppConstant.NUM_OF_COLUMNS);
+			gridview.setColumnWidth(columnWidth);
+			gridview.setStretchMode(GridView.NO_STRETCH);
+			gridview.setPadding((int) padding, (int) padding, (int) padding,
+					(int) padding);
+			gridview.setHorizontalSpacing((int) padding);
+			gridview.setVerticalSpacing((int) padding);
+		}
+
 	}
 
 	public static class EventsFragment extends Fragment implements
@@ -332,53 +366,31 @@ public class AlegriaBody extends FragmentActivity {
 					R.id.bn_sg05, R.id.bn_sg06, R.id.bn_sg07, R.id.bn_sg08,
 					R.id.bn_sg09, R.id.bn_sg10, R.id.bn_sg11, R.id.bn_sg12,
 					R.id.bn_sg13, R.id.bn_sg14, R.id.bn_sg15, R.id.bn_sg16,
-					R.id.bn_sg17 };
+					R.id.bn_sg17, R.id.bn_w01, R.id.bn_w02, R.id.bn_w03,
+					R.id.bn_w04, R.id.bn_w05, R.id.bn_w06, R.id.bn_w07,
+					R.id.bn_w08, R.id.bn_w09, R.id.bn_w10, R.id.bn_w11,
+					R.id.bn_w12, R.id.bn_w13, R.id.bn_w14, R.id.bn_w15,
+					R.id.bn_w16, R.id.bn_w17 };
+
+			Resources r = getResources();
+			float padding = TypedValue.applyDimension(
+					TypedValue.COMPLEX_UNIT_DIP, AppConstant.GRID_PADDING,
+					r.getDisplayMetrics());
+
+			Utils utils = new Utils(this.getActivity());
+			int columnWidth = (int) ((utils.getScreenWidth() - ((AppConstant.NUM_OF_COLUMNS + 1) * padding)) / AppConstant.NUM_OF_COLUMNS);
 			
 			for (Integer i : buttons) {
 				Button temp = (Button) rootView.findViewById(i);
+				LayoutParams params = temp.getLayoutParams();
+				params.width = columnWidth;
+				params.height = columnWidth;
+				temp.setLayoutParams(params);
+				int pad = (int) padding;
+				temp.setPadding(pad, pad,pad, pad);
 				temp.setOnClickListener(this);
 			}
 
-		/*	Button bn_mgt1 = (Button) rootView.findViewById(R.id.bn_mgt1);
-			Button bn_mgt2 = (Button) rootView.findViewById(R.id.bn_mgt2);
-			Button bn_mgt3 = (Button) rootView.findViewById(R.id.bn_mgt3);
-			Button bn_mgt4 = (Button) rootView.findViewById(R.id.bn_mgt4);
-			Button bn_mgt5 = (Button) rootView.findViewById(R.id.bn_mgt5);
-			Button bn_mgt6 = (Button) rootView.findViewById(R.id.bn_mgt6);
-			Button bn_mgt7 = (Button) rootView.findViewById(R.id.bn_mgt7);
-			Button bn_mgt8 = (Button) rootView.findViewById(R.id.bn_mgt8);
-			Button bn_mgt9 = (Button) rootView.findViewById(R.id.bn_mgt9);
-
-			Button bn_fa01 = (Button) rootView.findViewById(R.id.bn_fa01);
-			Button bn_fa02 = (Button) rootView.findViewById(R.id.bn_fa02);
-			Button bn_fa03 = (Button) rootView.findViewById(R.id.bn_fa03);
-			Button bn_fa04 = (Button) rootView.findViewById(R.id.bn_fa04);
-			Button bn_fa05 = (Button) rootView.findViewById(R.id.bn_fa05);
-			Button bn_fa06 = (Button) rootView.findViewById(R.id.bn_fa06);
-			Button bn_fa07 = (Button) rootView.findViewById(R.id.bn_fa07);
-			Button bn_fa08 = (Button) rootView.findViewById(R.id.bn_fa08);
-			Button bn_fa09 = (Button) rootView.findViewById(R.id.bn_fa09);
-
-			bn_mgt1.setOnClickListener(this);
-			bn_mgt2.setOnClickListener(this);
-			bn_mgt3.setOnClickListener(this);
-			bn_mgt4.setOnClickListener(this);
-			bn_mgt5.setOnClickListener(this);
-			bn_mgt6.setOnClickListener(this);
-			bn_mgt7.setOnClickListener(this);
-			bn_mgt8.setOnClickListener(this);
-			bn_mgt9.setOnClickListener(this);
-
-			bn_fa01.setOnClickListener(this);
-			bn_fa02.setOnClickListener(this);
-			bn_fa03.setOnClickListener(this);
-			bn_fa04.setOnClickListener(this);
-			bn_fa05.setOnClickListener(this);
-			bn_fa06.setOnClickListener(this);
-			bn_fa07.setOnClickListener(this);
-			bn_fa08.setOnClickListener(this);
-			bn_fa09.setOnClickListener(this);
-*/
 			return rootView;
 		}
 

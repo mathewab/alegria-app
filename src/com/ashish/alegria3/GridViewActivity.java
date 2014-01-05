@@ -9,6 +9,7 @@ import android.util.TypedValue;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.GridView;
+import android.widget.TextView;
 
 import com.ashish.alegria3.gallery.adapter.GridViewImageAdapter;
 import com.ashish.alegria3.gallery.helper.AppConstant;
@@ -21,8 +22,13 @@ public class GridViewActivity extends Activity {
     private GridViewImageAdapter adapter;
     private GridView gridView;
     private int columnWidth;
+    private String path;
  
-    @Override
+    public String getPath() {
+		return path;
+	}
+
+	@Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         
@@ -38,12 +44,25 @@ public class GridViewActivity extends Activity {
  
         // Initilizing Grid View
         InitilizeGridLayout();
- 
-        // loading all image paths from SD card
-        imagePaths = utils.getFilePaths();
- 
+        
+        
+        String title = "";
+		Bundle extras = getIntent().getExtras();
+        if (extras != null) {
+            title = extras.getString("Title");
+            path = extras.getString("Link");
+        }
+        
+        // loading all image paths from internet
+        imagePaths = utils.getFilePaths(path);
+
+        
+        TextView tv_title = (TextView) findViewById(R.id.tv_title_event_gv);
+        
+        tv_title.setText(title);
+        
         // Gridview adapter
-        adapter = new GridViewImageAdapter(GridViewActivity.this, imagePaths,
+        adapter = new GridViewImageAdapter(GridViewActivity.this, imagePaths, path,
                 columnWidth);
  
         // setting grid view adapter

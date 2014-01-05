@@ -3,20 +3,28 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content" > 
     
-    <ImageView
-        android:id="@+id/bn_fb"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+    <View 
+        android:id="@+id/bn_stub"
+        android:visibility="invisible"
+        android:layout_width="0dp"
+        android:layout_height="0dp" 
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
+        />
+    <ImageView
+        android:id="@+id/bn_fb"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/bn_stub"
        android:scaleType="centerInside"
         android:src="@drawable/fb_logo" />
 
     <ImageView
 
         android:id="@+id/bn_twitter"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:layout_alignParentBottom="true"
         android:layout_toRightOf="@+id/bn_fb"
         android:scaleType="centerInside"
@@ -24,21 +32,21 @@
 
     <ImageView
         android:id="@+id/bn_utube"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:layout_alignParentBottom="true"
-        android:layout_toLeftOf="@+id/bn_fb"
+        android:layout_toLeftOf="@+id/bn_stub"
         android:scaleType="centerInside"
         android:src="@drawable/you_icon" />
 
     <ImageView
         android:id="@+id/bn_ins"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:layout_alignParentBottom="true"
-        android:layout_toRightOf="@+id/bn_twitter"
-        android:scaleType="centerInside"
-        android:src="@drawable/insta_icon" />
+        android:layout_toLeftOf="@+id/bn_utube"
+        android:scaleType="centerCrop"
+        android:src="@drawable/inst" />
 
     <ImageView
         android:id="@+id/maps_img"

@@ -13,14 +13,15 @@ import android.view.WindowManager;
 public class Utils {
  
     private Context _context;
+    private String base_path = "http://www.alegria.mes.ac.in/gallery/images/";
  
     // constructor
     public Utils(Context context) {
         this._context = context;
     }
- 
+    
     // Reading file paths from SDCard
-    public ArrayList<String> getFilePaths() {
+    public ArrayList<String> getFilePaths(String contextPath) {
         ArrayList<String> filePaths = new ArrayList<String>();
  
 /*        File directory = new File(
@@ -66,9 +67,12 @@ public class Utils {
         }
         
  */
-        filePaths.add("http://www.alegria.mes.ac.in/gallery/images/baichungbhutia/15.jpg");
+        for(int i =1; i<=15; i++) {
+        	filePaths.add(base_path+contextPath+"/"+i+".jpg");
+        }
+       /* filePaths.add("http://www.alegria.mes.ac.in/gallery/images/baichungbhutia/15.jpg");
         filePaths.add("http://www.alegria.mes.ac.in/gallery/images/baichungbhutia/16.jpg");
-        filePaths.add("http://www.alegria.mes.ac.in/gallery/images/baichungbhutia/17.jpg");
+        filePaths.add("http://www.alegria.mes.ac.in/gallery/images/baichungbhutia/17.jpg");*/
 
         return filePaths;
     }

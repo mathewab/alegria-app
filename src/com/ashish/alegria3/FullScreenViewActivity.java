@@ -16,9 +16,15 @@ public class FullScreenViewActivity extends Activity {
 		setContentView(R.layout.activity_full_screen_view);
 
         Utils utils = new Utils(this);
-
+        String path = "";
+		Bundle extras = getIntent().getExtras();
+        if (extras != null) {
+            path = extras.getString("Link");
+        }
+        
+        
 		ViewPager mViewPager = (ViewPager) findViewById(R.id.pager);
-		mViewPager.setAdapter(new FullScreenImageAdapter(this, utils.getFilePaths()));	}
+		mViewPager.setAdapter(new FullScreenImageAdapter(this, utils.getFilePaths(path)));	}
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {

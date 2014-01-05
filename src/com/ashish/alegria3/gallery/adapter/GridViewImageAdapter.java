@@ -31,11 +31,13 @@ public class GridViewImageAdapter extends BaseAdapter {
     private Activity _activity;
     private ArrayList<String> _filePaths = new ArrayList<String>();
     private int imageWidth;
+    private String _contextPath;
  
-    public GridViewImageAdapter(Activity activity, ArrayList<String> filePaths,
+    public GridViewImageAdapter(Activity activity, ArrayList<String> filePaths, String contextPath,
             int imageWidth) {
         this._activity = activity;
         this._filePaths = filePaths;
+        this._contextPath = contextPath;
         this.imageWidth = imageWidth;
     }
  
@@ -127,6 +129,7 @@ public class GridViewImageAdapter extends BaseAdapter {
             // launch full screen activity
             Intent i = new Intent(_activity, FullScreenViewActivity.class);
             i.putExtra("position", _postion);
+            i.putExtra("Link", _contextPath);
             _activity.startActivity(i);
         }
  

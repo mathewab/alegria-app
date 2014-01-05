@@ -3,9 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/event_fragment"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#88f3f17c"
-    >
+    android:layout_height="match_parent" >
 
     <ScrollView
         android:id="@+id/scrollView1"
@@ -25,7 +23,7 @@
                 android:gravity="center"
                 android:paddingTop="7dp"
                 android:text="Management Events"
-                android:background="#88f3f17c"
+                android:textAllCaps="true"
                 android:textSize="17sp" />
 
             <HorizontalScrollView
@@ -44,14 +42,13 @@
                         android:layout_width="150dp"
                         android:layout_height="150dp"
                         android:background="@drawable/button_shape"
-                        android:scaleType="fitXY"
-                        android:text="khiladi no 1"
-                        android:src="@drawable/alegria_logo" />
+                        android:text="khiladi no 1" />
 
                     <Button
                         android:id="@+id/bn_mgt2"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
+                        android:background="@drawable/button_shape"
                         android:text="finto parlimento" />
 
                     <Button
@@ -59,56 +56,49 @@
                         android:layout_width="150dp"
                         android:layout_height="150dp"
                         android:background="@drawable/button_shape"
-                        android:scaleType="fitXY"
-                        android:text="vyapar"
-                        android:src="@drawable/alegria_logo" />
+                        android:text="vyapar" />
 
                     <Button
                         android:id="@+id/bn_mgt4"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
-                        android:text="analyse this"
-                         />
+                        android:background="@drawable/button_shape"
+                        android:text="analyse this" />
 
                     <Button
                         android:id="@+id/bn_mgt5"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
-                        android:paddingRight="10dp"
                         android:background="@drawable/button_shape"
-                        android:scaleType="fitXY"
-                        android:text="share-e-bazar"
-                        android:src="@drawable/alegria_logo" />
+                        android:text="share-e-bazar" />
+
                     <Button
                         android:id="@+id/bn_mgt6"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
-						android:paddingRight="10dp"
                         android:background="@drawable/button_shape"
-                        android:scaleType="fitXY"
-                        android:text="ad-o-mania"
-                        android:src="@drawable/alegria_logo" />
+                        android:text="ad-o-mania" />
+
                     <Button
                         android:id="@+id/bn_mgt7"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
-                        android:text="the bazar"
-                         />
+                        android:background="@drawable/button_shape"
+                        android:text="the bazar" />
 
                     <Button
                         android:id="@+id/bn_mgt8"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
                         android:background="@drawable/button_shape"
-                        android:scaleType="fitXY"
-                        android:text="jumble -gamble"
-                        android:src="@drawable/alegria_logo" />
+                        android:text="jumble -gamble" />
+
                     <Button
                         android:id="@+id/bn_mgt9"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
-                        android:text="hisssss..."
-                         />
+                        android:background="@drawable/button_shape"
+                        android:text="hisssss..." />
                 </LinearLayout>
             </HorizontalScrollView>
 
@@ -118,7 +108,7 @@
                 android:gravity="center"
                 android:paddingTop="7dp"
                 android:text="Technical Events"
-                android:background="#88f3f17c"
+                android:textAllCaps="true"
                 android:textSize="17sp" />
 
             <HorizontalScrollView
@@ -134,100 +124,108 @@
 
                     <Button
                         android:id="@+id/bn_te01"
-                        android:background="@drawable/button_shape"
-                        android:src="@drawable/alegria_logo"
-                        android:text="Death race"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
-                        />
+                        android:background="@drawable/button_shape"
+                        android:text="Death race" />
 
                     <Button
                         android:id="@+id/bn_te02"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
-                        android:text="time chase"
-                        />
+                        android:background="@drawable/button_shape"
+                        android:text="time chase" />
 
                     <Button
                         android:id="@+id/bn_te03"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
-                        android:text="can u follow me"
-                        />
+                        android:background="@drawable/button_shape"
+                        android:text="can u follow me" />
 
                     <Button
                         android:id="@+id/bn_te04"
-                        android:text="xtreme fighter"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
-                         />
+                        android:background="@drawable/button_shape"
+                        android:text="xtreme fighter" />
 
                     <Button
                         android:id="@+id/bn_te05"
-                        android:text="machine primere league"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
-                         />
+                        android:background="@drawable/button_shape"
+                        android:text="machine primere league" />
+
                     <Button
                         android:id="@+id/bn_te06"
                         android:layout_width="150dp"
-                        android:text="Bhool bhulaiya"
                         android:layout_height="150dp"
-                         />
+                        android:background="@drawable/button_shape"
+                        android:text="Bhool bhulaiya" />
+
                     <Button
                         android:id="@+id/bn_te07"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
-                        android:text="robodecathon"
-                         />
+                        android:background="@drawable/button_shape"
+                        android:text="robodecathon" />
+
                     <Button
                         android:id="@+id/bn_te08"
-                        android:text="tpp"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
-                         />
+                        android:background="@drawable/button_shape"
+                        android:text="tpp" />
+
                     <Button
                         android:id="@+id/bn_te09"
                         android:layout_width="150dp"
-                        android:text="web hunt"
                         android:layout_height="150dp"
-                         />
+                        android:background="@drawable/button_shape"
+                        android:text="web hunt" />
+
                     <Button
                         android:id="@+id/bn_te10"
-                        android:text="code master"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
-                         />
+                        android:background="@drawable/button_shape"
+                        android:text="code master" />
+
                     <Button
                         android:id="@+id/bn_te11"
                         android:layout_width="150dp"
-                        android:text="junkyard wars"
                         android:layout_height="150dp"
-                         />
+                        android:background="@drawable/button_shape"
+                        android:text="junkyard wars" />
+
                     <Button
                         android:id="@+id/bn_te12"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
-                        android:text="techroadies 2.0"
-                         />
+                        android:background="@drawable/button_shape"
+                        android:text="techroadies 2.0" />
+
                     <Button
                         android:id="@+id/bn_te13"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
-                        android:text="mock interviews"
-                         />
+                        android:background="@drawable/button_shape"
+                        android:text="mock interviews" />
+
                     <Button
                         android:id="@+id/bn_te14"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
-                        android:text="robo-pirates"
-                         />
+                        android:background="@drawable/button_shape"
+                        android:text="robo-pirates" />
+
                     <Button
                         android:id="@+id/bn_te15"
                         android:layout_width="150dp"
-                        android:text="3D modelling"
                         android:layout_height="150dp"
-                         />
+                        android:background="@drawable/button_shape"
+                        android:text="3D modelling" />
                 </LinearLayout>
             </HorizontalScrollView>
 
@@ -237,7 +235,7 @@
                 android:gravity="center"
                 android:paddingTop="7dp"
                 android:text="Performing Arts"
-                android:background="#88f3f17c"
+                android:textAllCaps="true"
                 android:textSize="17sp" />
 
             <HorizontalScrollView
@@ -253,83 +251,90 @@
 
                     <Button
                         android:id="@+id/bn_pa01"
-                     	android:text="Bring it on"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
-                        />
+                        android:background="@drawable/button_shape"
+                        android:text="Bring it on" />
 
                     <Button
                         android:id="@+id/bn_pa02"
-                     	android:text="footloose"
                         android:layout_width="150dp"
-                        android:layout_height="150dp" />
+                        android:layout_height="150dp"
+                        android:background="@drawable/button_shape"
+                        android:text="footloose" />
 
                     <Button
                         android:id="@+id/bn_pa03"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
-                        android:text="stomp the floor"
-                        />
+                        android:background="@drawable/button_shape"
+                        android:text="stomp the floor" />
 
                     <Button
                         android:id="@+id/bn_pa04"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
-                        android:text="in sync"
-                        />
+                        android:background="@drawable/button_shape"
+                        android:text="in sync" />
 
                     <Button
                         android:id="@+id/bn_pa05"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
-                        android:text="reinventing traditions"
-                        />
+                        android:background="@drawable/button_shape"
+                        android:text="reinventing traditions" />
+
                     <Button
                         android:id="@+id/bn_pa06"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
-                        android:text="kalakshetra"
-                        />
+                        android:background="@drawable/button_shape"
+                        android:text="kalakshetra" />
+
                     <Button
                         android:id="@+id/bn_pa07"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
-                        android:text="vocalize"
-                        />
+                        android:background="@drawable/button_shape"
+                        android:text="vocalize" />
+
                     <Button
                         android:id="@+id/bn_pa08"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
-                        android:text="rap-shap"
-                        />
+                        android:background="@drawable/button_shape"
+                        android:text="rap-shap" />
+
                     <Button
                         android:id="@+id/bn_pa09"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
-                        android:text="Beats and chords"
-                        />
+                        android:background="@drawable/button_shape"
+                        android:text="Beats and chords" />
+
                     <Button
                         android:id="@+id/bn_pa10"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
-                        android:text="i me myself"
-                        />
+                        android:background="@drawable/button_shape"
+                        android:text="i me myself" />
+
                     <Button
                         android:id="@+id/bn_pa11"
-                        android:text="take-1"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
-                        />
+                        android:background="@drawable/button_shape"
+                        android:text="take-1" />
                 </LinearLayout>
             </HorizontalScrollView>
-  
-        <TextView
+
+            <TextView
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:paddingTop="7dp"
                 android:text="Fine Arts"
-                android:background="#88f3f17c"
+                android:textAllCaps="true"
                 android:textSize="17sp" />
 
             <HorizontalScrollView
@@ -343,76 +348,78 @@
                     android:layout_height="match_parent"
                     android:orientation="horizontal" >
 
-                                        <Button
+                    <Button
                         android:id="@+id/bn_fa01"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
-                        android:text="artistic fantasy"
-                        />
+                        android:background="@drawable/button_shape"
+                        android:text="artistic fantasy" />
 
                     <Button
                         android:id="@+id/bn_fa02"
-                        android:text="poster mania"
                         android:layout_width="150dp"
-                        android:layout_height="150dp" />
+                        android:layout_height="150dp"
+                        android:background="@drawable/button_shape"
+                        android:text="poster mania" />
 
                     <Button
                         android:id="@+id/bn_fa03"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
-                        android:text="art of colours"
-                        />
+                        android:background="@drawable/button_shape"
+                        android:text="art of colours" />
 
                     <Button
                         android:id="@+id/bn_fa04"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
-                        android:text="intricate patterns"
-                        />
+                        android:background="@drawable/button_shape"
+                        android:text="intricate patterns" />
 
                     <Button
                         android:id="@+id/bn_fa05"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
-                        android:text="nail fantasy"
-                        />
+                        android:background="@drawable/button_shape"
+                        android:text="nail fantasy" />
+
                     <Button
                         android:id="@+id/bn_fa06"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
-                        android:text="Blot the tee"
-                        />
+                        android:background="@drawable/button_shape"
+                        android:text="Blot the tee" />
+
                     <Button
                         android:id="@+id/bn_fa07"
-                        android:text="mask me"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
-                        />
+                        android:background="@drawable/button_shape"
+                        android:text="mask me" />
+
                     <Button
                         android:id="@+id/bn_fa08"
                         android:layout_width="150dp"
-                        android:text="Bodygraphy"
                         android:layout_height="150dp"
-                        />
+                        android:background="@drawable/button_shape"
+                        android:text="Bodygraphy" />
+
                     <Button
                         android:id="@+id/bn_fa09"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
-                       android:text="tooning around"
-                        />
-                    
-        
+                        android:background="@drawable/button_shape"
+                        android:text="tooning around" />
+                </LinearLayout>
+            </HorizontalScrollView>
 
-    	     
-             </LinearLayout>
-       </HorizontalScrollView> 
-          <TextView
+            <TextView
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:paddingTop="7dp"
                 android:text="Sports and Gaming"
-                android:background="#88f3f17c"
+                android:textAllCaps="true"
                 android:textSize="17sp" />
 
             <HorizontalScrollView
@@ -426,124 +433,134 @@
                     android:layout_height="match_parent"
                     android:orientation="horizontal" >
 
-                                        <Button
+                    <Button
                         android:id="@+id/bn_sg01"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
-                        android:text="counter strike 1.6"
-                        />
+                        android:background="@drawable/button_shape"
+                        android:text="counter strike 1.6" />
 
                     <Button
                         android:id="@+id/bn_sg02"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
+                        android:background="@drawable/button_shape"
                         android:text="Dota" />
 
                     <Button
                         android:id="@+id/bn_sg03"
                         android:layout_width="150dp"
-                        android:text="fifa"
                         android:layout_height="150dp"
-                        />
+                        android:background="@drawable/button_shape"
+                        android:text="fifa" />
 
                     <Button
                         android:id="@+id/bn_sg04"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
-                        android:text="nfs most wanted"
-                        />
+                        android:background="@drawable/button_shape"
+                        android:text="nfs most wanted" />
 
                     <Button
                         android:id="@+id/bn_sg05"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
-                        android:text="futsal(boys)"/>
+                        android:background="@drawable/button_shape"
+                        android:text="futsal(boys)" />
+
                     <Button
                         android:id="@+id/bn_sg06"
                         android:layout_width="150dp"
-                        android:text="futsal(girls)"
                         android:layout_height="150dp"
-                        />
+                        android:background="@drawable/button_shape"
+                        android:text="futsal(girls)" />
+
                     <Button
                         android:id="@+id/bn_sg07"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
-                        android:text="basketball"
-                        />
+                        android:background="@drawable/button_shape"
+                        android:text="basketball" />
+
                     <Button
                         android:id="@+id/bn_sg08"
-                        android:text="Boxcricket"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
-                        />
+                        android:background="@drawable/button_shape"
+                        android:text="Boxcricket" />
+
                     <Button
                         android:id="@+id/bn_sg09"
-                        android:text="volleyball"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
-                        />
+                        android:background="@drawable/button_shape"
+                        android:text="volleyball" />
 
                     <Button
                         android:id="@+id/bn_sg10"
-                        android:text="throwball(girls)"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
-                        />
-                    
+                        android:background="@drawable/button_shape"
+                        android:text="throwball(girls)" />
+
                     <Button
                         android:id="@+id/bn_sg11"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
-                        android:text="tug of war"
-                        />
+                        android:background="@drawable/button_shape"
+                        android:text="tug of war" />
 
                     <Button
                         android:id="@+id/bn_sg12"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
+                        android:background="@drawable/button_shape"
                         android:text="chess" />
 
                     <Button
                         android:id="@+id/bn_sg13"
-                        android:text="table tennis"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
-                        />
+                        android:background="@drawable/button_shape"
+                        android:text="table tennis" />
 
                     <Button
                         android:id="@+id/bn_sg14"
-                        android:text="carrom"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
-                        />
+                        android:background="@drawable/button_shape"
+                        android:text="carrom" />
 
                     <Button
                         android:id="@+id/bn_sg15"
-                        android:text="Neo cricket"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
-                        />
+                        android:background="@drawable/button_shape"
+                        android:text="Neo cricket" />
+
                     <Button
                         android:id="@+id/bn_sg16"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
-                        android:text="iom air-rifle shooting"
-                        />
+                        android:background="@drawable/button_shape"
+                        android:text="iom air-rifle shooting" />
+
                     <Button
                         android:id="@+id/bn_sg17"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
-                        android:text="sports freak"
-                        />
-        		</LinearLayout>
-        </HorizontalScrollView>
-    <TextView
+                        android:background="@drawable/button_shape"
+                        android:text="sports freak" />
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <TextView
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:paddingTop="7dp"
                 android:text="Workshops"
-                android:background="#88f3f17c"
+                android:textAllCaps="true"
                 android:textSize="17sp" />
 
             <HorizontalScrollView
@@ -561,121 +578,130 @@
                         android:id="@+id/bn_w01"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
-                        android:text="photo and video"
-                        />
+                        android:background="@drawable/button_shape"
+                        android:text="photo and video" />
 
                     <Button
                         android:id="@+id/bn_w02"
                         android:layout_width="150dp"
-                        android:text="pottery on a wheel"
-                        android:layout_height="150dp" />
+                        android:layout_height="150dp"
+                        android:background="@drawable/button_shape"
+                        android:text="pottery on a wheel" />
 
                     <Button
                         android:id="@+id/bn_w03"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
-                        android:text="architechture model making"
-                        />
+                        android:background="@drawable/button_shape"
+                        android:text="architechture model making" />
 
                     <Button
                         android:id="@+id/bn_w04"
-                        android:text="warli painting"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
-                        />
+                        android:background="@drawable/button_shape"
+                        android:text="warli painting" />
 
                     <Button
                         android:id="@+id/bn_w05"
                         android:layout_width="150dp"
-                        android:text="clay modelling"
                         android:layout_height="150dp"
-                        />
+                        android:background="@drawable/button_shape"
+                        android:text="clay modelling" />
+
                     <Button
                         android:id="@+id/bn_w06"
                         android:layout_width="150dp"
-                        android:text="waste paper modelling"
                         android:layout_height="150dp"
-                        />
+                        android:background="@drawable/button_shape"
+                        android:text="waste paper modelling" />
+
                     <Button
                         android:id="@+id/bn_w07"
                         android:layout_width="150dp"
-                        android:text="dramatics"
                         android:layout_height="150dp"
-                        />
+                        android:background="@drawable/button_shape"
+                        android:text="dramatics" />
+
                     <Button
                         android:id="@+id/bn_w08"
                         android:layout_width="150dp"
-                        android:text="metal foil workshops"
                         android:layout_height="150dp"
-                        />
+                        android:background="@drawable/button_shape"
+                        android:text="metal foil workshops" />
+
                     <Button
                         android:id="@+id/bn_w09"
-                        android:text="atmaraksha"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
-                        />
+                        android:background="@drawable/button_shape"
+                        android:text="atmaraksha" />
 
                     <Button
                         android:id="@+id/bn_w10"
                         android:layout_width="150dp"
-                        android:text="wood carving"
                         android:layout_height="150dp"
-                        />
-                    
+                        android:background="@drawable/button_shape"
+                        android:text="wood carving" />
+
                     <Button
                         android:id="@+id/bn_w11"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
-                        android:text="calligraphy"
-                        />
+                        android:background="@drawable/button_shape"
+                        android:text="calligraphy" />
 
                     <Button
                         android:id="@+id/bn_w12"
                         android:layout_width="150dp"
-                        android:text="paper furniture making"
-                        android:layout_height="150dp" />
+                        android:layout_height="150dp"
+                        android:background="@drawable/button_shape"
+                        android:text="paper furniture making" />
 
                     <Button
                         android:id="@+id/bn_w13"
                         android:layout_width="150dp"
-                        android:text="salsa"
                         android:layout_height="150dp"
-                        />
+                        android:background="@drawable/button_shape"
+                        android:text="salsa" />
 
                     <Button
                         android:id="@+id/bn_w14"
                         android:layout_width="150dp"
-                        android:text="death race"
                         android:layout_height="150dp"
-                        />
+                        android:background="@drawable/button_shape"
+                        android:text="death race" />
 
                     <Button
                         android:id="@+id/bn_w15"
                         android:layout_width="150dp"
-                        android:text="time chase"
                         android:layout_height="150dp"
-                        />
+                        android:background="@drawable/button_shape"
+                        android:text="time chase" />
+
                     <Button
                         android:id="@+id/bn_w16"
                         android:layout_width="150dp"
-                        android:text="can u follow me"
                         android:layout_height="150dp"
-                        />
+                        android:background="@drawable/button_shape"
+                        android:text="can u follow me" />
+
                     <Button
                         android:id="@+id/bn_w17"
                         android:layout_width="150dp"
-                        android:text="robo-pirates"
                         android:layout_height="150dp"
-                        />
-        		</LinearLayout>
-        </HorizontalScrollView>
-    <TextView
+                        android:background="@drawable/button_shape"
+                        android:text="robo-pirates" />
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <TextView
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:paddingTop="7dp"
                 android:text="Literary"
-                android:background="#88f3f17c"
+                android:textAllCaps="true"
                 android:textSize="17sp" />
 
             <HorizontalScrollView
@@ -694,70 +720,52 @@
                         android:layout_width="150dp"
                         android:layout_height="150dp"
                         android:background="@drawable/button_shape"
-                        android:scaleType="fitXY"
-                        android:text="wordsworth"
-                        android:src="@drawable/alegria_logo" />
+                        android:text="wordsworth" />
 
                     <Button
                         android:id="@+id/bn_l2"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
-                        android:text="right to write"
                         android:background="@drawable/button_shape"
-                        android:scaleType="fitXY"
-                        android:src="@drawable/alegria_logo" />
-                        
-                       />
+                        android:text="right to write" />
 
                     <Button
                         android:id="@+id/bn_l3"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
                         android:background="@drawable/button_shape"
-                        android:scaleType="fitXY"
-                        android:src="@drawable/alegria_logo"
                         android:text="battle of words" />
-                    
 
                     <Button
                         android:id="@+id/bn_l4"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
                         android:background="@drawable/button_shape"
-                        android:scaleType="fitXY"
-                        android:src="@drawable/alegria_logo"
                         android:text="me marathi" />
-                        
-                         />
 
                     <Button
                         android:id="@+id/bn_l5"
                         android:layout_width="150dp"
-                        android:text="spell to win"
                         android:layout_height="150dp"
-                        android:paddingRight="10dp"
                         android:background="@drawable/button_shape"
-                        android:scaleType="fitXY"
-                        android:src="@drawable/alegria_logo" />
+                        android:text="spell to win" />
+
                     <Button
                         android:id="@+id/bn_l6"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
-                        android:text="relay writing"
-						android:paddingRight="10dp"
                         android:background="@drawable/button_shape"
-                        android:scaleType="fitXY"
-                        android:src="@drawable/alegria_logo" />
-                
+                        android:text="relay writing" />
                 </LinearLayout>
             </HorizontalScrollView>
-    <TextView
+
+            <TextView
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:paddingTop="7dp"
                 android:text="Informal Events"
-                android:background="#88f3f17c"
+                android:textAllCaps="true"
                 android:textSize="17sp" />
 
             <HorizontalScrollView
@@ -776,66 +784,45 @@
                         android:layout_width="150dp"
                         android:layout_height="150dp"
                         android:background="@drawable/button_shape"
-                        android:scaleType="fitXY"
-                        android:text="Strut it or shut it"
-                        android:src="@drawable/alegria_logo" />
+                        android:text="Strut it or shut it" />
 
                     <Button
                         android:id="@+id/bn_in2"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
-                        android:text="mr and ms alegira"
                         android:background="@drawable/button_shape"
-                        android:scaleType="fitXY"
-                        android:src="@drawable/alegria_logo" />
-                        
-                       />
+                        android:text="mr and ms alegira" />
 
                     <Button
                         android:id="@+id/bn_in3"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
-                        android:text="reel stories"
                         android:background="@drawable/button_shape"
-                        android:scaleType="fitXY"
-                        android:src="@drawable/alegria_logo" />
+                        android:text="reel stories" />
 
                     <Button
                         android:id="@+id/bn_in4"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
-                        android:text="hocus focus"
                         android:background="@drawable/button_shape"
-                        android:scaleType="fitXY"
-                        android:src="@drawable/alegria_logo" />
-                        
-                         />
+                        android:text="hocus focus" />
 
                     <Button
                         android:id="@+id/bn_in5"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
-                        android:paddingRight="10dp"
                         android:background="@drawable/button_shape"
-                        android:scaleType="fitXY"
-                        android:text="ptv roadies"
-                        android:src="@drawable/alegria_logo" />
+                        android:text="ptv roadies" />
+
                     <Button
                         android:id="@+id/bn_in6"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
-						android:paddingRight="10dp"
-                        android:text="the hunting games"
                         android:background="@drawable/button_shape"
-                        android:scaleType="fitXY"
-                        android:src="@drawable/alegria_logo" />
-                
+                        android:text="the hunting games" />
                 </LinearLayout>
             </HorizontalScrollView>
-    
-    </LinearLayout>
-    
-        
+        </LinearLayout>
     </ScrollView>
 
 </RelativeLayout>
