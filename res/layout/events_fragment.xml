@@ -132,7 +132,7 @@
                     android:layout_height="match_parent"
                     android:orientation="horizontal" >
 
-                    <ImageButton
+                    <Button
                         android:id="@+id/bn_te01"
                         android:background="@drawable/button_shape"
                         android:src="@drawable/alegria_logo"

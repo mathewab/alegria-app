@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
-
+    android:layout_height="wrap_content" > 
+    
     <ImageView
         android:id="@+id/bn_fb"
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:scaleType="centerInside"
+        android:layout_centerHorizontal="true"
+       android:scaleType="centerInside"
         android:src="@drawable/fb_logo" />
 
     <ImageView
@@ -27,7 +27,7 @@
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:layout_alignParentBottom="true"
-        android:layout_toRightOf="@+id/bn_twitter"
+        android:layout_toLeftOf="@+id/bn_fb"
         android:scaleType="centerInside"
         android:src="@drawable/you_icon" />
 
@@ -36,14 +36,15 @@
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:layout_alignParentBottom="true"
-        android:layout_toRightOf="@+id/bn_utube"
+        android:layout_toRightOf="@+id/bn_twitter"
         android:scaleType="centerInside"
         android:src="@drawable/insta_icon" />
 
     <ImageView
         android:id="@+id/maps_img"
-        android:layout_width="300dp"
-        android:layout_height="150dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="fitStart"
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/textView1"
         android:src="@drawable/contact_us" />
@@ -51,21 +52,23 @@
 	<TextView
 	    android:id="@+id/textView3"
 	    android:layout_width="wrap_content"
-	    android:layout_height="wrap_content"
-	    android:layout_above="@+id/bn_fb"
+	    android:layout_height="match_parent"
 	    android:layout_alignParentLeft="true"
 	    android:layout_alignParentRight="true"
-	    android:layout_below="@+id/imageView1"
+	    android:layout_below="@+id/textView1"
+	    		android:gravity="center"
+	    
 	    android:text="@string/directions"
 	    android:textSize="12sp" />
 
 	<TextView
 	    android:id="@+id/textView1"
-	    android:layout_width="wrap_content"
+	    android:layout_width="match_parent"
 	    android:layout_height="wrap_content"
 	    android:layout_alignParentLeft="true"
 	    android:layout_alignParentRight="true"
 	    android:layout_alignParentTop="true"
+		android:gravity="center"
 	    android:text="@string/contact_us1"
 	    android:textSize="14sp" />
 

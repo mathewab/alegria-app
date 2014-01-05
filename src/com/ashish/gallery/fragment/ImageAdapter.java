@@ -73,10 +73,11 @@ public class ImageAdapter extends BaseAdapter {
         public void onClick(View v) {
             // on selecting grid view image
             // launch full screen activity
+        	
             Intent i = new Intent(mActivity, GridViewActivity.class);
-            i.putExtra("position", _postion);
-            mActivity.startActivity(i);
-        }
+         i.putExtra("position", _postion);
+           mActivity.startActivity(i);        
+           }
  
     }
 }

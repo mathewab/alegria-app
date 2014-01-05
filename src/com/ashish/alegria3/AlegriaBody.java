@@ -4,6 +4,7 @@ import java.util.Locale;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.content.res.Resources;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -11,6 +12,7 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -22,6 +24,8 @@ import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.ashish.alegria3.gallery.helper.AppConstant;
+import com.ashish.alegria3.gallery.helper.Utils;
 import com.ashish.gallery.fragment.ImageAdapter;
 
 public class AlegriaBody extends FragmentActivity {
@@ -44,15 +48,15 @@ public class AlegriaBody extends FragmentActivity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		
+
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
-	    getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, 
-	                            WindowManager.LayoutParams.FLAG_FULLSCREEN);
-		
+		getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+				WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
 		setContentView(R.layout.activity_alegria_body);
 
 		// Show the Up button in the action bar.
-		//getActionBar().setDisplayHomeAsUpEnabled(true);
+		// getActionBar().setDisplayHomeAsUpEnabled(true);
 
 		// Create the adapter that will return a fragment for each of the three
 		// primary sections of the app.
@@ -64,7 +68,6 @@ public class AlegriaBody extends FragmentActivity {
 		mViewPager.setAdapter(mSectionsPagerAdapter);
 
 	}
-
 
 	/**
 	 * A {@link FragmentPagerAdapter} that returns a fragment corresponding to
@@ -79,30 +82,28 @@ public class AlegriaBody extends FragmentActivity {
 		@Override
 		public Fragment getItem(int position) {
 			Fragment fragment;
-			if(position == 0){
+			if (position == 0) {
 				return new AboutMeFragment();
-			}
-			else if (position == 1){
+			} else if (position == 1) {
 				return new EventsFragment();
-			}
-			else if(position == 2)
-			{
+			} else if (position == 2) {
 				return new GalleryFragment();
-			}
-			else if (position == 3) {
+			} else if (position == 3) {
 				return new ContactUsFragment();
-			}
-			else {
-			// getItem is called to instantiate the fragment for the given page.
-			// Return a DummySectionFragment (defined as a static inner class
-			// below) with the page number as its lone argument.
-			fragment = new DummySectionFragment();
-			Bundle args = new Bundle();
-			args.putInt(DummySectionFragment.ARG_SECTION_NUMBER, position + 1);
-			fragment.setArguments(args); 
+			} else {
+				// getItem is called to instantiate the fragment for the given
+				// page.
+				// Return a DummySectionFragment (defined as a static inner
+				// class
+				// below) with the page number as its lone argument.
+				fragment = new DummySectionFragment();
+				Bundle args = new Bundle();
+				args.putInt(DummySectionFragment.ARG_SECTION_NUMBER,
+						position + 1);
+				fragment.setArguments(args);
 			}
 			return fragment;
-			
+
 		}
 
 		@Override
@@ -124,7 +125,7 @@ public class AlegriaBody extends FragmentActivity {
 				return getString(R.string.title_section4).toUpperCase(l);
 			case 3:
 				return getString(R.string.title_section3).toUpperCase(l);
-			
+
 			}
 			return null;
 		}
@@ -156,7 +157,9 @@ public class AlegriaBody extends FragmentActivity {
 			return rootView;
 		}
 	}
-	public static class ContactUsFragment extends Fragment implements OnClickListener{
+
+	public static class ContactUsFragment extends Fragment implements
+			OnClickListener {
 		/**
 		 * The fragment argument representing the section number for this
 		 * fragment.
@@ -169,29 +172,30 @@ public class AlegriaBody extends FragmentActivity {
 		@Override
 		public View onCreateView(LayoutInflater inflater, ViewGroup container,
 				Bundle savedInstanceState) {
-			View rootView = inflater.inflate(
-					R.layout.contact_us_fragment, container, false);
-			
+			View rootView = inflater.inflate(R.layout.contact_us_fragment,
+					container, false);
+
 			ImageView iv_fb = (ImageView) rootView.findViewById(R.id.bn_fb);
-			
+
 			iv_fb.setOnClickListener(this);
-			
+
 			ImageView iv_map = (ImageView) rootView.findViewById(R.id.maps_img);
-			iv_map.setOnClickListener(this) ;
-			ImageView iv_twi = (ImageView) rootView.findViewById(R.id.bn_twitter);
-			iv_twi.setOnClickListener(this) ;
+			iv_map.setOnClickListener(this);
+			ImageView iv_twi = (ImageView) rootView
+					.findViewById(R.id.bn_twitter);
+			iv_twi.setOnClickListener(this);
 			ImageView iv_ins = (ImageView) rootView.findViewById(R.id.bn_ins);
-			iv_ins.setOnClickListener(this) ;
+			iv_ins.setOnClickListener(this);
 			ImageView iv_uto = (ImageView) rootView.findViewById(R.id.bn_utube);
-			iv_uto.setOnClickListener(this) ;
-			
+			iv_uto.setOnClickListener(this);
+
 			return rootView;
 		}
-		
+
 		@Override
 		public void onClick(View v) {
-			
-			switch(v.getId()){
+
+			switch (v.getId()) {
 			case R.id.maps_img:
 				String map = "https://maps.google.co.in/maps?f=d&source=s_q&hl=en&geocode=%3BCccmoaV-1eUzFRjEIQEdbddbBCn_____ROjnOzFi_i3lFtLPkQ&q=Pillai%27s+Institute+of+Information+Technology,+Engineering,+Media+Studies+%26+Research,+Composite+College+Campus+10,+Sector+16,+New+Panvel,+Navi+Mumbai,+Maharashtra&aq=0&oq=pillai&sll=18.815427,76.775144&sspn=9.557646,19.753418&ie=UTF8&hq=Pillai%27s+Institute+of+Information+Technology,+Engineering,+Media+Studies+%26+Research,+Composite+College+Campus+10,+Sector+16,+New+Panvel,&hnear=Navi+Mumbai,+Thane,+Maharashtra&t=m&ll=19.002887,73.129978&spn=0.081153,0.137329&z=13&vpsrc=6&iwloc=A&daddr=Pillai+Institute+of+Information+Technology,+Dr.+K.+M.+Vasudevan+Pillais+Campus+,+Sector+16,+New+Panvel,+Navi+Mumbai,,+Panvel,+Maharashtra+410206";
 				Intent imap = new Intent(Intent.ACTION_VIEW);
@@ -222,12 +226,12 @@ public class AlegriaBody extends FragmentActivity {
 				itw.setData(Uri.parse(tw));
 				startActivity(itw);
 				break;
-				
-			
+
 			}
-			
+
 		}
 	}
+
 	public static class AboutMeFragment extends Fragment {
 		/**
 		 * The fragment argument representing the section number for this
@@ -241,35 +245,60 @@ public class AlegriaBody extends FragmentActivity {
 		@Override
 		public View onCreateView(LayoutInflater inflater, ViewGroup container,
 				Bundle savedInstanceState) {
-			View rootView = inflater.inflate(
-					R.layout.about_me_fragment, container, false);
+			View rootView = inflater.inflate(R.layout.about_me_fragment,
+					container, false);
 			return rootView;
 		}
 	}
-	
-	public static class GalleryFragment extends Fragment{
+
+	public static class GalleryFragment extends Fragment {
 		/**
 		 * The fragment argument representing the section number for this
 		 * fragment.
 		 */
 		public static final String ARG_SECTION_NUMBER = "section_number";
 
+		GridView gridview;
+		
 		public GalleryFragment() {
 		}
-		
+
 		@Override
 		public View onCreateView(LayoutInflater inflater, ViewGroup container,
 				Bundle savedInstanceState) {
-			View rootView = inflater.inflate(
-					R.layout.gallery_fragment, container, false);
+			View rootView = inflater.inflate(R.layout.gallery_fragment,
+					container, false);
 			
-		    GridView gridview = (GridView) rootView.findViewById(R.id.gridViewGallery);
-		    gridview.setAdapter(new ImageAdapter(this.getActivity()));
-		    return rootView;
+			
+			gridview = (GridView) rootView
+					.findViewById(R.id.gridViewGallery);
+			
+			InitilizeGridLayout();
+
+			gridview.setAdapter(new ImageAdapter(this.getActivity()));
+			return rootView;
 		}
+	    private void InitilizeGridLayout() {
+	        Resources r = getResources();
+	        float padding = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,
+	                AppConstant.GRID_PADDING, r.getDisplayMetrics());
+	        Utils utils = new Utils(this.getActivity());
+
+	        int columnWidth = (int) ((utils.getScreenWidth() - ((AppConstant.NUM_OF_COLUMNS + 1) * padding)) / AppConstant.NUM_OF_COLUMNS);
+	 
+	        gridview.setNumColumns(AppConstant.NUM_OF_COLUMNS);
+	        gridview.setColumnWidth(columnWidth);
+	        gridview.setStretchMode(GridView.NO_STRETCH);
+	        gridview.setPadding((int) padding, (int) padding, (int) padding,
+	                (int) padding);
+	        gridview.setHorizontalSpacing((int) padding);
+	        gridview.setVerticalSpacing((int) padding);
+	    }
+	 
 	}
-	
-	public static class EventsFragment extends Fragment implements OnClickListener {
+
+	public static class EventsFragment extends Fragment implements
+			OnClickListener {
 		/**
 		 * The fragment argument representing the section number for this
 		 * fragment.
@@ -282,10 +311,35 @@ public class AlegriaBody extends FragmentActivity {
 		@Override
 		public View onCreateView(LayoutInflater inflater, ViewGroup container,
 				Bundle savedInstanceState) {
-			View rootView = inflater.inflate(
-					R.layout.events_fragment, container, false);
+			View rootView = inflater.inflate(R.layout.events_fragment,
+					container, false);
+
+			Integer[] buttons = { R.id.bn_mgt1, R.id.bn_mgt2, R.id.bn_mgt3,
+					R.id.bn_mgt4, R.id.bn_mgt5, R.id.bn_mgt6, R.id.bn_mgt7,
+					R.id.bn_mgt8, R.id.bn_mgt9, R.id.bn_fa01, R.id.bn_fa02,
+					R.id.bn_fa03, R.id.bn_fa04, R.id.bn_fa05, R.id.bn_fa06,
+					R.id.bn_fa07, R.id.bn_fa08, R.id.bn_fa09, R.id.bn_te01,
+					R.id.bn_te02, R.id.bn_te03, R.id.bn_te04, R.id.bn_te05,
+					R.id.bn_te06, R.id.bn_te07, R.id.bn_te08, R.id.bn_te09,
+					R.id.bn_te10, R.id.bn_te11, R.id.bn_te12, R.id.bn_te13,
+					R.id.bn_te14, R.id.bn_te15, R.id.bn_in1, R.id.bn_in2,
+					R.id.bn_in3, R.id.bn_in4, R.id.bn_in5, R.id.bn_in6,
+					R.id.bn_pa01, R.id.bn_pa02, R.id.bn_pa03, R.id.bn_pa04,
+					R.id.bn_pa05, R.id.bn_pa06, R.id.bn_pa07, R.id.bn_pa08,
+					R.id.bn_pa09, R.id.bn_pa10, R.id.bn_pa11, R.id.bn_l1,
+					R.id.bn_l2, R.id.bn_l3, R.id.bn_l4, R.id.bn_l5, R.id.bn_l6,
+					R.id.bn_sg01, R.id.bn_sg02, R.id.bn_sg03, R.id.bn_sg04,
+					R.id.bn_sg05, R.id.bn_sg06, R.id.bn_sg07, R.id.bn_sg08,
+					R.id.bn_sg09, R.id.bn_sg10, R.id.bn_sg11, R.id.bn_sg12,
+					R.id.bn_sg13, R.id.bn_sg14, R.id.bn_sg15, R.id.bn_sg16,
+					R.id.bn_sg17 };
 			
-			Button bn_mgt1 = (Button) rootView.findViewById(R.id.bn_mgt1);
+			for (Integer i : buttons) {
+				Button temp = (Button) rootView.findViewById(i);
+				temp.setOnClickListener(this);
+			}
+
+		/*	Button bn_mgt1 = (Button) rootView.findViewById(R.id.bn_mgt1);
 			Button bn_mgt2 = (Button) rootView.findViewById(R.id.bn_mgt2);
 			Button bn_mgt3 = (Button) rootView.findViewById(R.id.bn_mgt3);
 			Button bn_mgt4 = (Button) rootView.findViewById(R.id.bn_mgt4);
@@ -304,8 +358,7 @@ public class AlegriaBody extends FragmentActivity {
 			Button bn_fa07 = (Button) rootView.findViewById(R.id.bn_fa07);
 			Button bn_fa08 = (Button) rootView.findViewById(R.id.bn_fa08);
 			Button bn_fa09 = (Button) rootView.findViewById(R.id.bn_fa09);
-			
-			
+
 			bn_mgt1.setOnClickListener(this);
 			bn_mgt2.setOnClickListener(this);
 			bn_mgt3.setOnClickListener(this);
@@ -325,42 +378,60 @@ public class AlegriaBody extends FragmentActivity {
 			bn_fa07.setOnClickListener(this);
 			bn_fa08.setOnClickListener(this);
 			bn_fa09.setOnClickListener(this);
-
+*/
 			return rootView;
 		}
+
 		@Override
 		public void onClick(View v) {
 			Intent intent;
 			intent = new Intent("com.ashish.alegria3.EVENTACTIVITY");
 			intent.putExtra("EventCode", "");
 
-			switch(v.getId()){
-			  case R.id.bn_mgt1:
-				  System.out.println("Button clicked");
-			       break;
+			switch (v.getId()) {
+			case R.id.bn_mgt1:
+				System.out.println("Button clicked");
+				break;
 
-			  case R.id.bn_mgt2: intent.putExtra("EventCode", "MGT101"); break; 
-			  case R.id.bn_mgt3: intent.putExtra("EventCode", "MGT102"); break;
-			  
-			  case R.id.bn_fa01: intent.putExtra("EventCode", "FA101"); break; 
-			  case R.id.bn_fa02: intent.putExtra("EventCode", "FA102"); break; 
-			  case R.id.bn_fa03: intent.putExtra("EventCode", "FA103"); break; 
-			  case R.id.bn_fa04: intent.putExtra("EventCode", "FA104"); break; 
-			  case R.id.bn_fa05: intent.putExtra("EventCode", "FA105"); break; 
-			  case R.id.bn_fa06: intent.putExtra("EventCode", "FA106"); break; 
-			  case R.id.bn_fa07: intent.putExtra("EventCode", "FA107"); break; 
-			  case R.id.bn_fa08: intent.putExtra("EventCode", "FA108"); break; 
-			  case R.id.bn_fa09: intent.putExtra("EventCode", "FA109"); break; 
+			case R.id.bn_mgt2:
+				intent.putExtra("EventCode", "MGT101");
+				break;
+			case R.id.bn_mgt3:
+				intent.putExtra("EventCode", "MGT102");
+				break;
 
-			 
-			  }
-		      this.startActivity(intent);
+			case R.id.bn_fa01:
+				intent.putExtra("EventCode", "FA101");
+				break;
+			case R.id.bn_fa02:
+				intent.putExtra("EventCode", "FA102");
+				break;
+			case R.id.bn_fa03:
+				intent.putExtra("EventCode", "FA103");
+				break;
+			case R.id.bn_fa04:
+				intent.putExtra("EventCode", "FA104");
+				break;
+			case R.id.bn_fa05:
+				intent.putExtra("EventCode", "FA105");
+				break;
+			case R.id.bn_fa06:
+				intent.putExtra("EventCode", "FA106");
+				break;
+			case R.id.bn_fa07:
+				intent.putExtra("EventCode", "FA107");
+				break;
+			case R.id.bn_fa08:
+				intent.putExtra("EventCode", "FA108");
+				break;
+			case R.id.bn_fa09:
+				intent.putExtra("EventCode", "FA109");
+				break;
 
+			}
+			this.startActivity(intent);
 
-			
 		}
 	}
-	
-
 
 }

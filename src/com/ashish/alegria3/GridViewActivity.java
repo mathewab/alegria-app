@@ -6,6 +6,8 @@ import android.app.Activity;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.util.TypedValue;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.GridView;
 
 import com.ashish.alegria3.gallery.adapter.GridViewImageAdapter;
@@ -23,6 +25,11 @@ public class GridViewActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        
+		requestWindowFeature(Window.FEATURE_NO_TITLE);
+		getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+				WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
         setContentView(R.layout.activity_grid_view);
  
         gridView = (GridView) findViewById(R.id.grid_view);

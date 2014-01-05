@@ -11,7 +11,9 @@ import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.drawable.Drawable;
 import android.os.AsyncTask;
+import android.os.Handler;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -21,6 +23,8 @@ import android.widget.GridView;
 import android.widget.ImageView;
 
 import com.ashish.alegria3.FullScreenViewActivity;
+import com.ashish.alegria3.R;
+import com.ashish.alegria3.gallery.helper.ImageLoader;
  
 public class GridViewImageAdapter extends BaseAdapter {
  
@@ -53,6 +57,7 @@ public class GridViewImageAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         ImageView imageView;
+        
         if (convertView == null) {
             imageView = new ImageView(_activity);
         } else {
@@ -61,18 +66,14 @@ public class GridViewImageAdapter extends BaseAdapter {
         imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
         imageView.setLayoutParams(new GridView.LayoutParams(imageWidth,
                 imageWidth));
-        //Bitmap image = null;
-        try {
-			 new DownloadImageTask(imageView)
-			.execute(_filePaths.get(position)).get();
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (ExecutionException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+
+        int loader = R.drawable.loader;
+        String image_url = _filePaths.get(position);
         
+        ImageLoader imgLoader = new ImageLoader(_activity.getApplicationContext());
+        
+        imgLoader.DisplayImage(image_url, loader, imageView);
+      
         // get screen dimensions
         //Bitmap image = decodeFile(_filePaths.get(position), imageWidth,
         //        imageWidth);

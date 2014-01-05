@@ -1,15 +1,14 @@
 package com.ashish.alegria3.gallery.helper;
 
-import java.io.File;
+import java.io.InputStream;
+import java.io.OutputStream;
 import java.util.ArrayList;
 import java.util.Locale;
- 
-import android.app.AlertDialog;
+
 import android.content.Context;
 import android.graphics.Point;
 import android.view.Display;
 import android.view.WindowManager;
-import android.widget.Toast;
  
 public class Utils {
  
@@ -68,9 +67,27 @@ public class Utils {
         
  */
         filePaths.add("http://www.alegria.mes.ac.in/gallery/images/baichungbhutia/15.jpg");
+        filePaths.add("http://www.alegria.mes.ac.in/gallery/images/baichungbhutia/16.jpg");
+        filePaths.add("http://www.alegria.mes.ac.in/gallery/images/baichungbhutia/17.jpg");
+
         return filePaths;
     }
- 
+    public static void CopyStream(InputStream is, OutputStream os)
+    {
+        final int buffer_size=1024;
+        try
+        {
+            byte[] bytes=new byte[buffer_size];
+            for(;;)
+            {
+              int count=is.read(bytes, 0, buffer_size);
+              if(count==-1)
+                  break;
+              os.write(bytes, 0, count);
+            }
+        }
+        catch(Exception ex){}
+    }
     // Check supported file extensions
     private boolean IsSupportedFile(String filePath) {
         String ext = filePath.substring((filePath.lastIndexOf(".") + 1),
