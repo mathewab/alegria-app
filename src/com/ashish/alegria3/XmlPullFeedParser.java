@@ -54,6 +54,10 @@ public class XmlPullFeedParser extends BaseFeedParser {
                             	currentEvent.setTitle(parser.nextText());
                             } else if (name.equalsIgnoreCase(EVENT_HEAD)) {
                             	currentEvent.setEventHead(parser.nextText());
+                            } else if (name.equalsIgnoreCase(HEAD_CONTACT)) {
+                            	currentEvent.setHeadcontact(parser.nextText());
+                            } else if (name.equalsIgnoreCase(VENUE)) {
+                            	currentEvent.setVenue(parser.nextText());
                             }
                         }
                         break;

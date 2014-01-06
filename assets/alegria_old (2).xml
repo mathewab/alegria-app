@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<management xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<event id="MGT101">
+		<title>Ad Mad</title>
+		<desc>This is a timepass event</desc>
+		<date>28-12-2013</date>
+		<time>10:00</time>
+		<duration>02:00</duration>
+		<rate>45</rate>
+		<venue>G-401</venue>
+		<rule>This is rule1</rule>
+		<head>Ashish Mathew</head>
+		<headcontact>9773098459</headcontact>
+	</event>
+	<event id="MGT102">
+		<title>Mad ad</title>
+		<date>28-12-2013</date>
+		<time>10:00</time>
+		<duration>02:00</duration>
+		<rate>45</rate>
+		<rule>This is rule2</rule>
+		<head>Ashish Mathew</head>
+	</event>
+	<event id="FA101">
+		<title>1. Artistic fantasy</title>
+		<desc>(Fine Art)SKETCH it, DRAW it and Paint it for our marquee fine arts event. Design an original creation that will make even the great M.F.Hussain proud.</desc>
+		<rule>
+		      1. Mounted canvas (A-3 size) will be provided
+		      2. Materials-brushes, colors (Acrylics, oil and mixed medium
+		      colors) should be brought by participants.
+		      3. Theme will be announced on the spot.
+		      4. Maximum duration will be 4 hours. 
+		      5. For this competition only all the artworks will be retained and exhibited in the Pillai’s Hall Of Fame.</rule>
+		</event>
+		<event id="FA102">
+		<title>2. Poster Mania</title>
+		<desc>
+		    (Poster Making) Do you paint in your notebook and draw in your text book? Stop ruining your property and take the opportunity to sketch up our theme and make us beam.</desc>
+		<rule>
+		    1. Design an original poster.
+		    2. Participants are requested to report half-an-hour prior to the event.
+		    3. Materials should be brought by the participants.
+		    4. Only drawing paper will be provided.
+		    5. Theme would be given on the spot.
+		    6. Participants will not be allowed to copy any sketch.
+		    7.Winning entries will be retained to be kept in the Pillai’s Hall Of Fame.</rule>
+	</event>
+	<event id="FA103">
+		<title>3. Art of colors</title>
+		<desc>(Rangoli Design) Anyone can draw with paper, but can you draw with powder? Celebrate the art of Rangoli. Amaze and delight us with your designs and colors.</desc>
+		<rule>
+		    1. Participants are requested to report half an hour prior to the event.
+		    2. Event duration will be one hour.
+		    3. Required materials to be brought by the participants.
+		    4. Only use of white chalk and rangoli powder is allowed.
+		    5. Participants are not allowed to copy any sketch.
+		    6. Use of stencils is prohibited.</rule>
+	</event>
+	<event id="FA104">
+		<title>4. Intricate Patterns</title>
+		<desc>(Mehendi Design) “A hand of glory, a hand of life, beautiful mehendi is what makes a right wife.”</desc>
+		<rule>
+		1. Participants are requested to report half an hour prior to the event.
+		2. Event duration will be one hour.
+		3. Participants will have to make arrangements for a person to design mehendi on their hands.
+		4. Materials required should be brought by the participants.
+		5. Participants will not be allowed to copy any sketch.</rule>
+	</event>
+	<event id="FA105">
+		<title>5. Nail Fantasy</title>
+		<desc>(Nail Art) “Do you have a surgeons hands and M.F.Hussain’s skill needed to paint on the smallest canvas? Painting nails is not for the weak hearted.”</desc>
+		<rule>
+		1. Participants are requested to report half an hour prior to the event.
+		2. Event duration will be one hour.
+		3. Participants are to bring a friend to put the nail paint on.
+		4. Materials required should be brought by the participants.
+		5. Participants will not be allowed to copy any sketch.</rule>
+	</event>
+	<event id="FA106">
+		<title>6. Blot the tee</title>
+		<desc>T-shirt Painting) You are what you wear. Show the Indian in you by designing a custom T-shirt that depicts Indian Culture and style.</desc>
+		<rule>
+		1. Participants are requested to report half an hour prior to the event.
+		2. Event duration will be one hour.
+		3. White T-shirt material and other requirements for painting should be brought by the participants.
+		4. Winning entries will be retained by Alegria and displayed on the Pillai’s Hall Of Fame.
+		5. T-shirts will be made available for purchase on the spot.</rule>
+	</event>
+	<event id="FA107">
+		<title>7. Mask Me</title>
+		<desc>(Face painting) Eyes and nose are common to all, colors and designs are what we want. Use your face as a canvas to express the emotions traditionally rooted in Indian Culture.</desc>
+		<rule>
+		1. Participants are requested to report half an hour prior to the
+		 event.
+		2. Event duration will be one hour.
+		3. Themes would be provided on the spot.
+		4. Materials to be brought by the participants.
+		5. Participants will not be allowed to copy any sketch.</rule>
+	</event>
+	<event id="FA108">
+		<title>8. Bodygraphy</title>
+		<desc>(Tattoo making) People have tattooed their bodies for god, for love, for honor since ancient days. Now it’s time for you to represent India and what matters the most about India to you and your body.</desc>
+		<rule>
+		1. Participants are requested to report half an hour prior to the
+		 event.
+		2. Event duration will be one hour.
+		3. Themes would be provided on the spot.
+		4. Materials to be brought by the participants.
+		5. Participants will not be allowed to copy any sketch.
+		</rule>
+	</event>
+	<event id="FA109">
+		<title>9. Tooning around</title>
+		<desc>(Cartooning) “The world is a joke, but can you draw it out? Alegria
+gives you a chance to showcase the story in an all new way in your
+own original way.”</desc>
+		<rule>
+		1. Participants are requested to report half an hour prior to the
+		 event.
+		2. Event duration will be one hour.
+		3. Themes would be provided on the spot.
+		4. Materials to be brought by the participants.
+		5. Only paper will be provided.
+		6. Participants will not be allowed to copy any sketch.
+		</rule>
+	</event>
+	
+	
+	
+	
+	
+	
+	<event id="TE101">
+		<title>1. Death Race</title>
+		<desc>(Robotics L1) Defy the tracks, time your gaps, jump the bridges and speed
+through the tunnels. This event is what we all live for.</desc>
+		<rule>
+		1. Maximum permitted dimensions and weight is 25cmX25cmX25cm and
+		1kg respectively.
+		2. There will be two rounds-qualifier and knock-out eventually leading to the
+		3. The participants will have to complete a part of the track for qualifying.
+		Qualification will depend on the time taken.
+		4. In the knock-out round, two participants would compete on the mirrored
+		track, with the first completing the track winning the round.</rule>
+	</event>
+	<event id="TE102">
+		<title>2. Time Chase</title>
+		<desc>(Robotics L2-PC controlled) The faster bots roll across the finish line,
+ governed by the computers and controlled by you.</desc>
+		<rule>
+		1. Maximum permitted dimensions and weight is 25cmX25cmX25cm and 1kg respectively.
+		2. The robots should be controlled by the keyboard via computer, both of which would be provided.
+		3. No serial, parallel or USB port connector cables would be provided.
+		4. The programming must be purely C/C++/Java.
+		</rule>
+	</event>
+	<event id="TE103">
+		<title>3. Can you follow me</title>
+		<desc>(Robotics L3-Line Follower) These zig-zag lines can take you straight to the prize.</desc>
+		<rule>
+		1. Maximum permitted dimensions and weight is 25cmX25cmX25cm and
+		1kg respectively
+		2. The track would contain lines of width 35mm and the following elements:
+		Straight stretches, Loops, Radial turns, S-shaped beds
+		(zigzags) etc.
+		3. There will be a restriction the number of sensors used- 2, 3, and 4 as 
+		decided by the organizers. The same will be notified to the participants.
+		4. The robot must be fully autonomous, with all powering and motoring 
+		mechanisms contained.
+		5. No power supply would be provided.
+		</rule>
+	</event>
+	<event id="TE108">
+		<title>8. TPP</title>
+		<desc>(Technical Paper Presentation) It’s the time for you to innovate and sell,
+have a buy-in.</desc>
+		<rule>
+		1. Size of the abstract should not exceed a page (350-400 words), and it
+		must outline the following: Objectives, Major Outcomes expected,
+		Methodology and Practical implications, if any.
+		2. This abstract should be e-mailed to the event head(s), the last date 
+		for which is 25th Jan.
+		3. Intimation will be given to the participants, following which they are
+		supposed to be present on the scheduled date, with 3 hard copies of
+		the techpaper.
+		4. The paper can be of the participant’s technical field of interest.
+		5. Presentation time will be 12 min, with an additional time of 3 min for
+		queries.
+		</rule>
+	</event>
+	<event id="TE109">
+		<title>9. Web Hunt</title>
+		<desc>(Online Treasure Hunt) Web designing contest which will trap you in its web. Try to escape from its clutches using your designing skills.</desc>
+		<rule>
+		1. Once entry fees have been paid, the username and password of the
+		participant would be sent through e-mail. No online payment mode is
+		available.
+		2. Participants can start the hunt once the Web Hunt site is hosted. The
+		site will be hosted a few days prior to the festival. The final date would
+		3. There will be multiple stages. Each stage would consist of a question,
+		a puzzle, a game or anything that would take you to the
+		next level on successful completion.
+		</rule>
+	</event>
+	<event id="TE110">
+		<title>10. Code Master</title>
+		<desc>(Debugging + Coding) Time to twist, squeeze and crunch your code to achieve the minimum number of bytes and get it running.</desc>
+		<rule>
+		1. Participants can use any programming language from the specified
+		 languages- C/C++/Java. 2. Three rounds will be conducted.
+			a. Round 1 - Blind coding
+			b. Round 2- Code the algo.
+			c. Round 3-Parallel coding
+		3. Criteria for elimination at the end of each round will be decided by the event heads.
+		</rule>
+	</event>
+	<event id="TE111">
+		<title>11. Junk Yard Wars</title>
+		<desc>(Create out of junk) Recreate-Reuse-Recycle and PUT TO TECHNICAL USE.</desc>
+		<rule>
+		1. Teams will be provided with junk box filled with materials to build the
+		device. They may use either all or a part of the materials
+		provided.
+		2. They shall not be allowed to share materials with other teams.
+		3. The time limit for the event is 2-3 hours.
+	</rule>
+	</event>
+	<event id="TE112">
+		<title>12. Techroadies 2.0</title>
+		<desc>(Technical Roadies Competition) ARE U A tech.ROADIE??</desc>
+		<rule>
+		1. The different rules for the various break-up tasks would be explained
+		at the time of the event by the event head.
+		2. All the participants will have to a sign a NOC (No Objection
+		 Certificate).
+		3. The exact details of the tasks would be divulged to the participants
+		 only on the day of the event.
+		</rule>
+	</event>
+	<event id="TE113">
+		<title>13. Mock Interviews</title>
+		<desc>(Mock technical interviews) Placement is too far; but mock gives experience. Get ready to get grilled from real world recruiting experts who will test your knowledge, personality, composure and charm in this ultimate test of your abilities.</desc>
+		<rule>
+		1. The entire event will be conducted in 4 rounds.
+		a. Round 1 – Aptitude test
+		b. Round 2 – Group discussion
+		c. Round 3 –Two minute debate
+		d. Round 4 – Personal interview
+		</rule>
+	</event>
+	<event id="TE114">
+		<title>14. Robo- Pirates</title>
+		<desc>(Aquabotics) Take up the challenge, build an Aquabot and see how far you can go.</desc>
+		<rule>
+		1. The dimension of the bot should not exceed 15cm X 15cm (l X b).
+		2. There will be three tasks in the arena which would be disclosed on the
+		day of the event.
+		3. If your bot drowns, it may use its mechanism to come upward (points
+		will be deducted for drowning).
+		4. A maximum number of two restarts will be allowed.
+		5. The final results will be based on the points accumulated and/or on
+		the time taken to complete the course.</rule>
+	</event>
+	<event id="TE115">
+		<title>15. 3D Modeling</title>
+		<desc>(PRO-E/SOLID WORKS) Draw the next dimension. Isn’t that simple enough?</desc>
+		<rule>
+		1. The participant should be able to complete the modeling within the
+		given time. No extra time will be given.
+		2. Participants must use any of the two softwares mentioned.
+		3. No arguments will be accepted regarding dimension fault or assembly fault.
+		Any part or step that is indicated by the software as
+		error would not be accepted.
+		4. You will be required to save your work in the working directory
+ 		accordingly. The management would not be responsible for the loss of
+ 		your work because of any accident.
+ 		</rule>
+ 		</event>
+	</management>

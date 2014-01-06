@@ -15,7 +15,9 @@ public class Event implements Comparable<Event>{
 	private String rules;
 	private String eventHead;
 	private String title;
-	public String desc;
+	private String desc;
+	private String venue;
+	private String headcontact;
 	
 	static SimpleDateFormat FORMATTER = 
 	        new SimpleDateFormat("dd-MM-yyyy");
@@ -36,6 +38,22 @@ public class Event implements Comparable<Event>{
 		title = "Information not availaible";
 		desc = "Information not availaible";
 
+	}
+
+	public String getVenue() {
+		return venue;
+	}
+
+	public void setVenue(String venue) {
+		this.venue = venue;
+	}
+
+	public String getHeadcontact() {
+		return headcontact;
+	}
+
+	public void setHeadcontact(String headcontact) {
+		this.headcontact = headcontact;
 	}
 
 	public String getDesc() {

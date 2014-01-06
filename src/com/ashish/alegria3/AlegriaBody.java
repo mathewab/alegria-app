@@ -401,43 +401,120 @@ public class AlegriaBody extends FragmentActivity {
 			intent.putExtra("EventCode", "");
 
 			switch (v.getId()) {
-			case R.id.bn_mgt1:
-				System.out.println("Button clicked");
-				break;
+			case R.id.bn_mgt1: 	intent.putExtra("EventCode", "M01"); 	break;
+			case R.id.bn_mgt2: 	intent.putExtra("EventCode", "M02"); 	break;
+			case R.id.bn_mgt3: 	intent.putExtra("EventCode", "M03"); 	break;
+			case R.id.bn_mgt4: 	intent.putExtra("EventCode", "M04"); 	break;
+			case R.id.bn_mgt5: 	intent.putExtra("EventCode", "M05"); 	break;
+			case R.id.bn_mgt6: 	intent.putExtra("EventCode", "M06"); 	break;
+			case R.id.bn_mgt7: 	intent.putExtra("EventCode", "M07"); 	break;
+			case R.id.bn_mgt8: 	intent.putExtra("EventCode", "M08"); 	break;
+			case R.id.bn_mgt9: 	intent.putExtra("EventCode", "M09"); 	break;
 
-			case R.id.bn_mgt2:
-				intent.putExtra("EventCode", "MGT101");
-				break;
-			case R.id.bn_mgt3:
-				intent.putExtra("EventCode", "MGT102");
-				break;
+			case R.id.bn_in1: 	intent.putExtra("EventCode", "I01"); 	break;
+			case R.id.bn_in2: 	intent.putExtra("EventCode", "I02"); 	break;
+			case R.id.bn_in3: 	intent.putExtra("EventCode", "I03"); 	break;
+			case R.id.bn_in4: 	intent.putExtra("EventCode", "I04"); 	break;
+			case R.id.bn_in5: 	intent.putExtra("EventCode", "I05"); 	break;
+			case R.id.bn_in6: 	intent.putExtra("EventCode", "I06"); 	break;
 
+			case R.id.bn_l1: 	intent.putExtra("EventCode", "LA01"); 	break;
+			case R.id.bn_l2: 	intent.putExtra("EventCode", "LA02"); 	break;
+			case R.id.bn_l3: 	intent.putExtra("EventCode", "LA03"); 	break;
+			case R.id.bn_l4: 	intent.putExtra("EventCode", "LA04"); 	break;
+			case R.id.bn_l5: 	intent.putExtra("EventCode", "LA05"); 	break;
+			case R.id.bn_l6: 	intent.putExtra("EventCode", "LA06"); 	break;
+
+			case R.id.bn_pa01: 	intent.putExtra("EventCode", "PA01"); 	break;
+			case R.id.bn_pa02: 	intent.putExtra("EventCode", "PA02"); 	break;
+			case R.id.bn_pa03: 	intent.putExtra("EventCode", "PA03"); 	break;
+			case R.id.bn_pa04: 	intent.putExtra("EventCode", "PA04"); 	break;
+			case R.id.bn_pa05: 	intent.putExtra("EventCode", "PA05"); 	break;
+			case R.id.bn_pa06: 	intent.putExtra("EventCode", "PA06"); 	break;
+			case R.id.bn_pa07: 	intent.putExtra("EventCode", "PA07"); 	break;
+			case R.id.bn_pa08: 	intent.putExtra("EventCode", "PA08"); 	break;
+			case R.id.bn_pa09: 	intent.putExtra("EventCode", "PA09"); 	break;
+			case R.id.bn_pa10: 	intent.putExtra("EventCode", "PA10"); 	break;
+			case R.id.bn_pa11: 	intent.putExtra("EventCode", "PA11"); 	break;
+
+			case R.id.bn_sg01: 	intent.putExtra("EventCode", "S01"); 	break;
+			case R.id.bn_sg02: 	intent.putExtra("EventCode", "S02"); 	break;
+			case R.id.bn_sg03: 	intent.putExtra("EventCode", "S03"); 	break;
+			case R.id.bn_sg04: 	intent.putExtra("EventCode", "S04"); 	break;
+			case R.id.bn_sg05: 	intent.putExtra("EventCode", "S05"); 	break;
+			case R.id.bn_sg06: 	intent.putExtra("EventCode", "S06"); 	break;
+			case R.id.bn_sg07: 	intent.putExtra("EventCode", "S07"); 	break;
+			case R.id.bn_sg08: 	intent.putExtra("EventCode", "S08"); 	break;
+			case R.id.bn_sg09: 	intent.putExtra("EventCode", "S09"); 	break;
+			case R.id.bn_sg10: 	intent.putExtra("EventCode", "S10"); 	break;
+			case R.id.bn_sg11: 	intent.putExtra("EventCode", "S11"); 	break;
+			case R.id.bn_sg12: 	intent.putExtra("EventCode", "S12"); 	break;
+			case R.id.bn_sg13: 	intent.putExtra("EventCode", "S13"); 	break;
+			case R.id.bn_sg14: 	intent.putExtra("EventCode", "S14"); 	break;
+			case R.id.bn_sg15: 	intent.putExtra("EventCode", "S15"); 	break;
+			case R.id.bn_sg16: 	intent.putExtra("EventCode", "S16"); 	break;
+			case R.id.bn_sg17: 	intent.putExtra("EventCode", "S17"); 	break;
+			
+			case R.id.bn_te01: 	intent.putExtra("EventCode", "T01"); 	break;
+			case R.id.bn_te02: 	intent.putExtra("EventCode", "T02"); 	break;
+			case R.id.bn_te03: 	intent.putExtra("EventCode", "T03"); 	break;
+			case R.id.bn_te04: 	intent.putExtra("EventCode", "T04"); 	break;
+			case R.id.bn_te05: 	intent.putExtra("EventCode", "T05"); 	break;
+			case R.id.bn_te06: 	intent.putExtra("EventCode", "T06"); 	break;
+			case R.id.bn_te07: 	intent.putExtra("EventCode", "T07"); 	break;
+			case R.id.bn_te08: 	intent.putExtra("EventCode", "T08"); 	break;
+			case R.id.bn_te09: 	intent.putExtra("EventCode", "T09"); 	break;
+			case R.id.bn_te10: 	intent.putExtra("EventCode", "T10"); 	break;
+			case R.id.bn_te11: 	intent.putExtra("EventCode", "T11"); 	break;
+			case R.id.bn_te12: 	intent.putExtra("EventCode", "T12"); 	break;
+			case R.id.bn_te13: 	intent.putExtra("EventCode", "T13"); 	break;
+			case R.id.bn_te14: 	intent.putExtra("EventCode", "T14"); 	break;
+			case R.id.bn_te15: 	intent.putExtra("EventCode", "T15"); 	break;
+			
+			case R.id.bn_w01: 	intent.putExtra("EventCode", "W01"); 	break;
+			case R.id.bn_w02: 	intent.putExtra("EventCode", "W02"); 	break;
+			case R.id.bn_w03: 	intent.putExtra("EventCode", "W03"); 	break;
+			case R.id.bn_w04: 	intent.putExtra("EventCode", "W04"); 	break;
+			case R.id.bn_w05: 	intent.putExtra("EventCode", "W05"); 	break;
+			case R.id.bn_w06: 	intent.putExtra("EventCode", "W06"); 	break;
+			case R.id.bn_w07: 	intent.putExtra("EventCode", "W07"); 	break;
+			case R.id.bn_w08: 	intent.putExtra("EventCode", "W08"); 	break;
+			case R.id.bn_w09: 	intent.putExtra("EventCode", "W09"); 	break;
+			case R.id.bn_w10: 	intent.putExtra("EventCode", "W10"); 	break;
+			case R.id.bn_w11: 	intent.putExtra("EventCode", "W11"); 	break;
+			case R.id.bn_w12: 	intent.putExtra("EventCode", "W12"); 	break;
+			case R.id.bn_w13: 	intent.putExtra("EventCode", "W13"); 	break;
+			case R.id.bn_w14: 	intent.putExtra("EventCode", "W14"); 	break;
+			case R.id.bn_w15: 	intent.putExtra("EventCode", "W15"); 	break;
+			case R.id.bn_w16: 	intent.putExtra("EventCode", "W16"); 	break;
+			case R.id.bn_w17: 	intent.putExtra("EventCode", "W17"); 	break;			
+			
 			case R.id.bn_fa01:
-				intent.putExtra("EventCode", "FA101");
+				intent.putExtra("EventCode", "FA01");
 				break;
 			case R.id.bn_fa02:
-				intent.putExtra("EventCode", "FA102");
+				intent.putExtra("EventCode", "FA02");
 				break;
 			case R.id.bn_fa03:
-				intent.putExtra("EventCode", "FA103");
+				intent.putExtra("EventCode", "FA03");
 				break;
 			case R.id.bn_fa04:
-				intent.putExtra("EventCode", "FA104");
+				intent.putExtra("EventCode", "FA04");
 				break;
 			case R.id.bn_fa05:
-				intent.putExtra("EventCode", "FA105");
+				intent.putExtra("EventCode", "FA05");
 				break;
 			case R.id.bn_fa06:
-				intent.putExtra("EventCode", "FA106");
+				intent.putExtra("EventCode", "FA06");
 				break;
 			case R.id.bn_fa07:
-				intent.putExtra("EventCode", "FA107");
+				intent.putExtra("EventCode", "FA07");
 				break;
 			case R.id.bn_fa08:
-				intent.putExtra("EventCode", "FA108");
+				intent.putExtra("EventCode", "FA08");
 				break;
 			case R.id.bn_fa09:
-				intent.putExtra("EventCode", "FA109");
+				intent.putExtra("EventCode", "FA09");
 				break;
 
 			}
