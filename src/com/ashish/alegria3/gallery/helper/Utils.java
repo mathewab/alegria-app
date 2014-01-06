@@ -70,9 +70,7 @@ public class Utils {
         for(int i =1; i<=15; i++) {
         	filePaths.add(base_path+contextPath+"/"+i+".jpg");
         }
-       /* filePaths.add("http://www.alegria.mes.ac.in/gallery/images/baichungbhutia/15.jpg");
-        filePaths.add("http://www.alegria.mes.ac.in/gallery/images/baichungbhutia/16.jpg");
-        filePaths.add("http://www.alegria.mes.ac.in/gallery/images/baichungbhutia/17.jpg");*/
+
 
         return filePaths;
     }

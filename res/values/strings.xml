@@ -11,6 +11,7 @@
     <string name="title_section2">Events</string>
     <string name="title_section3">Contact Us</string>
     <string name="title_section4">Gallery</string>
+    <string name="title_section5">Sponsors</string>    
     <string name="title_activity_event">EventActivity</string>
     <string name="hello_world">Hello world!</string>
     <string name="about_alegria">Alegría - the Festival of Joy from the 28th of January to the 1st of February 2013 at\' Dr. K. M. Vasudevan Pillais Campus, New Panvel. Alegría - the Festival of Joy is a multi-institution\' mega festival, created with the goal of providing a platform for students to demonstrate their wonderful and sometimes hidden talent and skill.</string>
@@ -57,6 +58,98 @@
         <item>danceperformance</item>
         <item>fashionshow</item>
         <item>technicalevents</item>
+    </string-array>
+    <string-array name="codes_events">
+        <item>M01</item>
+        <item>M02</item>
+        <item>M03</item>
+        <item>M04</item>
+        <item>M05</item>
+        <item>M06</item>
+        <item>M07</item>
+        <item>M08</item>
+        <item>M09</item>
+        <item>FA01</item>
+        <item>FA02</item>
+        <item>FA03</item>
+        <item>FA04</item>
+        <item>FA05</item>
+        <item>FA06</item>
+        <item>FA07</item>
+        <item>FA08</item>
+        <item>FA09</item>
+        <item>T01</item>
+        <item>T02</item>
+        <item>T03</item>
+        <item>T04</item>
+        <item>T05</item>
+        <item>T06</item>
+        <item>T07</item>
+        <item>T08</item>
+        <item>T09</item>
+        <item>T10</item>
+        <item>T11</item>
+        <item>T12</item>
+        <item>T13</item>
+        <item>T14</item>
+        <item>T15</item>
+        <item>I01</item>
+        <item>I02</item>
+        <item>I03</item>
+        <item>I04</item>
+        <item>I05</item>
+        <item>I06</item>
+        <item>PA01</item>
+        <item>PA02</item>
+        <item>PA03</item>
+        <item>PA04</item>
+        <item>PA05</item>
+        <item>PA06</item>
+        <item>PA07</item>
+        <item>PA08</item>
+        <item>PA09</item>
+        <item>PA10</item>
+        <item>PA11</item>
+        <item>LA01</item>
+        <item>LA02</item>
+        <item>LA03</item>
+        <item>LA04</item>
+        <item>LA05</item>
+        <item>LA06</item>
+        <item>S01</item>
+        <item>S02</item>
+        <item>S03</item>
+        <item>S04</item>
+        <item>S05</item>
+        <item>S06</item>
+        <item>S07</item>
+        <item>S08</item>
+        <item>S09</item>
+        <item>S10</item>
+        <item>S11</item>
+        <item>S12</item>
+        <item>S13</item>
+        <item>S14</item>
+        <item>S15</item>
+        <item>S16</item>
+        <item>S17</item>
+        <item>W01</item>
+        <item>W02</item>
+        <item>W03</item>
+        <item>W04</item>
+        <item>W05</item>
+        <item>W06</item>
+        <item>W07</item>
+        <item>W08</item>
+        <item>W09</item>
+        <item>W10</item>
+        <item>W11</item>
+        <item>W12</item>
+        <item>W13</item>
+        <item>W14</item>
+        <item>W15</item>
+        <item>W16</item>
+        <item>W17</item>
     </string-array>
 
 </resources>

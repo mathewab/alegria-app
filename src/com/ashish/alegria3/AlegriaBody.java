@@ -29,6 +29,7 @@ import android.widget.TextView;
 import com.ashish.alegria3.gallery.helper.AppConstant;
 import com.ashish.alegria3.gallery.helper.Utils;
 import com.ashish.gallery.fragment.ImageAdapter;
+import com.ashish.gallery.fragment.SponsorAdapter;
 
 public class AlegriaBody extends FragmentActivity {
 
@@ -90,9 +91,11 @@ public class AlegriaBody extends FragmentActivity {
 				return new EventsFragment();
 			} else if (position == 2) {
 				return new GalleryFragment();
-			} else if (position == 3) {
+			} else if (position == 4) {
 				return new ContactUsFragment();
-			} else {
+			} else if (position == 3) {
+				return new SponsorsFragment();
+			}else {
 				// getItem is called to instantiate the fragment for the given
 				// page.
 				// Return a DummySectionFragment (defined as a static inner
@@ -110,8 +113,8 @@ public class AlegriaBody extends FragmentActivity {
 
 		@Override
 		public int getCount() {
-			// Show 4 total pages.
-			return 4;
+			// Show 5 total pages.
+			return 5;
 		}
 
 		@SuppressLint("DefaultLocale")
@@ -126,8 +129,9 @@ public class AlegriaBody extends FragmentActivity {
 			case 2:
 				return getString(R.string.title_section4).toUpperCase(l);
 			case 3:
+				return getString(R.string.title_section5).toUpperCase(l);
+			case 4:
 				return getString(R.string.title_section3).toUpperCase(l);
-
 			}
 			return null;
 		}
@@ -160,6 +164,49 @@ public class AlegriaBody extends FragmentActivity {
 		}
 	}
 
+	public static class SponsorsFragment extends Fragment {
+		public static final String ARG_SECTION_NUMBER = "section_number";
+		
+		GridView gridview;
+		
+		public SponsorsFragment() {
+			
+		}
+		@Override
+		public View onCreateView(LayoutInflater inflater, ViewGroup container,
+				Bundle savedInstanceState) {
+			View rootView = inflater.inflate(R.layout.sponsors_fragment,
+					container, false);
+			
+			
+			gridview = (GridView) rootView.findViewById(R.id.grid_sponsor_view);
+
+			InitilizeGridLayout();
+
+			gridview.setAdapter(new SponsorAdapter(this.getActivity()));
+			
+			return rootView;
+		}
+		
+		private void InitilizeGridLayout() {
+			Resources r = getResources();
+			float padding = TypedValue.applyDimension(
+					TypedValue.COMPLEX_UNIT_DIP, AppConstant.GRID_PADDING,
+					r.getDisplayMetrics());
+			Utils utils = new Utils(this.getActivity());
+
+			int columnWidth = (int) ((utils.getScreenWidth() - ((AppConstant.NUM_OF_COLUMNS + 1) * padding)) / AppConstant.NUM_OF_COLUMNS);
+
+			gridview.setNumColumns(AppConstant.NUM_OF_COLUMNS);
+			gridview.setColumnWidth(columnWidth);
+			gridview.setStretchMode(GridView.NO_STRETCH);
+			gridview.setPadding((int) padding, (int) padding, (int) padding,
+					(int) padding);
+			gridview.setHorizontalSpacing((int) padding);
+			gridview.setVerticalSpacing((int) padding);
+		}
+
+	}
 	public static class ContactUsFragment extends Fragment implements
 			OnClickListener {
 		/**
@@ -235,7 +282,7 @@ public class AlegriaBody extends FragmentActivity {
 				this.startActivity(imap);
 				break;
 			case R.id.bn_fb:
-				String fb = "https://www.facebook.com/pillaisalegria";
+				//String fb = "https://www.facebook.com/pillaisalegria";
 				Intent ifb = getOpenFacebookIntent(this.getActivity()
 						.getApplicationContext());
 				// ifb.setData(Uri.parse(fb));
@@ -254,7 +301,7 @@ public class AlegriaBody extends FragmentActivity {
 				startActivity(iut);
 				break;
 			case R.id.bn_twitter:
-				String tw = "https://twitter.com/PillaisAlegria";
+				//String tw = "https://twitter.com/PillaisAlegria";
 				Intent itw = getOpenTwitterIntent(this.getActivity()
 						.getApplicationContext());
 				// itw.setData(Uri.parse(tw));
@@ -338,7 +385,31 @@ public class AlegriaBody extends FragmentActivity {
 		 * fragment.
 		 */
 		public static final String ARG_SECTION_NUMBER = "section_number";
-
+		
+		private Integer[] buttons = { R.id.bn_mgt1, R.id.bn_mgt2, R.id.bn_mgt3,
+				R.id.bn_mgt4, R.id.bn_mgt5, R.id.bn_mgt6, R.id.bn_mgt7,
+				R.id.bn_mgt8, R.id.bn_mgt9, R.id.bn_fa01, R.id.bn_fa02,
+				R.id.bn_fa03, R.id.bn_fa04, R.id.bn_fa05, R.id.bn_fa06,
+				R.id.bn_fa07, R.id.bn_fa08, R.id.bn_fa09, R.id.bn_te01,
+				R.id.bn_te02, R.id.bn_te03, R.id.bn_te04, R.id.bn_te05,
+				R.id.bn_te06, R.id.bn_te07, R.id.bn_te08, R.id.bn_te09,
+				R.id.bn_te10, R.id.bn_te11, R.id.bn_te12, R.id.bn_te13,
+				R.id.bn_te14, R.id.bn_te15, R.id.bn_in1, R.id.bn_in2,
+				R.id.bn_in3, R.id.bn_in4, R.id.bn_in5, R.id.bn_in6,
+				R.id.bn_pa01, R.id.bn_pa02, R.id.bn_pa03, R.id.bn_pa04,
+				R.id.bn_pa05, R.id.bn_pa06, R.id.bn_pa07, R.id.bn_pa08,
+				R.id.bn_pa09, R.id.bn_pa10, R.id.bn_pa11, R.id.bn_l1,
+				R.id.bn_l2, R.id.bn_l3, R.id.bn_l4, R.id.bn_l5, R.id.bn_l6,
+				R.id.bn_sg01, R.id.bn_sg02, R.id.bn_sg03, R.id.bn_sg04,
+				R.id.bn_sg05, R.id.bn_sg06, R.id.bn_sg07, R.id.bn_sg08,
+				R.id.bn_sg09, R.id.bn_sg10, R.id.bn_sg11, R.id.bn_sg12,
+				R.id.bn_sg13, R.id.bn_sg14, R.id.bn_sg15, R.id.bn_sg16,
+				R.id.bn_sg17, R.id.bn_w01, R.id.bn_w02, R.id.bn_w03,
+				R.id.bn_w04, R.id.bn_w05, R.id.bn_w06, R.id.bn_w07,
+				R.id.bn_w08, R.id.bn_w09, R.id.bn_w10, R.id.bn_w11,
+				R.id.bn_w12, R.id.bn_w13, R.id.bn_w14, R.id.bn_w15,
+				R.id.bn_w16, R.id.bn_w17 };
+		
 		public EventsFragment() {
 		}
 
@@ -347,30 +418,6 @@ public class AlegriaBody extends FragmentActivity {
 				Bundle savedInstanceState) {
 			View rootView = inflater.inflate(R.layout.events_fragment,
 					container, false);
-
-			Integer[] buttons = { R.id.bn_mgt1, R.id.bn_mgt2, R.id.bn_mgt3,
-					R.id.bn_mgt4, R.id.bn_mgt5, R.id.bn_mgt6, R.id.bn_mgt7,
-					R.id.bn_mgt8, R.id.bn_mgt9, R.id.bn_fa01, R.id.bn_fa02,
-					R.id.bn_fa03, R.id.bn_fa04, R.id.bn_fa05, R.id.bn_fa06,
-					R.id.bn_fa07, R.id.bn_fa08, R.id.bn_fa09, R.id.bn_te01,
-					R.id.bn_te02, R.id.bn_te03, R.id.bn_te04, R.id.bn_te05,
-					R.id.bn_te06, R.id.bn_te07, R.id.bn_te08, R.id.bn_te09,
-					R.id.bn_te10, R.id.bn_te11, R.id.bn_te12, R.id.bn_te13,
-					R.id.bn_te14, R.id.bn_te15, R.id.bn_in1, R.id.bn_in2,
-					R.id.bn_in3, R.id.bn_in4, R.id.bn_in5, R.id.bn_in6,
-					R.id.bn_pa01, R.id.bn_pa02, R.id.bn_pa03, R.id.bn_pa04,
-					R.id.bn_pa05, R.id.bn_pa06, R.id.bn_pa07, R.id.bn_pa08,
-					R.id.bn_pa09, R.id.bn_pa10, R.id.bn_pa11, R.id.bn_l1,
-					R.id.bn_l2, R.id.bn_l3, R.id.bn_l4, R.id.bn_l5, R.id.bn_l6,
-					R.id.bn_sg01, R.id.bn_sg02, R.id.bn_sg03, R.id.bn_sg04,
-					R.id.bn_sg05, R.id.bn_sg06, R.id.bn_sg07, R.id.bn_sg08,
-					R.id.bn_sg09, R.id.bn_sg10, R.id.bn_sg11, R.id.bn_sg12,
-					R.id.bn_sg13, R.id.bn_sg14, R.id.bn_sg15, R.id.bn_sg16,
-					R.id.bn_sg17, R.id.bn_w01, R.id.bn_w02, R.id.bn_w03,
-					R.id.bn_w04, R.id.bn_w05, R.id.bn_w06, R.id.bn_w07,
-					R.id.bn_w08, R.id.bn_w09, R.id.bn_w10, R.id.bn_w11,
-					R.id.bn_w12, R.id.bn_w13, R.id.bn_w14, R.id.bn_w15,
-					R.id.bn_w16, R.id.bn_w17 };
 
 			Resources r = getResources();
 			float padding = TypedValue.applyDimension(
@@ -397,126 +444,15 @@ public class AlegriaBody extends FragmentActivity {
 		@Override
 		public void onClick(View v) {
 			Intent intent;
+			String codes[] = this.getResources().getStringArray(
+					R.array.codes_events);
 			intent = new Intent("com.ashish.alegria3.EVENTACTIVITY");
-			intent.putExtra("EventCode", "");
-
-			switch (v.getId()) {
-			case R.id.bn_mgt1: 	intent.putExtra("EventCode", "M01"); 	break;
-			case R.id.bn_mgt2: 	intent.putExtra("EventCode", "M02"); 	break;
-			case R.id.bn_mgt3: 	intent.putExtra("EventCode", "M03"); 	break;
-			case R.id.bn_mgt4: 	intent.putExtra("EventCode", "M04"); 	break;
-			case R.id.bn_mgt5: 	intent.putExtra("EventCode", "M05"); 	break;
-			case R.id.bn_mgt6: 	intent.putExtra("EventCode", "M06"); 	break;
-			case R.id.bn_mgt7: 	intent.putExtra("EventCode", "M07"); 	break;
-			case R.id.bn_mgt8: 	intent.putExtra("EventCode", "M08"); 	break;
-			case R.id.bn_mgt9: 	intent.putExtra("EventCode", "M09"); 	break;
-
-			case R.id.bn_in1: 	intent.putExtra("EventCode", "I01"); 	break;
-			case R.id.bn_in2: 	intent.putExtra("EventCode", "I02"); 	break;
-			case R.id.bn_in3: 	intent.putExtra("EventCode", "I03"); 	break;
-			case R.id.bn_in4: 	intent.putExtra("EventCode", "I04"); 	break;
-			case R.id.bn_in5: 	intent.putExtra("EventCode", "I05"); 	break;
-			case R.id.bn_in6: 	intent.putExtra("EventCode", "I06"); 	break;
-
-			case R.id.bn_l1: 	intent.putExtra("EventCode", "LA01"); 	break;
-			case R.id.bn_l2: 	intent.putExtra("EventCode", "LA02"); 	break;
-			case R.id.bn_l3: 	intent.putExtra("EventCode", "LA03"); 	break;
-			case R.id.bn_l4: 	intent.putExtra("EventCode", "LA04"); 	break;
-			case R.id.bn_l5: 	intent.putExtra("EventCode", "LA05"); 	break;
-			case R.id.bn_l6: 	intent.putExtra("EventCode", "LA06"); 	break;
-
-			case R.id.bn_pa01: 	intent.putExtra("EventCode", "PA01"); 	break;
-			case R.id.bn_pa02: 	intent.putExtra("EventCode", "PA02"); 	break;
-			case R.id.bn_pa03: 	intent.putExtra("EventCode", "PA03"); 	break;
-			case R.id.bn_pa04: 	intent.putExtra("EventCode", "PA04"); 	break;
-			case R.id.bn_pa05: 	intent.putExtra("EventCode", "PA05"); 	break;
-			case R.id.bn_pa06: 	intent.putExtra("EventCode", "PA06"); 	break;
-			case R.id.bn_pa07: 	intent.putExtra("EventCode", "PA07"); 	break;
-			case R.id.bn_pa08: 	intent.putExtra("EventCode", "PA08"); 	break;
-			case R.id.bn_pa09: 	intent.putExtra("EventCode", "PA09"); 	break;
-			case R.id.bn_pa10: 	intent.putExtra("EventCode", "PA10"); 	break;
-			case R.id.bn_pa11: 	intent.putExtra("EventCode", "PA11"); 	break;
-
-			case R.id.bn_sg01: 	intent.putExtra("EventCode", "S01"); 	break;
-			case R.id.bn_sg02: 	intent.putExtra("EventCode", "S02"); 	break;
-			case R.id.bn_sg03: 	intent.putExtra("EventCode", "S03"); 	break;
-			case R.id.bn_sg04: 	intent.putExtra("EventCode", "S04"); 	break;
-			case R.id.bn_sg05: 	intent.putExtra("EventCode", "S05"); 	break;
-			case R.id.bn_sg06: 	intent.putExtra("EventCode", "S06"); 	break;
-			case R.id.bn_sg07: 	intent.putExtra("EventCode", "S07"); 	break;
-			case R.id.bn_sg08: 	intent.putExtra("EventCode", "S08"); 	break;
-			case R.id.bn_sg09: 	intent.putExtra("EventCode", "S09"); 	break;
-			case R.id.bn_sg10: 	intent.putExtra("EventCode", "S10"); 	break;
-			case R.id.bn_sg11: 	intent.putExtra("EventCode", "S11"); 	break;
-			case R.id.bn_sg12: 	intent.putExtra("EventCode", "S12"); 	break;
-			case R.id.bn_sg13: 	intent.putExtra("EventCode", "S13"); 	break;
-			case R.id.bn_sg14: 	intent.putExtra("EventCode", "S14"); 	break;
-			case R.id.bn_sg15: 	intent.putExtra("EventCode", "S15"); 	break;
-			case R.id.bn_sg16: 	intent.putExtra("EventCode", "S16"); 	break;
-			case R.id.bn_sg17: 	intent.putExtra("EventCode", "S17"); 	break;
-			
-			case R.id.bn_te01: 	intent.putExtra("EventCode", "T01"); 	break;
-			case R.id.bn_te02: 	intent.putExtra("EventCode", "T02"); 	break;
-			case R.id.bn_te03: 	intent.putExtra("EventCode", "T03"); 	break;
-			case R.id.bn_te04: 	intent.putExtra("EventCode", "T04"); 	break;
-			case R.id.bn_te05: 	intent.putExtra("EventCode", "T05"); 	break;
-			case R.id.bn_te06: 	intent.putExtra("EventCode", "T06"); 	break;
-			case R.id.bn_te07: 	intent.putExtra("EventCode", "T07"); 	break;
-			case R.id.bn_te08: 	intent.putExtra("EventCode", "T08"); 	break;
-			case R.id.bn_te09: 	intent.putExtra("EventCode", "T09"); 	break;
-			case R.id.bn_te10: 	intent.putExtra("EventCode", "T10"); 	break;
-			case R.id.bn_te11: 	intent.putExtra("EventCode", "T11"); 	break;
-			case R.id.bn_te12: 	intent.putExtra("EventCode", "T12"); 	break;
-			case R.id.bn_te13: 	intent.putExtra("EventCode", "T13"); 	break;
-			case R.id.bn_te14: 	intent.putExtra("EventCode", "T14"); 	break;
-			case R.id.bn_te15: 	intent.putExtra("EventCode", "T15"); 	break;
-			
-			case R.id.bn_w01: 	intent.putExtra("EventCode", "W01"); 	break;
-			case R.id.bn_w02: 	intent.putExtra("EventCode", "W02"); 	break;
-			case R.id.bn_w03: 	intent.putExtra("EventCode", "W03"); 	break;
-			case R.id.bn_w04: 	intent.putExtra("EventCode", "W04"); 	break;
-			case R.id.bn_w05: 	intent.putExtra("EventCode", "W05"); 	break;
-			case R.id.bn_w06: 	intent.putExtra("EventCode", "W06"); 	break;
-			case R.id.bn_w07: 	intent.putExtra("EventCode", "W07"); 	break;
-			case R.id.bn_w08: 	intent.putExtra("EventCode", "W08"); 	break;
-			case R.id.bn_w09: 	intent.putExtra("EventCode", "W09"); 	break;
-			case R.id.bn_w10: 	intent.putExtra("EventCode", "W10"); 	break;
-			case R.id.bn_w11: 	intent.putExtra("EventCode", "W11"); 	break;
-			case R.id.bn_w12: 	intent.putExtra("EventCode", "W12"); 	break;
-			case R.id.bn_w13: 	intent.putExtra("EventCode", "W13"); 	break;
-			case R.id.bn_w14: 	intent.putExtra("EventCode", "W14"); 	break;
-			case R.id.bn_w15: 	intent.putExtra("EventCode", "W15"); 	break;
-			case R.id.bn_w16: 	intent.putExtra("EventCode", "W16"); 	break;
-			case R.id.bn_w17: 	intent.putExtra("EventCode", "W17"); 	break;			
-			
-			case R.id.bn_fa01:
-				intent.putExtra("EventCode", "FA01");
-				break;
-			case R.id.bn_fa02:
-				intent.putExtra("EventCode", "FA02");
-				break;
-			case R.id.bn_fa03:
-				intent.putExtra("EventCode", "FA03");
-				break;
-			case R.id.bn_fa04:
-				intent.putExtra("EventCode", "FA04");
-				break;
-			case R.id.bn_fa05:
-				intent.putExtra("EventCode", "FA05");
-				break;
-			case R.id.bn_fa06:
-				intent.putExtra("EventCode", "FA06");
-				break;
-			case R.id.bn_fa07:
-				intent.putExtra("EventCode", "FA07");
-				break;
-			case R.id.bn_fa08:
-				intent.putExtra("EventCode", "FA08");
-				break;
-			case R.id.bn_fa09:
-				intent.putExtra("EventCode", "FA09");
-				break;
-
+			intent.putExtra("EventCode","");
+			for (int i = 0; i <buttons.length; i++) {
+				if (v.getId() == buttons[i]) {
+					intent.putExtra("EventCode", codes[i]);
+					break;
+				}
 			}
 			this.startActivity(intent);
 

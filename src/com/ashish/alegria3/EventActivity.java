@@ -1,28 +1,15 @@
 package com.ashish.alegria3;
 
 import java.util.List;
-import java.util.Locale;
-
-import com.ashish.alegria3.AlegriaBody.AboutMeFragment;
-import com.ashish.alegria3.AlegriaBody.DummySectionFragment;
-import com.ashish.alegria3.AlegriaBody.EventsFragment;
-import com.ashish.alegria3.AlegriaBody.SectionsPagerAdapter;
 
 import android.os.Bundle;
-import android.annotation.SuppressLint;
-import android.app.Activity;
-import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.View;
-import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.TextView;
+
+import com.ashish.alegria3.AlegriaBody.SectionsPagerAdapter;
 
 public class EventActivity extends FragmentActivity {
 
