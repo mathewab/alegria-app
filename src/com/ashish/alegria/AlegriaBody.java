@@ -1,4 +1,4 @@
-package com.ashish.alegria3;
+package com.ashish.alegria;
 
 import java.util.Locale;
 
@@ -26,10 +26,12 @@ import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.ashish.alegria3.gallery.helper.AppConstant;
-import com.ashish.alegria3.gallery.helper.Utils;
-import com.ashish.gallery.fragment.ImageAdapter;
-import com.ashish.gallery.fragment.SponsorAdapter;
+import com.ashish.alegria.adapter.CategoryAdapter;
+import com.ashish.alegria.adapter.ImageAdapter;
+import com.ashish.alegria.adapter.SponsorAdapter;
+import com.ashish.alegria.helper.AppConstant;
+import com.ashish.alegria.helper.Utils;
+import com.ashish.alegria.R;
 
 public class AlegriaBody extends FragmentActivity {
 
@@ -378,15 +380,16 @@ public class AlegriaBody extends FragmentActivity {
 
 	}
 
-	public static class EventsFragment extends Fragment implements
-			OnClickListener {
+	public static class EventsFragment extends Fragment {
 		/**
 		 * The fragment argument representing the section number for this
 		 * fragment.
 		 */
 		public static final String ARG_SECTION_NUMBER = "section_number";
 		
-		private Integer[] buttons = { R.id.bn_mgt1, R.id.bn_mgt2, R.id.bn_mgt3,
+		GridView gridview;
+		
+		/*private Integer[] buttons = { R.id.bn_mgt1, R.id.bn_mgt2, R.id.bn_mgt3,
 				R.id.bn_mgt4, R.id.bn_mgt5, R.id.bn_mgt6, R.id.bn_mgt7,
 				R.id.bn_mgt8, R.id.bn_mgt9, R.id.bn_fa01, R.id.bn_fa02,
 				R.id.bn_fa03, R.id.bn_fa04, R.id.bn_fa05, R.id.bn_fa06,
@@ -409,17 +412,17 @@ public class AlegriaBody extends FragmentActivity {
 				R.id.bn_w08, R.id.bn_w09, R.id.bn_w10, R.id.bn_w11,
 				R.id.bn_w12, R.id.bn_w13, R.id.bn_w14, R.id.bn_w15,
 				R.id.bn_w16, R.id.bn_w17 };
-		
+		*/
 		public EventsFragment() {
 		}
 
 		@Override
 		public View onCreateView(LayoutInflater inflater, ViewGroup container,
 				Bundle savedInstanceState) {
-			View rootView = inflater.inflate(R.layout.events_fragment,
+			View rootView = inflater.inflate(R.layout.events_fragment1,
 					container, false);
 
-			Resources r = getResources();
+/*			Resources r = getResources();
 			float padding = TypedValue.applyDimension(
 					TypedValue.COMPLEX_UNIT_DIP, AppConstant.GRID_PADDING,
 					r.getDisplayMetrics());
@@ -436,27 +439,51 @@ public class AlegriaBody extends FragmentActivity {
 				int pad = (int) padding;
 				temp.setPadding(pad, pad,pad, pad);
 				temp.setOnClickListener(this);
-			}
+			}*/
+			
+			gridview = (GridView) rootView.findViewById(R.id.gridViewEvents);
+
+			InitilizeGridLayout();
+
+			gridview.setAdapter(new CategoryAdapter(this.getActivity(), 0));
 
 			return rootView;
 		}
+		
+		private void InitilizeGridLayout() {
+			Resources r = getResources();
+			float padding = TypedValue.applyDimension(
+					TypedValue.COMPLEX_UNIT_DIP, AppConstant.GRID_PADDING,
+					r.getDisplayMetrics());
+			Utils utils = new Utils(this.getActivity());
 
-		@Override
+			int columnWidth = (int) ((utils.getScreenWidth() - ((AppConstant.NUM_OF_COLUMNS + 1) * padding)) / AppConstant.NUM_OF_COLUMNS);
+
+			gridview.setNumColumns(AppConstant.NUM_OF_COLUMNS);
+			gridview.setColumnWidth(columnWidth);
+			gridview.setStretchMode(GridView.NO_STRETCH);
+			gridview.setPadding((int) padding, (int) padding, (int) padding,
+					(int) padding);
+			gridview.setHorizontalSpacing((int) padding);
+			gridview.setVerticalSpacing((int) padding);
+		}
+
+/*		@Override
 		public void onClick(View v) {
 			Intent intent;
 			String codes[] = this.getResources().getStringArray(
 					R.array.codes_events);
-			intent = new Intent("com.ashish.alegria3.EVENTACTIVITY");
+			intent = new Intent(this.getActivity(), EventCategoryActivity.class);
 			intent.putExtra("EventCode","");
 			for (int i = 0; i <buttons.length; i++) {
 				if (v.getId() == buttons[i]) {
 					intent.putExtra("EventCode", codes[i]);
 					break;
 				}
-			}
+			} 
 			this.startActivity(intent);
 
-		}
+		}*/
 	}
 
 }

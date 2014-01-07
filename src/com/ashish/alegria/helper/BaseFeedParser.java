@@ -1,4 +1,4 @@
-package com.ashish.alegria3.util;
+package com.ashish.alegria.helper;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -10,7 +10,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.res.AssetManager;
 
-import com.ashish.alegria3.Event;
+import com.ashish.alegria.Event;
 
 public abstract class BaseFeedParser implements FeedParser {
 

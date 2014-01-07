@@ -33,171 +33,168 @@
             android:textAllCaps="true"
             android:textColor="#fff" />
 
-        <RelativeLayout
-            android:id="@+id/Body"
-            android:layout_width="match_parent"
+        <ScrollView
+            android:id="@+id/scrollView1"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content" >
 
             <RelativeLayout
-                android:id="@+id/Description"
+                android:id="@+id/Body"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentTop="true" >
+                android:layout_height="wrap_content" >
 
-                <TextView
-                    android:id="@+id/tv_description"
+                <RelativeLayout
+                    android:id="@+id/Description"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@string/font"
-                    android:maxLines="10"
-                    android:text=""
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true" >
+
+                    <TextView
+                        android:id="@+id/tv_description"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@string/font"
+                        android:maxLines="10"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/Rules"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/FancyRows"
+                    android:layout_marginTop="18dp"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/tv_rules_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.20"
+                        android:fontFamily="@string/font"
+                        android:text="Rules"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <TextView
+                        android:id="@+id/tv_rules_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@string/font"
+                        android:maxLines="10" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/EventHead"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/Rules"
+                    android:layout_marginTop="18dp" >
+
+                    <TextView
+                        android:id="@+id/tv_head_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.20"
+                        android:fontFamily="@string/font"
+                        android:text="Event Head"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <TextView
+                        android:id="@+id/tv_head_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.80"
+                        android:fontFamily="@string/font" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/FancyRows"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/Description"
+                    android:layout_marginLeft="28dp"
+                    android:layout_marginTop="18dp"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:id="@+id/dateRow"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@+id/tv_date_label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.20"
+                            android:fontFamily="@string/font"
+                            android:text="Date"
+                            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                        <TextView
+                            android:id="@+id/tv_date_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.80"
+                            android:fontFamily="@string/font"
+                            android:text="Date"
+                            android:textAppearance="?android:attr/textAppearanceLarge" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/timeRow"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@+id/tv_time_label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.20"
+                            android:fontFamily="@string/font"
+                            android:text="Time"
+                            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                        <TextView
+                            android:id="@+id/tv_time_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.80"
+                            android:fontFamily="@string/font"
+                            android:text="Time"
+                            android:textAppearance="?android:attr/textAppearanceLarge" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/priceRow"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@+id/tv_rate_label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.20"
+                            android:fontFamily="@string/font"
+                            android:text="Price"
+                            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                        <TextView
+                            android:id="@+id/tv_rate_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.80"
+                            android:fontFamily="@string/font"
+                            android:text="Price"
+                            android:textAppearance="?android:attr/textAppearanceLarge" />
+                    </LinearLayout>
+                </LinearLayout>
             </RelativeLayout>
 
-            <LinearLayout
-                android:id="@+id/Rules"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="18dp"
-                android:orientation="vertical"
-                android:layout_below="@+id/FancyRows" >
+        </ScrollView>
 
-                <TextView
-                    android:id="@+id/tv_rules_label"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.20"
-                    android:fontFamily="@string/font"
-                    android:text="Rules"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-
-
-                <TextView
-                    android:id="@+id/tv_rules_text"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:fontFamily="@string/font"
-                    android:maxLines="10"
-                    android:text="" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/EventHead"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="18dp"
-                android:layout_below="@+id/Rules" >
-
-                <TextView
-                    android:id="@+id/tv_head_label"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.20"
-                    android:fontFamily="@string/font"
-                    android:text="Event Head"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-
-                <TextView
-                    android:id="@+id/tv_head_text"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.80"
-                    android:fontFamily="@string/font"
-                    android:text="" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/FancyRows"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/Description"
-                android:layout_marginLeft="28dp"
-                android:layout_marginTop="18dp"
-                android:layout_alignParentLeft="true"
-                android:orientation="vertical" >
-
-                <LinearLayout
-                    android:id="@+id/dateRow"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" >
-
-                    <TextView
-                        android:id="@+id/tv_date_label"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0.20"
-                        android:fontFamily="@string/font"
-                        android:text="Date"
-                        android:textAppearance="?android:attr/textAppearanceMedium" />
-
-                    <TextView
-                        android:id="@+id/tv_date_text"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0.80"
-                                                android:text="Date"
-                        
-                        android:fontFamily="@string/font"
-                        android:textAppearance="?android:attr/textAppearanceLarge" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/timeRow"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" >
-
-                    <TextView
-                        android:id="@+id/tv_time_label"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0.20"
-                        android:fontFamily="@string/font"
-                        android:text="Time"
-                        android:textAppearance="?android:attr/textAppearanceMedium" />
-
-                    <TextView
-                        android:id="@+id/tv_time_text"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0.80"
-                                                android:text="Time"
-                        
-                        android:fontFamily="@string/font"
-                        android:textAppearance="?android:attr/textAppearanceLarge" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/priceRow"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" >
-
-                    <TextView
-                        android:id="@+id/tv_rate_label"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0.20"
-                        android:fontFamily="@string/font"
-                        android:text="Price"
-                        android:textAppearance="?android:attr/textAppearanceMedium" />
-
-                    <TextView
-                        android:id="@+id/tv_rate_text"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0.80"
-                                                android:text="Price"
-                        
-                        android:fontFamily="@string/font"
-                        android:textAppearance="?android:attr/textAppearanceLarge" />
-
-                </LinearLayout>
-            </LinearLayout>
-
-        </RelativeLayout>
     </LinearLayout>
 
 </RelativeLayout>

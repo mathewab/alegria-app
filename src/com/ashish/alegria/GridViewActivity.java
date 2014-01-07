@@ -1,4 +1,4 @@
-package com.ashish.alegria3;
+package com.ashish.alegria;
 
 import java.util.ArrayList;
 
@@ -11,9 +11,10 @@ import android.view.WindowManager;
 import android.widget.GridView;
 import android.widget.TextView;
 
-import com.ashish.alegria3.gallery.adapter.GridViewImageAdapter;
-import com.ashish.alegria3.gallery.helper.AppConstant;
-import com.ashish.alegria3.gallery.helper.Utils;
+import com.ashish.alegria.adapter.gallery.GridViewImageAdapter;
+import com.ashish.alegria.helper.AppConstant;
+import com.ashish.alegria.helper.Utils;
+import com.ashish.alegria.R;
  
 public class GridViewActivity extends Activity {
  

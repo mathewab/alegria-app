@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
  
-    <com.ashish.alegria3.gallery.helper.TouchImageView
+    <com.ashish.alegria.helper.TouchImageView
         android:id="@+id/imgDisplay"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
@@ -17,10 +17,10 @@
         android:layout_alignParentTop="true"
         android:layout_marginRight="15dp"
         android:layout_marginTop="15dp"
-        android:paddingTop="2dp"
+        android:background="@drawable/button_round"
         android:paddingBottom="2dp"
-        android:background="@drawable/button_background"
-        android:textColor="#ffffff"
-        android:text="Close" />
+        android:paddingTop="2dp"
+        android:text="X"
+        android:textColor="#ffffff" />
  
 </RelativeLayout>

@@ -1,4 +1,4 @@
-package com.ashish.alegria3.gallery.helper;
+package com.ashish.alegria.helper;
 
 import android.content.Context;
 import android.graphics.Matrix;

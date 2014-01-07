@@ -1,4 +1,4 @@
-package com.ashish.alegria3.gallery.adapter;
+package com.ashish.alegria.adapter.gallery;
 
 import java.io.InputStream;
 import java.util.ArrayList;
@@ -20,8 +20,8 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
-import com.ashish.alegria3.R;
-import com.ashish.alegria3.gallery.helper.ImageLoader;
+import com.ashish.alegria.helper.ImageLoader;
+import com.ashish.alegria.R;
 
 public class FullScreenImageAdapter extends PagerAdapter {
 	 

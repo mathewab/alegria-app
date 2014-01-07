@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.ashish.alegria3"
+    package="com.ashish.alegria"
     android:versionCode="1"
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="13"
+        android:minSdkVersion="11"
         android:targetSdkVersion="19" />
 
-<uses-permission android:name="android.permission.INTERNET" />
-<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />    
-<uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.USE_CREDENTIALS" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
@@ -19,12 +19,9 @@
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
-        <meta-data
-            android:name="com.google.android.gms.version"
-            android:value="@integer/google_play_services_version" />
 
         <activity
-            android:name="com.ashish.alegria3.Home"
+            android:name="com.ashish.alegria.Home"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
@@ -36,16 +33,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.ashish.alegria3.SimpleActivity"
-            android:label="@string/app_name" >
-            <intent-filter>
-                <action android:name="com.ashish.alegria3.SIMPLEACTIVITY" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name="com.ashish.alegria3.AlegriaBody"
+            android:name="com.ashish.alegria.AlegriaBody"
             android:label="@string/title_activity_alegria_body"
             android:parentActivityName="android.support.v4.app.FragmentActivity" >
             <meta-data
@@ -59,21 +47,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.ashish.alegria3.SettingsActivity"
-            android:label="@string/title_activity_settings" >
-            <intent-filter>
-                <action android:name="com.ashish.alegria3.SETTINGSACTIVITY" />
-
-                <category android:name="android.intent.category.PREFERENCE" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name="com.ashish.alegria3.LoginActivity"
-            android:label="@string/title_activity_login"
-            android:windowSoftInputMode="adjustResize|stateVisible" >
-        </activity>
-        <activity
-            android:name="com.ashish.alegria3.EventActivity"
+            android:name="com.ashish.alegria.EventActivity"
             android:label="@string/title_activity_event" >
             <intent-filter>
                 <action android:name="com.ashish.alegria3.EVENTACTIVITY" />
@@ -82,13 +56,20 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.ashish.alegria3.GridViewActivity"
+            android:name="com.ashish.alegria.GridViewActivity"
             android:label="@string/title_activity_grid_view" >
         </activity>
         <activity
-            android:name="com.ashish.alegria3.FullScreenViewActivity"
-            android:label="@string/title_activity_full_screen_view"
-            android:theme="@android:style/Theme.Holo.NoActionBar" >
+            android:name="com.ashish.alegria.FullScreenViewActivity"
+            android:label="@string/title_activity_full_screen_view" >
+        </activity>
+        <activity
+            android:name="com.ashish.alegria.EventCategoryActivity"
+            android:label="@string/title_activity_event_category"
+            android:parentActivityName="com.ashish.alegria.AlegriaBody" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.ashish.alegria3.AlegriaBody" />
         </activity>
     </application>
 

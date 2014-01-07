@@ -1,4 +1,4 @@
-package com.ashish.alegria3;
+package com.ashish.alegria;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,7 +8,7 @@ import org.xmlpull.v1.XmlPullParser;
 import android.app.Activity;
 import android.util.Xml;
 
-import com.ashish.alegria3.util.BaseFeedParser;
+import com.ashish.alegria.helper.BaseFeedParser;
 
 public class XmlPullFeedParser extends BaseFeedParser {
     public XmlPullFeedParser(String feedUrl) {

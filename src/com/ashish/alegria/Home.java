@@ -1,4 +1,6 @@
-package com.ashish.alegria3;
+package com.ashish.alegria;
+
+import com.ashish.alegria.R;
 
 import android.app.Activity;
 import android.content.Intent;

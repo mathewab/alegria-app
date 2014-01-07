@@ -1,4 +1,4 @@
-package com.ashish.alegria3;
+package com.ashish.alegria;
 
 import java.util.List;
 
@@ -9,7 +9,8 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.TextView;
 
-import com.ashish.alegria3.AlegriaBody.SectionsPagerAdapter;
+import com.ashish.alegria.AlegriaBody.SectionsPagerAdapter;
+import com.ashish.alegria.R;
 
 public class EventActivity extends FragmentActivity {
 

@@ -1,4 +1,4 @@
-package com.ashish.alegria3.gallery.helper;
+package com.ashish.alegria.helper;
 
 import java.io.File;
 import android.content.Context;

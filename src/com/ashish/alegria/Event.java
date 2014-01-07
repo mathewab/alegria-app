@@ -1,4 +1,4 @@
-package com.ashish.alegria3;
+package com.ashish.alegria;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;

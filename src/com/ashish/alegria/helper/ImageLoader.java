@@ -1,4 +1,4 @@
-package com.ashish.alegria3.gallery.helper;
+package com.ashish.alegria.helper;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -14,7 +14,7 @@ import java.util.WeakHashMap;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-import com.ashish.alegria3.R;
+import com.ashish.alegria.R;
   
 import android.app.Activity;
 import android.content.Context;

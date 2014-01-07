@@ -1,4 +1,4 @@
-package com.ashish.alegria3.gallery.adapter;
+package com.ashish.alegria.adapter.gallery;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -22,9 +22,9 @@ import android.widget.BaseAdapter;
 import android.widget.GridView;
 import android.widget.ImageView;
 
-import com.ashish.alegria3.FullScreenViewActivity;
-import com.ashish.alegria3.R;
-import com.ashish.alegria3.gallery.helper.ImageLoader;
+import com.ashish.alegria.FullScreenViewActivity;
+import com.ashish.alegria.helper.ImageLoader;
+import com.ashish.alegria.R;
  
 public class GridViewImageAdapter extends BaseAdapter {
  
