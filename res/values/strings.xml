@@ -168,6 +168,17 @@
         <item>W16</item>
         <item>W17</item>
     </string-array>
+    
+    <string-array name="titles_categories">
+        <item>Management Events</item>
+        <item>Fine Arts</item>
+        <item>Performing Arts</item>
+        <item>Informals</item>
+        <item>Workshop</item>
+        <item>Literary Arts</item>
+        <item>Sports and Gaming</item>
+        <item>Technical Events</item>
+    </string-array>
 
     <string name="title_activity_event_category">EventCategoryActivity</string>
 

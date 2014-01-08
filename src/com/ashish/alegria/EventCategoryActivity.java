@@ -8,6 +8,7 @@ import com.ashish.alegria.helper.AppConstant;
 import com.ashish.alegria.helper.Utils;
 import com.ashish.alegria.R;
 
+import android.app.Activity;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -67,7 +68,7 @@ public class EventCategoryActivity extends FragmentActivity {
 		// Create the adapter that will return a fragment for each of the three
 		// primary sections of the app.
 		mSectionsPagerAdapter = new SectionsPagerAdapter(
-				getSupportFragmentManager());
+				getSupportFragmentManager(), this);
 
 		// Set up the ViewPager with the sections adapter.
 		mViewPager = (ViewPager) findViewById(R.id.pager);
@@ -106,8 +107,11 @@ public class EventCategoryActivity extends FragmentActivity {
 	 */
 	public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
-		public SectionsPagerAdapter(FragmentManager fm) {
+		String titles[];
+		public SectionsPagerAdapter(FragmentManager fm, Activity mActivity) {
 			super(fm);
+			titles = mActivity.getResources().getStringArray(
+					R.array.titles_categories);
 		}
 
 		@Override
@@ -125,13 +129,14 @@ public class EventCategoryActivity extends FragmentActivity {
 		@Override
 		public int getCount() {
 			// Show 3 total pages.
-			return 3;
+			return titles.length;
 		}
 
 		@Override
 		public CharSequence getPageTitle(int position) {
 			Locale l = Locale.getDefault();
-			switch (position) {
+			return (titles[position]).toUpperCase(l);
+			/*switch (position) {
 			case 0:
 				return getString(R.string.title_category1).toUpperCase(l);
 			case 1:
@@ -139,7 +144,7 @@ public class EventCategoryActivity extends FragmentActivity {
 			case 2:
 				return getString(R.string.title_category3).toUpperCase(l);
 			}
-			return null;
+			return null;*/
 		}
 	}
 
